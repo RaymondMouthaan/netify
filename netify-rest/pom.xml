@@ -5,7 +5,7 @@
 
     <parent>
         <artifactId>netify</artifactId>
-        <groupId>org.mouthaan</groupId>
+        <groupId>org.mouthaan.netify</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -27,8 +27,17 @@
         <io.springfox.version>2.9.2</io.springfox.version>
     </properties>
 
-    <!-- Spring dependencies -->
+
     <dependencies>
+
+        <!-- Internal dependencies -->
+        <dependency>
+            <groupId>org.mouthaan.netify</groupId>
+            <artifactId>netify-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Spring dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -63,6 +72,7 @@
     </dependencies>
 
     <build>
+        <finalName>netify-rest</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -71,5 +81,31 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <activatedProperties>local</activatedProperties>
+            </properties>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.mouthaan.netify</groupId>
+                    <artifactId>netify-liquibase</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 
 </project>

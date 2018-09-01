@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   logicalFilePath="db.changelog.netify.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.table.movie.create" runAlways="true">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="TA_MOVIE"/>
+            </not>
+        </preConditions>
+        <comment>Create table TA_MOVIE if not exists</comment>
+        <createTable tableName="TA_MOVIE">
+            <column autoIncrement="true" name="ID" type="INTEGER" startWith="380000"><constraints nullable="false" primaryKey="true"/></column>
+            <column name="IMDB_ID" type="VARCHAR(25)"/>
+            <column name="TITLE" type="VARCHAR(255)"/>
+            <column name="ORIGINAL_TITLE" type="VARCHAR(255)"/>
+            <column name="RELEASE_DATE" type="DATE"/>
+            <column name="RUNTIME" type="INTEGER"/>
+            <column name="ORIGINAL_LANGUAGE" type="VARCHAR(2)"/>
+            <column name="POPULARITY" type="DOUBLE"/>
+            <column name="HOMEPAGE" type="VARCHAR(255)"/>
+            <column name="BUDGET" type="INTEGER"/>
+            <column name="REVENUE" type="INTEGER"/>
+            <column name="STATUS" type="VARCHAR(25)"/>
+            <column name="TAGLINE" type="VARCHAR(511)"/>
+            <column name="OVERVIEW" type="VARCHAR(1023)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.movies.loaddata" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="TA_MOVIE"/>
+        </preConditions>
+        <comment>Load data from csv</comment>
+        <loadData encoding="UTF-8"
+                  relativeToChangelogFile="true"
+                  file="TA_MOVIE.csv"
+                  separator=";"
+                  tableName="TA_MOVIE">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

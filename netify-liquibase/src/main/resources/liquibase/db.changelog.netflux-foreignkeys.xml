@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   logicalFilePath="db.changelog.netify.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.foreignkeys.add" runAlways="true">
+        <!--<preConditions onFail="MARK_RAN">-->
+            <!--<not>-->
+                <!--<tableExists tableName="ROLES"/>-->
+            <!--</not>-->
+        <!--</preConditions>-->
+
+        <comment>Add foreign keys</comment>
+        <addForeignKeyConstraint baseColumnNames="MOVIE_ID"
+                                 baseTableName="TA_ROLE"
+                                 constraintName="TA_ROLE_TA_MOVIE_FK"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="TA_MOVIE"/>
+
+        <addForeignKeyConstraint baseColumnNames="ACTOR_ID"
+                                 baseTableName="TA_ROLE"
+                                 constraintName="TA_ROLE_TA_ACTOR_FK"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="TA_ACTOR"/>
+
+        <addForeignKeyConstraint baseColumnNames="GENRE_ID"
+                                 baseTableName="TA_MOVIE_GENRE"
+                                 constraintName="TA_MOVIE_GENRE_TA_GENRE_FK"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="TA_GENRE"/>
+
+        <addForeignKeyConstraint baseColumnNames="MOVIE_ID"
+                                 baseTableName="TA_MOVIE_GENRE"
+                                 constraintName="TA_MOVIE_GENRE_TA_MOVIE_FK"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="TA_MOVIE"/>
+
+    </changeSet>
+
+</databaseChangeLog>

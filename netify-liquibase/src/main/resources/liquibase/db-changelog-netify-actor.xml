@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   logicalFilePath="db.changelog.netify.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.table.actor.create" runAlways="true">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="NTFY_ACTOR"/>
+            </not>
+        </preConditions>
+        <comment>Create table NTFY_ACTOR if not exists</comment>
+        <createTable tableName="NTFY_ACTOR">
+            <column name="ID" type="INTEGER" autoIncrement="true" startWith="1800000">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="GENDER_ID" type="SMALLINT"/>
+        </createTable>
+        <addUniqueConstraint
+                columnNames="NAME"
+                constraintName="UK_NTFY_ACTOR"
+                tableName="NTFY_ACTOR"
+        />
+    </changeSet>
+
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.actor.loaddata" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="NTFY_ACTOR"/>
+        </preConditions>
+        <comment>Load data from csv</comment>
+        <loadData
+                relativeToChangelogFile="true"
+                file="NTFY_ACTOR.csv"
+                separator=";"
+                tableName="NTFY_ACTOR">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

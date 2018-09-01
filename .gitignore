@@ -21,11 +21,9 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/netify.git.iml
 .idea/
 netify-rest/.gitignore
 netify-rest/.mvn/
 netify-rest/mvnw
 netify-rest/mvnw.cmd
-netify.iml
-/netify-rest/netify-rest.iml
+*.iml

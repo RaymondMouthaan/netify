@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   logicalFilePath="db.changelog.netify.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.table.genre.create" runAlways="true">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="TA_GENRE"/>
+            </not>
+        </preConditions>
+        <comment>Create table TA_GENRE if not exists</comment>
+        <createTable tableName="TA_GENRE">
+            <column name="ID" type="INTEGER" autoIncrement="true" startWith="11000">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)" >
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint
+                             columnNames="NAME"
+                             constraintName="UK_TA_GENRE"
+                             tableName="TA_GENRE"
+        />
+    </changeSet>
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.genre.loaddata" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="TA_GENRE"/>
+        </preConditions>
+        <comment>Load data from csv</comment>
+        <loadData encoding="UTF-8"
+                  relativeToChangelogFile="true"
+                  file="TA_GENRE.csv"
+                  separator=";"
+                  tableName="TA_GENRE">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

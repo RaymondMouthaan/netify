@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   logicalFilePath="db.changelog.netify.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.table.bug.create" runAlways="true">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="TA_BUG"/>
+            </not>
+        </preConditions>
+        <comment>Create table TA_BUG if not exists</comment>
+        <createTable tableName="TA_BUG">
+            <column name="BUG_KEY" type="VARCHAR(255)"><constraints nullable="false" primaryKey="true"/></column>
+            <column name="BUG_LOCATION" type="VARCHAR(255)"/>
+            <column name="BUG_ENABLED" type="BOOLEAN"/>
+            <column name="BUG_GROUP" type="INTEGER"/>
+            <column name="BUG_DESCRIPTION" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.bug.loaddata" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="TA_BUG"/>
+        </preConditions>
+        <comment>Load data from csv</comment>
+        <loadData encoding="UTF-8"
+                  relativeToChangelogFile="true"
+                  file="TA_BUG.csv"
+                  separator=";"
+                  tableName="TA_BUG">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

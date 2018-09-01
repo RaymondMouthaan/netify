@@ -1,0 +1,2438 @@
+MOVIE_ID;CHARACTER;ROLE_ORDER;ACTOR_ID
+2503;Jason Bourne;0;1892
+2503;Nicky Parsons;1;12041
+2503;Noah Vosen;2;11064
+2503;Ezra Kramer;3;349
+2503;Simon Ross;4;14887
+2503;Paz;5;25616
+2503;Dr. Albert Hirsch;6;3926
+2503;Pamela Landy;7;11148
+2503;Tom Cronin;8;27030
+2503;Conrad Wills;9;17199
+218;The Terminator;0;1100
+218;Kyle Reese;1;2712
+218;Sarah Connor;2;2713
+218;Lieutenant Ed Traxler;3;1818
+218;Detective Vukovich;4;2714
+218;Ginger Ventura;5;2715
+218;Dr. Peter Silberman;6;2716
+218;Matt Buchanan;7;2717
+218;Punk Leader;8;2053
+218;Punk;9;2719
+155;Bruce Wayne / Batman;0;3894
+155;Alfred Pennyworth;1;3895
+155;The Joker;2;1810
+155;Harvey Dent / Two-Face;3;6383
+155;Lt. James Gordon;4;64
+155;Rachel Dawes;5;1579
+155;Lucius Fox;6;192
+155;Lau;7;101015
+155;Salvatore Maroni;8;21315
+155;Ramirez;9;53651
+422;Guido Anselmi;0;5676
+422;Claudia;1;4959
+422;Luisa Anselmi;2;5682
+422;Carla;3;5683
+422;Rossella;4;5684
+422;Gloria Morin;5;5685
+422;Madeleine, l'attrice francese;6;4116
+422;La signora misteriosa;7;5686
+422;La Saraghina;8;5687
+422;Pace, il produttore;9;5688
+630;Dorothy Gale;0;9066
+630;Professor Marvel / The Wizard of Oz;1;9067
+630;"Hunk" / The Scarecrow;2;9068
+630;"Zeke" / The Cowardly Lion;3;9069
+630;"Hickory" / The Tin Man;4;9070
+630;Glinda, the Good Witch of the North;5;9071
+630;Miss Gulch / The Wicked Witch of the West;6;9072
+630;Uncle Henry;7;8517
+630;Auntie Em;8;9073
+630;The Munchkins;9;1468722
+3175;Barry Lyndon;0;31070
+3175;Lady Lyndon;1;31071
+3175;Capt. Potzdorf;2;37777
+3175;Lischen;3;22703
+3175;Sir Charles Reginald Lyndon;4;31718
+3175;Captain Feeny;5;31719
+3175;Capt. Grogan;6;2279
+3175;Capt. John Quin;7;249
+3175;Graham;8;694
+3175;The Chevalier de Balibari;9;2264
+137;Phil Connors;0;1532
+137;Rita;1;1533
+137;Larry;2;1534
+137;Ned Ryerson;3;537
+137;Buster Green;4;1535
+137;Mrs. Lancaster;5;1537
+137;Gus;6;1538
+137;Ralph;7;1539
+137;Doris, the Waitress;8;1540
+137;Kenny;9;1542
+406;Vinz;0;1925
+406;Hubert;1;5418
+406;Saïd;2;5419
+406;Abdel;3;5420
+406;Santo;4;72270
+406;Sarah;6;5424
+406;Benoît;7;5442
+406;Darty;8;5441
+406;Inspecteur Notre Dame;9;2170
+63;James Cole;0;62
+63;Dr. Kathryn Railly;1;289
+63;Jeffrey Goines;2;287
+63;Dr. Goines;3;290
+63;Dr. Peters;4;52
+63;Jose;5;288
+63;Dr. Fletcher;6;291
+63;junger Cole;7;975569
+63;WWI Sergeant;8;1273540
+63;Lt. Halperin;9;22227
+578;Police Chief Martin Brody;0;6355
+578;Quint;1;8606
+578;Matt Hooper;2;3037
+578;Ellen Brody;3;8607
+578;Mayor Larry Vaughn;4;8608
+578;Ben Meadows;5;8555
+578;Deputy Leonard 'Lenny' Hendricks;6;8609
+578;Christine 'Chrissie' Watkins;7;8610
+578;Tom Cassidy;8;5286
+578;Michael 'Mike' Brody;9;8611
+10775;Inspector Lau Kin Ming;0;25246
+10775;Chan Wing Yan;1;1337
+10775;Superintendent Wong Chi Shing;2;66717
+10775;Hon Sam;3;26724
+10775;Dr. Lee Sum Yee;4;72730
+10775;Mary;5;86318
+10775;Lau Kin Ming (young);6;20372
+10775;Chan Wing Yan (young);7;78869
+10775;May;8;236115
+10775;'Crazy' Tsui Wai Keung;9;118742
+887;Al Stephenson;0;13576
+887;Milly Stephenson;1;13577
+887;Fred Derry;2;13578
+887;Peggy Stephenson;3;7663
+887;Marie Derry;4;13579
+887;Wilma Cameron;5;10023
+887;Butch Engle;6;11439
+887;Homer Parrish;7;13580
+887;Hortense Derry;8;14450
+887;Pat Derry;9;95315
+117691;Sardar Khan;0;35782
+117691;Nagma;1;150471
+117691;Ramadhir Singh;2;545084
+117691;Faizal Khan;3;85047
+117691;Durga;4;86225
+117691;Mohsina Hamid;5;1108805
+117691;Nasir;6;127790
+117691;Asghar;7;113686
+117691;Shahid Khan;8;973402
+117691;Sultan Qureshi;9;1179460
+389;Juror 8;0;4958
+389;Juror 1;1;1936
+389;Juror 2;2;5247
+389;Juror 3;3;5248
+389;Juror 4;4;5249
+389;Juror 5;5;5250
+389;Juror 6;6;2651
+389;Juror 7;7;5251
+389;Juror 9;8;5252
+389;Juror 10;9;39816
+50014;Eugenia 'Skeeter' Phelan;0;54693
+50014;Aibileen Clark;1;19492
+50014;Minny Jackson;2;6944
+50014;Hilly Holbrook;3;18997
+50014;Celia Foote;4;83002
+50014;Johnny Foote;5;6858
+50014;Charlotte Phelan;6;19
+50014;Missus Walters;7;5606
+50014;Stuart Whitworth;8;84300
+50014;Elizabeth Leefolt;9;999605
+10020;Belle (voice);0;62050
+10020;Beast (voice);1;15048
+10020;Gaston (voice);2;108055
+10020;Lumiere (voice);3;725
+10020;Cogsworth (voice);4;28010
+10020;Mrs. Potts (voice);5;14730
+10020;Maurice (voice);6;170970
+10020;Lefou (voice);7;75599
+10020;Chip (voice);8;145151
+10020;Philippe (voice);9;25627
+968;Sonny;0;1158
+968;Sal;1;3096
+968;Det. Sgt. Eugene Moretti;2;1466
+968;Leon;3;14541
+968;Sheldon;4;14542
+968;TV Anchorman;5;14543
+968;Sylvia;6;14544
+968;Mulvaney;7;14545
+968;Margaret;8;14546
+968;Jenny;9;10556
+17295;Ali La Pointe;0;140996
+17295;Col. Mathieu;1;39953
+17295;Djafar;2;557864
+17295;Captain;3;557865
+17295;Halima;4;1055191
+17295;One of the girls;5;1077247
+17295;Petit Omar;7;1077248
+17295;(uncredited);8;1510525
+843;Chow Mo-Wan;0;1337
+843;Su Li-Zhen;1;1338
+843;Mrs. Suen;2;12462
+843;Mr. Ho;3;12463
+843;Ah Ping;4;12674
+843;;5;1148003
+843;;6;1002925
+843;;7;12465
+843;;8;12464
+843;;9;1427114
+22;Captain Jack Sparrow;0;85
+22;Captain Hector Barbossa;1;118
+22;Will Turner;2;114
+22;Elizabeth Swann;3;116
+22;Commodore James Norrington;4;1709
+22;Governor Weatherby Swann;5;378
+22;Joshamee Gibbs;6;2449
+22;Anamaria;7;8691
+22;Pintel;8;1710
+22;Ragetti;9;1711
+10242;Baby Jane Hudson;0;3380
+10242;Blanche Hudson;1;31550
+10242;Edwin Flagg;2;24811
+10242;Marty Mc Donald;3;66712
+10242;Baby Jane Hudson, in 1917;4;1046811
+10242;Cora Hudson;5;153365
+10242;Dehlia Flagg;6;97257
+10242;Ben Golden;7;31503
+10242;Mrs. Bates;8;88460
+10242;Elvira Stitt;9;103087
+655;Travis Henderson;0;5048
+655;Jane Henderson;1;2630
+655;Walt Henderson;2;923
+655;Hunter Henderson;3;9892
+655;Anne Henderson;4;9893
+655;Doctor Ulmer;5;9894
+655;Slater;6;6394
+655;Stretch;7;1482975
+655;Nurse Bibs;8;1482976
+655;Carmelita;9;1245394
+352173;Vijay Salgaonkar;1;42803
+352173;Inspector General Meera Deshmukh;2;55062
+352173;Nandini Vijay Salgaonkar;3;145628
+352173;Mahesh Deshmukh (Meera's Husband);4;78922
+352173;Anju Salgaonkar (Vijay's elder daughter);5;1527501
+297222;PK;0;52763
+297222;;1;81928
+297222;;2;1192902
+297222;;3;35779
+297222;Bhairao Singh;4;85881
+297222;;5;123317
+297222;;6;76789
+297222;;7;86890
+297222;;8;1255526
+297222;;9;601881
+424;Oskar Schindler;0;3896
+424;Itzhak Stern;1;2282
+424;Amon Goeth;2;5469
+424;Emilie Schindler;3;6692
+424;Poldek Pfefferberg;4;6693
+424;Helen Hirsch;5;6368
+424;Victoria Klonowska;6;6694
+424;Wilek Chilowicz;7;6695
+424;Marcel Goldberg;8;6696
+424;Ingrid;9;6697
+680;Vincent Vega;0;8891
+680;Jules Winfield;1;2231
+680;Mia Wallace;2;139
+680;Butch Coolidge;3;62
+680;Marsellus Wallace;4;10182
+680;Wolf;5;1037
+680;Lance;6;7036
+680;Pumpkin;7;3129
+680;Honey Bunny;8;99
+680;Fabienne;9;2319
+122;Frodo Baggins;0;109
+122;Gandalf the White;1;1327
+122;Aragorn;2;110
+122;Arwen Evenstar;3;882
+122;Legolas;4;114
+122;Gimli & Treebeard (Voice);5;655
+122;Sam Gamgee;6;1328
+122;Peregrin 'Pippin' Took;7;1329
+122;Meriadoc 'Merry' Brandybuck;8;1330
+122;Gollum;9;1333
+429;Tuco;0;3265
+429;Blondie;1;190
+429;Sentenza/Angel Eyes;2;4078
+429;Alcoholic Union Captain;3;5813
+429;Father Pablo Ramirez;4;5814
+429;Maria;5;5815
+429;Sheriff;6;5816
+429;Baker;7;5817
+429;Jackson/Bill Carson;8;5818
+429;Monk;9;5819
+550;The Narrator;0;819
+550;Tyler Durden;1;287
+550;Robert 'Bob' Paulson;2;7470
+550;Angel Face;3;7499
+550;Marla Singer;4;1283
+550;Richard Chesler;5;7471
+550;The Mechanic;6;7497
+550;Ricky;7;7498
+550;Intern;8;7472
+550;Thomas;9;7219
+120;Frodo Baggins;0;109
+120;Gandalf the Grey;1;1327
+120;Galadriel;2;112
+120;Legolas;3;114
+120;Boromir;4;48
+120;Aragorn;5;110
+120;Elrond;6;1331
+120;Arwen Evenstar;7;882
+120;Gimli;8;655
+120;Saruman;9;113
+13;Forrest Gump;0;31
+13;Jenny Curran;1;32
+13;Lt. Dan Taylor;2;33
+13;Pvt. Benjamin Buford 'Bubba' Blue;3;34
+13;Mrs. Gump;4;35
+13;Young Forrest Gump;5;37821
+13;Young Jenny Curran;6;204997
+13;Forrest Gump Jr.;7;9640
+13;School Bus Driver;8;6751
+13;Drill Sergeant;9;37825
+1891;Luke Skywalker;0;2
+1891;Han Solo;1;3
+1891;Princess Leia;2;4
+1891;Lando Calrissian;3;3799
+1891;C-3PO;4;6
+1891;Darth Vader;5;24342
+1891;R2-D2;6;130
+1891;Chewbacca;7;24343
+1891;Yoda (Voice);8;7908
+1891;Darth Vader (Voice);9;15152
+27205;Dom Cobb;0;6193
+27205;Arthur;1;24045
+27205;Ariadne;2;27578
+27205;Eames;3;2524
+27205;Saito;4;3899
+27205;Robert Fischer;5;2037
+27205;Mal;6;8293
+27205;Miles;7;3895
+27205;Yusuf;8;95697
+27205;Browning;9;13022
+121;Frodo Baggins;0;109
+121;Gandalf the White;1;1327
+121;Aragorn;2;110
+121;Arwen Evenstar;3;882
+121;Legolas;4;114
+121;Gimli / Voice of Treebeard;5;655
+121;Saruman;6;113
+121;Sam Gamgee;7;1328
+121;Peregrin 'Pippin' Took;8;1329
+121;Meriadoc 'Merry' Brandybuck;9;1330
+510;Randle Patrick McMurphy;0;514
+510;Nurse Mildred Ratched;1;7071
+510;Martini;2;518
+510;Harding;3;7072
+510;Orderly Turkle;4;7077
+510;Billy Bibbit;5;1370
+510;Taber;6;1062
+510;Chief Bromden;7;68301
+510;Dr. John Spivey;8;7075
+510;Ellis;9;7073
+769;James Conway;0;380
+769;Henry Hill;1;11477
+769;Tommy DeVito;2;4517
+769;Karen Hill;3;11478
+769;Paul Cicero;4;7004
+769;Frankie Carbone;5;11480
+769;Sonny Bunz;6;11482
+769;Frenchy;7;5170
+769;Billy Batts;8;7164
+769;Morris Kessler;9;11479
+603;Thomas "Neo" Anderson;0;6384
+603;Morpheus;1;2975
+603;Trinity;2;530
+603;Agent Smith;3;1331
+603;Oracle;4;9364
+603;Cypher;5;532
+603;Tank;6;9372
+603;Agent Brown;7;9380
+603;Agent Jones;8;39545
+603;Apoc;9;7244
+346;Kikuchiyo;0;7450
+346;Kambei Shimada;1;7453
+346;Gorobei Katayama;2;20828
+346;Kyuzo;3;20829
+346;Heihachi Hayashida;4;7454
+346;Shichiroji;5;7457
+346;Katsushiro Okamoto;6;20830
+346;Shino;7;20831
+346;Rikichi's Wife;8;554250
+346;Manzô - Father of Shino;9;96552
+11;Luke Skywalker;0;2
+11;Han Solo;1;3
+11;Princess Leia Organa;2;4
+11;Grand Moff Tarkin;3;5
+11;Obi-Wan "Ben" Kenobi;4;12248
+11;See Threepio (C-3PO);5;6
+11;Artoo-Detoo (R2-D2);6;130
+11;Chewbacca;7;24343
+11;Darth Vader;8;24342
+11;Voice of Darth Vader (voice);9;15152
+598;Buscapé;0;8595
+598;Zé Pequeno;1;8596
+598;Bené;2;8597
+598;Dadinho;3;8598
+598;Cabeleira;4;8599
+598;Sandro Cenoura;5;8600
+598;Mané Galinha;6;5659
+598;Alicate;7;8601
+598;Angélica;8;8602
+598;Berenice;9;8603
+807;Detective David Mills;0;287
+807;Detective Lt. William Somerset;1;192
+807;Tracy Mills;2;12052
+807;California;3;11885
+807;John Doe;4;1979
+807;Police Captain;5;8655
+807;Dist. Atty. Martin Talbot;6;6487
+807;Mark Swarr;7;31028
+807;Mrs. Gould;8;1558263
+807;Greasy F.B.I. Man;9;534
+274;Clarice Starling;0;1038
+274;Hannibal Lecter;1;4173
+274;Jack Crawford;2;349
+274;Jame 'Buffalo Bill' Gumb;3;15854
+274;Dr. Frederick Chilton;4;16293
+274;Catherine Martin;5;31649
+274;Senator Ruth Martin;6;6930
+274;Ardelia Mapp;7;51864
+274;Barney Matthews;8;13936
+274;Lamar;9;3801
+1585;George Bailey;0;854
+1585;Mary Hatch;1;17752
+1585;Henry F. Potter;2;17753
+1585;Uncle Billy Bailey;3;3383
+1585;Clarence Odbody;4;7666
+1585;Ma Bailey;5;17755
+1585;Bert;6;4303
+1585;Ernie Bishop;7;17759
+1585;Violet Bick;8;77081
+1585;Mr. Gower;9;33278
+637;Dora;0;9235
+637;Guido Orefice;1;4818
+637;Giosué Orefice;2;9236
+637;Eliseo Orefice;3;9237
+637;Rodolfo;4;9238
+637;Ferruccio;5;9239
+637;Signora Guicciardini;6;9240
+637;Dottore Lessing;7;5789
+637;Bartolomeo;8;9241
+637;Madre di Dora;9;954
+629;Michael McManus;0;9045
+629;Dean Keaton;1;5168
+629;US Customs Agent Dave Kujan;2;9046
+629;Todd Hockney;3;7166
+629;Kobayashi;4;4935
+629;Roger 'Verbal' Kint;5;1979
+629;Edie Finneran;6;2179
+629;FBI Agent Jack Baer;7;4808
+629;Fred Fenster;8;1121
+629;Sgt. Jeffrey "Jeff" Rabin;9;6486
+101;Léon Montana;0;1003
+101;Mathilda Lando;1;524
+101;Norman Stansfield;2;64
+101;Tony;3;1004
+101;Malky;4;1005
+101;Mathilda's Father;5;1010
+101;Mathilda's Mother;6;13420
+101;Mathilda's Sister;7;122230
+101;Mathilda's Brother;8;977543
+101;Bodyguard Chief;9;1171233
+857;Captain John H. Miller;0;31
+857;Technical Sergeant Michael Horvath;1;3197
+857;Lieutenant Colonel Walter Anderson;2;1117
+857;Corporal Henderson;3;94864
+857;Steamboat Willie;4;12838
+857;General George C. Marshall;6;3907
+857;Private James Francis Ryan;7;1892
+857;Private Richard Reiben;8;12833
+857;Private Daniel Jackson;9;12834
+129;Chihiro (voice);0;19587
+129;Haku (voice);1;19588
+129;Yubaba (voice);2;19589
+129;Chihiro's Father (voice);3;19590
+129;Chihiro's Mother (voice);4;19591
+129;Aogaeru (voice);5;19592
+129;Lin (voice);6;19594
+129;Bandai-gaeru (voice);7;40450
+129;Kawa no Kami (voice);8;554423
+129;Chichiyaku (voice);9;20334
+335;Frank;0;4958
+335;Jill McBain;1;4959
+335;Cheyenne;2;4765
+335;Harmonica;3;4960
+335;Morton (railroad baron);4;4961
+335;Sam;5;4962
+335;Stony (member of Frank's gang);6;4963
+335;Snaky (member of Frank's gang);7;4965
+335;Sheriff;8;4966
+335;Brett McBain;9;4968
+73;Derek Vinyard;0;819
+73;Danny Vinyard;1;820
+73;Doris Vinyard;2;821
+73;Dr. Bob Sweeney;3;822
+73;Davina Vinyard;4;823
+73;Seth Ryan;5;824
+73;Cameron Alexander;6;825
+73;Stacey;7;826
+73;Murray;8;827
+73;Lamont;9;828
+157336;Joseph Cooper;0;10297
+157336;Murph Cooper;1;83002
+157336;Dr. Amelia Brand;2;1813
+157336;Professor John Brand;3;3895
+157336;Tom Cooper;4;1893
+157336;Young Murph Cooper;5;851784
+157336;Young Tom Cooper;6;1190668
+157336;TARS (voice);7;58549
+157336;Dr. Mann;8;1892
+157336;Old Murph Cooper;9;9560
+539;Norman Bates;0;7301
+539;Lila Crane;1;7303
+539;Sam Loomis;2;7304
+539;Marion Crane;3;7302
+539;Det. Milton Arbogast;4;1936
+539;Sheriff Al Chambers;5;53010
+539;Dr. Fred Richman;6;14063
+539;Tom Cassidy;7;78902
+539;Caroline;8;12500
+539;George Lowery;9;3641
+289;Rick Blaine;0;4110
+289;Ilsa Lund;1;4111
+289;Victor Laszlo;2;4112
+289;Captain Louis Renault;3;4113
+289;Major Heinrich Strasser;4;3001
+289;Signor Ferrari;5;4114
+289;Ugarte;6;2094
+289;Carl (as S.K. Sakall);7;94110
+289;Yvonne (as Madeleine LeBeau);8;4116
+289;Sam;9;4117
+901;Tramp;0;13848
+901;A Blind Girl;1;13852
+901;The Blind Girl's Grandmother;2;13853
+901;An Eccentric Millionaire;3;13854
+901;The Eccentric Millionaire's Butler;4;13855
+901;A Prizefighter;5;13856
+901;Street Sweeper / Burglar (uncredited);6;21306
+901;Boxing Fight Referee (uncredited);7;1041513
+901;Mayor / Blind Girl's Downstairs Neighbor (uncredited);8;14438
+901;Bald Party Guest (uncredited);9;1130467
+497;Paul Edgecomb;0;31
+497;John Coffey;1;61981
+497;Brutus "Brutal" Howell;2;52
+497;Jan Edgecomb;3;5149
+497;Warden Hal Moores;4;2505
+497;Melinda Moores;5;1276
+497;Eduard Delacroix;6;2169
+497;'Wild Bill' Wharton;7;6807
+497;Arlen Bitterbuck;8;6804
+497;Percy Wetmore;9;6806
+77338;Philippe;0;33161
+77338;Driss;1;78423
+77338;Magalie;2;219708
+77338;Yvonne;3;19370
+77338;Marcelle;4;2411
+77338;Elisa;5;26107
+77338;Adama;6;581728
+77338;Albert;7;581729
+77338;Chantal;8;333422
+77338;Fatou;9;1411815
+3082;A factory worker;0;13848
+3082;A gamin;1;14027
+3082;Cafe proprietor;2;14438
+3082;Big Bill;3;30194
+3082;Mechanic;4;30195
+3082;Burglar;5;13856
+3082;Gamin's father;6;30196
+3082;President of the Electro Steel Corp.;7;13855
+3082;Cellmate;8;30197
+3082;Minister;9;30198
+85;Indy;0;3
+85;Marion Ravenwood;1;650
+85;Dr. René Belloq;2;652
+85;Major Arnold Toht;3;653
+85;Sallah;4;655
+85;Dr. Marcus Brody;5;656
+85;Colonel Dietrich;6;659
+85;Gobler;7;660
+85;Barranca / Monkey Man;8;661
+85;Col. Musgrove;9;662
+567;L. B. Jefferies;0;854
+567;Lisa Carol Fremont;1;4070
+567;Det. Lt. Thomas J. Doyle;2;7683
+567;Stella;3;7684
+567;Lars Thorwald;4;7685
+567;Miss Lonelyheart;5;7686
+567;Songwriter;6;49906
+567;Miss Torso;7;161738
+567;Woman on Fire Escape;8;121038
+567;Man on Fire Escape;9;93622
+423;Wladyslaw Szpilman;0;3490
+423;Captain Wilm Hosenfeld;1;3491
+423;Father;2;6637
+423;Mother;3;6638
+423;Dorota;4;6639
+423;Henryk;5;6640
+423;Regina;6;6641
+423;Halina;7;6642
+423;Jurek;8;6643
+423;SS Slapping Father;9;6644
+1422;William "Billy" Costigan, Jr.;0;6193
+1422;Staff Sgt. Colin Sullivan;1;1892
+1422;Francis "Frank" Costello;2;514
+1422;Staff Sgt. Sean Dignam;3;13240
+1422;Capt. Oliver Charles Queenan;4;8349
+1422;Arnold "Frenchy" French;5;5538
+1422;Dr. Madolyn Madden;6;21657
+1422;Trooper Brown;7;18471
+1422;Capt. George Ellerby;8;7447
+1422;Cousin Sean;9;18472
+280;The Terminator;0;1100
+280;Sarah Connor;1;2713
+280;John Connor;2;820
+280;T-1000;3;418
+280;Dr. Peter Silberman;4;2716
+280;Dr. Miles Bennett Dyson;5;3977
+280;Tarissa Dyson;6;3978
+280;Enrique Salceda;7;3979
+280;Tim;8;3980
+280;Janelle Voight;9;3981
+105;Marty McFly;0;521
+105;Dr. Emmett Brown;1;1062
+105;Lorraine Baines;2;1063
+105;George McFly;3;1064
+105;Biff Tannen;4;1065
+105;Jennifer Parker;5;1066
+105;Dave McFly;6;1067
+105;Linda McFly;7;1068
+105;Sam Baines;8;1069
+105;Stella Baines;9;1070
+244786;Andrew Neimann;0;996701
+244786;Terence Fletcher;1;18999
+244786;Nicole;2;129104
+244786;Ryan;3;970216
+244786;Travis;4;223012
+244786;Assistant - Sophie;5;159366
+244786;Mr. Neyman;6;781
+244786;Carl Tanner;7;1451540
+244786;Uncle Frank;8;15824
+244786;Mr. Kramer;9;53454
+98;Maximus;0;934
+98;Commodus;1;73421
+98;Lucilla;2;935
+98;Proximo;3;936
+98;Marcus Aurelius;4;194
+98;Gracchus;5;937
+98;Juba;6;938
+98;Falco;7;939
+98;Gaius;8;940
+98;Quintus;9;941
+77;Leonard;0;529
+77;Natalie;1;530
+77;Teddy Gammell;2;532
+77;Burt;3;534
+77;Sammy;4;537
+77;Mrs. Jankis;5;538
+77;Dodd;6;540
+77;Jimmy;7;544
+77;Leonard's Wife;8;536
+77;Waiter;9;535
+1124;Robert Angier;0;6968
+1124;Alfred Borden;1;3894
+1124;Cutter;2;3895
+1124;Olivia Wenscombe;3;1245
+1124;Alley;4;1333
+1124;Jess Borden;5;1580598
+1124;Nikola Tesla;6;7487
+1124;Julia McCullough;7;15555
+1124;Sarah Borden;8;15556
+1124;Judge;9;177765
+8587;Young Simba (voice);0;53283
+8587;Adult Simba (voice);1;4756
+8587;King Mufasa (voice);2;15152
+8587;Scar (voice);3;16940
+8587;Adult Nala (voice);4;20005
+8587;Young Nala (voice);5;56043
+8587;Pumbaa (voice);6;69415
+8587;Timon (voice);7;78729
+8587;Rafiki (voice);8;8294
+8587;Zazu the Hornbill (voice);9;10730
+28;Captain Benjamin L. Willard;0;8349
+28;Colonel Walter E. Kurtz;1;3084
+28;Lieutenant Colonel Bill Kilgore;2;3087
+28;Tyrone 'Clean' Miller;3;2975
+28;Lance B. Johnson;4;8350
+28;Jay 'Chef' Hicks;5;8351
+28;Chief Phillips;6;8354
+28;Colonel Lucas;7;3
+28;Photojournalist;8;2778
+28;General Corman;9;3173
+348;Arthur Dallas;0;4139
+348;Ellen Ripley;1;10205
+348;Joan Lambert;2;5047
+348;Samuel Brett;3;5048
+348;Gilbert Kane;4;5049
+348;Ash;5;65
+348;Dennis Parker;6;5050
+348;Alien;7;5051
+348;Mother (voice);8;5052
+348;Alien (uncredited);9;1077325
+599;Joe Gillis;0;8252
+599;Norma Desmond;1;8629
+599;Max von Mayerling;2;8630
+599;Betty Schaefer;3;8631
+599;Sheldrake;4;8632
+599;Morino;5;8633
+599;Artie Green;6;8634
+599;Himself;7;8635
+599;Himself;8;8636
+599;Herself;9;8637
+935;Group Capt. Lionel Mandrake / President Merkin Muffley / Dr. Strangelove;0;12446
+935;General "Buck" Turgidson;1;862
+935;Brigadier General Jack D. Ripper;2;3088
+935;Colonel Bat Guano;3;4966
+935;Major "King" Kong;4;14253
+935;Botschafter De Sadesky;5;6600
+935;Lt. Lothar Zogg;6;15152
+935;Miss Scott;7;126354
+935;Mr. Staines;8;12485
+935;Lt. Dietrich;9;1332529
+914;Hynkel - Dictator of Tomania / A Jewish Barber;0;13848
+914;Benzini Napaloni;1;14028
+914;Commander Schultz;2;14029
+914;Garbitsch;3;10924
+914;Field Marshal Herring;4;5464
+914;Mr. Agar;6;14035
+914;Hannah;7;14027
+914;Madame Napaloni;7;14030
+914;Mr. Jaeckel;9;14032
+11216;Alfredo;0;24366
+11216;Salvatore 'Toto' Di Vita - Adult;1;20030
+11216;Salvatore 'Toto' Di Vita - Teenager;2;27643
+11216;Salvatore 'Toto' Di Vita - Child;3;68635
+11216;Elena Mendola;4;120152
+11216;Maria Di Vita - Younger;5;70083
+11216;Spaccafico;6;52657
+11216;Anna;7;1014911
+11216;Usher;8;119992
+11216;Maria Di Vita - Older;9;25780
+582;Christa-Maria Sieland;0;678
+582;Gerd Wiesler;1;8196
+582;Georg Dreyman;2;8197
+582;Anton Grubitz;3;8198
+582;Bruno Hempf;4;8199
+582;Paul Hauser;5;8200
+582;Albert Jerska;6;8201
+582;Karl Wallner;7;8202
+582;Häftling 227;8;8203
+582;Udo;9;8204
+12477;Seita (voice);0;72413
+12477;Setsuko (voice);1;72414
+12477;Mother (voice);2;72415
+12477;Aunt (voice);3;72416
+975;Col. Dax;0;2090
+975;Cpl. Philippe Paris;1;14562
+975;Gen. George Broulard;2;14563
+975;Gen. Paul Mireau;3;14564
+975;Lt. Roget/Singing man;4;14565
+975;Maj. Saint-Auban;5;12312
+975;Pvt. Pierre Arnaud;6;592
+975;Pvt. Maurice Ferol;7;2758
+975;German Singer;8;1019259
+975;Proprietor of Cafe;9;117671
+68718;Django;0;134
+68718;Dr. King Schultz;1;27319
+68718;Calvin Candie;2;6193
+68718;Broomhilda von Shaft;3;11703
+68718;Stephen;4;2231
+68718;Billy Crash;5;27740
+68718;Leonide Moguy;6;27770
+68718;Butch Pooch / Ace Speck;7;1736
+68718;Mr. Stonesipher;8;1067187
+68718;Cora;9;1133063
+694;Jack Torrance;0;514
+694;Wendy Torrance;1;10409
+694;Danny Torrance;2;10410
+694;Dick Hallorann;3;7077
+694;Stuart Ullman;4;10411
+694;Delbert Grady;5;694
+694;Lloyd the Bartender;6;592
+694;Doctor;7;10412
+694;Larry Durkin;8;16504
+694;Bill Watson;9;72742
+10681;WALL·E / M-O (voice);0;670
+10681;EVE (voice);1;72754
+10681;Captain (voice);2;60074
+10681;Shelby Forthright, BnL CEO;3;20753
+10681;John (voice);4;7907
+10681;Ship's Computer (voice);5;10205
+10681;Mary (voice);6;11074
+10681;(voice);7;117081
+10681;Axiom Passenger (voice);8;35159
+10681;AUTO (voice);9;72755
+14;Lester Burnham;0;1979
+14;Carolyn Burnham;1;516
+14;Jane Burnham;2;2155
+14;Ricky Fitts;3;8210
+14;Angela Hayes;4;8211
+14;Colonel Frank Fitts;5;2955
+14;Jim Olmeyer;6;2154
+14;Buddy Kane;7;8212
+14;Barbara Fitts;8;19
+14;Jim Berkley;9;8213
+49026;Bruce Wayne / Batman;0;3894
+49026;Alfred Pennyworth;1;3895
+49026;James Gordon;2;64
+49026;Selina Kyle / Catwoman;3;1813
+49026;Bane;4;2524
+49026;Miranda Tate;5;8293
+49026;Blake;6;24045
+49026;Lucius Fox;7;192
+49026;Dr. Jonathan Crane / Scarecrow;8;2037
+49026;Jen;9;36594
+128;Ashitaka (voice);0;622
+128;San (voice);1;20330
+128;Eboshi-gozen (voice);2;20331
+128;Jiko-bô (voice);3;20332
+128;Kouroku (voice);4;20333
+128;Gonza (voice);5;20334
+128;Toki (voice);6;613
+128;Yama-inu (voice);7;20335
+128;Tatari-gami (voice);8;20336
+128;Usi-kai (voice);9;20337
+679;Lieutenant Ellen Ripley;0;10205
+679;Corporal Dwayne Hicks;1;2712
+679;Hicks body double;2;1736
+679;Carter J. Burke;3;781
+679;L. Bishop;4;2714
+679;Rebecca "Newt" Jorden;5;10206
+679;Private W. Hudson;6;2053
+679;Lieutenant S. Gorman;7;10207
+679;Private J. Vasquez;8;3981
+679;Sergeant A. Apone;9;10208
+670;Oh Dae-su;0;64880
+670;Lee Woo-jin;1;10112
+670;Mi-do;2;1299317
+670;Mr. Han;3;1299313
+670;Park Cheol-woong;4;77188
+670;No Joo-Hwan;5;139491
+670;Young Dae-su;6;77183
+670;Lee Soo-ah;8;117504
+670;Yoo Hyung-ja;9;554330
+311;David 'Noodles' Aaronson;0;380
+311;Maximilian 'Max' Bercovicz;1;4512
+311;Deborah Gelly;2;4513
+311;Frankie Minaldi;3;4517
+311;Joe;4;4521
+311;Carol;5;4514
+311;James Conway O'Donnell;6;4515
+311;Police Chief Vincent Aiello;7;1004
+311;Chicken Joe;8;3174
+311;Patrick 'Patsy' Goldberg;9;4516
+37257;Leonard Vole;0;10922
+37257;Christine Vole;1;2896
+37257;Sir Wilfrid Robarts;2;10921
+37257;Miss Plimsoll;3;2926
+37257;Brogan-Moore;4;5182
+37257;Mayhew;5;10924
+37257;Carter;6;2782
+37257;Mr. Myers;7;10925
+37257;Emily Jane French;8;10926
+37257;Janet McKenzie;9;2929
+387;Kapitän-Leutnant Heinrich Lehmann-Willenbrock;0;920
+387;Leutnant Werner;1;5228
+387;Der Leitende/Fritz Grade;2;5229
+387;1WO;3;5230
+387;2WO;4;4924
+387;Kriechbaum/Navigator;5;2349
+387;Johann;6;3970
+387;Ullmann;7;5232
+387;Hinrich;8;5233
+387;Bosun;9;682
+15;Charles Foster Kane;0;40
+15;Jedediah Leland;1;7664
+15;Susan Alexander Kane;2;11029
+15;Jim W. Gettys;3;14518
+15;Walter Parks Thatcher;4;11028
+15;Mary Kane;5;11025
+15;Raymond;6;11033
+15;Emily Norton Kane;7;11026
+15;Herbert Carter;8;14364
+15;Jerry Thompson/Narrator;9;11030
+360814;Mahavir Singh Phogat;0;52763
+360814;Daya Kaur;1;1238200
+360814;Babita Kumari;3;1756851
+360814;Omkar;4;1756890
+360814;;5;128704
+360814;Coach Pramod Kadam;6;587090
+360814;Young Geeta;7;1756862
+360814;Young Babita;8;1756864
+360814;Geeta Phogat;9;1046204
+213;Roger O. Thornhill;0;2638
+213;Eve Kendall;1;2639
+213;Phillip Vandamm;2;2091
+213;The Professor;3;2642
+213;Leonard;4;2641
+213;Valerian;5;2645
+213;Clara Thornhill;6;2640
+213;Maggie - Thornhill's Secretary;7;2745
+213;Vandamm's Sister aka Mrs. Townsend;8;2643
+213;Lester Townsend;9;2644
+426;Det. John 'Scottie' Ferguson;0;854
+426;Madeleine Elster/Judy Barton;1;5729
+426;Marjorie 'Midge' Wood;2;5730
+426;Gavin Elster;3;5731
+426;Coroner;4;5732
+426;Scottie's doctor;5;5737
+426;Manager of McKittrick Hotel;6;5738
+426;Pop Leibel;7;5739
+426;Car owner mistaken for Madeleine;8;5740
+426;Diner at Ernie's;9;121323
+1892;Luke Skywalker;0;2
+1892;Han Solo;1;3
+1892;Princess Leia;2;4
+1892;Lando Calrissian;3;3799
+1892;C-3PO;4;6
+1892;Darth Vader;5;24342
+1892;R2-D2 / Paploo;6;130
+1892;Chewbacca;7;24343
+1892;Yoda (voice);8;7908
+1892;The Emperor;9;27762
+500;Mr. White/Larry Dimmick;0;1037
+500;Mr. Orange/Freddy Newandyke;1;3129
+500;Mr. Blonde/Vic Vega;2;147
+500;Nice Guy Eddie Cabot;3;2969
+500;Mr. Pink;4;884
+500;Joe Cabot;5;6937
+500;Mr. Blue;6;6939
+500;Mr. Brown;7;138
+500;Detective Holdaway;8;6938
+500;Officer Marvin Nash;9;3206
+197;William Wallace;0;2461
+197;Murron MacClannough;1;2462
+197;Princess Isabelle;2;1957
+197;King Edward;3;2463
+197;Robert the Bruce;4;2464
+197;Hamish Campbell;5;2039
+197;Young William Wallace;6;2465
+197;Campbell;7;2467
+197;MacClannough;8;2468
+197;Mother MacClannough;9;2469
+832;Hans Beckert;0;2094
+832;Frau Beckmann;1;12322
+832;Elsie Beckmann;2;12323
+832;Inspector Karl Lohmann;3;12324
+832;Inspector Groeber;4;79
+832;Schränker;5;12325
+832;Franz, der Dieb;6;12326
+832;Falschspieler;7;28068
+832;Taschendieb;8;219738
+832;Bauernfänger;9;28066
+641;Sara Goldfarb;0;9560
+641;Harry Goldfarb;1;7499
+641;Marion Silver;2;6161
+641;Tyrone C. Love;3;9562
+641;Tappy Tibbons;4;4443
+641;Ada;5;9565
+641;Rae;6;14548
+641;Mrs. Pearlman;7;171117
+641;Mrs. Scarlini;8;11484
+641;Mr. Rabinowitz;9;1173
+194;Amélie Poulain;0;2405
+194;Nino Quincampoix;1;2406
+194;Raphaël Poulain;2;2407
+194;Lucien;3;2408
+194;Suzanne;4;1654
+194;Georgette;5;2412
+194;Joseph;6;2413
+194;Hipolito;7;2414
+194;Madeleine Wallace;8;2415
+194;Amandine Poulain;9;2409
+7508;Ishaan Nandkishore Awasthi;0;52764
+7508;Ram Shankar Nikumbh;1;52763
+7508;Maya Awasthi;2;52766
+7508;Nandkishore Awasthi;3;52768
+7508;Rajan Damodaran;4;52771
+7508;Yohaan Awasthi;5;52770
+7508;Jabeen;6;897996
+7508;Sen Sir;7;1519186
+7508;Tiwari Sir;8;1661765
+7508;Lalita Lajmi;9;1661766
+185;Alexander  DeLarge;0;56890
+185;Mr. Alexander;1;2264
+185;Mrs. Alexander;2;2265
+185;Chief Guard;3;2267
+185;Dim;4;2268
+185;Georgie;5;2270
+185;Pete;6;2271
+185;Dr. Brodsky;7;2272
+185;Tramp;8;2273
+185;Catlady;9;2274
+947;T.E. Lawrence;0;11390
+947;Prince Feisal;1;12248
+947;Auda abu Tayi;2;5401
+947;General Lord Edmund Allenby;3;10018
+947;Sherif Ali;4;5004
+947;Mr. Dryden;5;4113
+947;Colonel Brighton;6;14371
+947;Turkish Bey;7;12515
+947;Jackson Bentley;8;11128
+947;General Sir Archibald Murray;9;14372
+103;Travis Bickle;0;380
+103;Betsy;1;1036
+103;'Sport' Matthew;2;1037
+103;Iris Steensma;3;1038
+103;Wizard;4;1039
+103;Senator Charles Palantine;5;1040
+103;Tom;6;13
+103;Concession Girl;7;1041
+103;Policeman al rally;8;1043
+103;Man in cab;9;1032
+996;Walter Neff;0;4091
+996;Phyllis Dietrichson;1;14974
+996;Barton Keyes;2;13566
+996;Mr. Jackson;3;14975
+996;Edward S. Norton, Jr.;4;14976
+996;Lola Dietrichson;5;14977
+996;Mr. Dietrichson;6;14978
+996;Sam Garlopis;7;14979
+996;Nino Zachetti;8;109844
+996;Bit Part (uncredited);9;94169
+38;Joel Barish;0;206
+38;Clementine Kruczynski;1;204
+38;Mary Svevo;2;205
+38;Stan Fink;3;103
+38;Patrick;4;109
+38;Dr. Howard Mierzwiak;5;207
+38;Carrie Eakin;6;209
+38;Rob Eakin;7;212
+38;Hollis Mierzwiak;8;77013
+38;Frank;9;130840
+279;Antonio Salieri;0;1164
+279;Wolfgang Amadeus Mozart;1;3999
+279;Constanze Mozart;2;4000
+279;Leopold Mozart;3;4002
+279;Emanuel Schikaneder;4;4001
+279;Katerina Cavalieri;5;4003
+279;Emperor Joseph II;6;4004
+279;Mrs. Weber;7;4005
+279;Lorl;8;38024
+279;Count Arco;9;15833
+595;Atticus Finch;0;8487
+595;Tom Robinson;1;2112
+595;Bob Ewell;2;8498
+595;Jean Louise 'Scout' Finch;3;8488
+595;Jeremy 'Jem' Finch;4;8489
+595;Charles Baker 'Dill' Harris;5;8490
+595;Calpurnia;6;8494
+595;Mayella Violet Ewell (as Collin Wilcox);7;8497
+595;Sheriff Heck Tate;8;6838
+595;Maudie Atkinson;9;8492
+10193;Woody (voice);0;31
+10193;Buzz Lightyear (voice);1;12898
+10193;Lotso (voice);2;13726
+10193;Jessie the Yodeling Cowgirl (voice);3;3234
+10193;Ken (voice);4;2232
+10193;Stretch the Octopus (voice);5;2395
+10193;Purple-haired doll (voice);6;5149
+10193;Rex (voice);7;12900
+10193;Hamm (voice);8;7907
+10193;Mr. Potato Head (voice);9;7167
+600;Pvt. Joker;0;8654
+600;Animal Mother;1;2059
+600;Pvt. Pyle;2;7132
+600;Gny. Sgt. Hartman;3;8655
+600;Eightball;4;8656
+600;Pvt. Cowboy;5;3229
+600;Rafterman;6;8657
+600;Lt. Touchdown;7;8658
+600;Lt. Lockhart;8;8659
+600;Poge Colonel;9;8664
+62;Dr. Dave Bowman;0;245
+62;Dr. Frank Poole;1;246
+62;Dr. Heywood R. Floyd;2;247
+62;HAL 9000 (voice);3;253
+62;Moon-Watcher;4;248
+62;Dr. Andrei Smyslov;5;249
+62;Elena;6;250
+62;Dr. Ralph Halvorsen;7;251
+62;Dr. Bill Michaels;8;252
+62;Mission Controller (voice);9;102573
+872;Don Lockwood;0;13294
+872;Cosmo Brown;1;13295
+872;Kathy Selden;2;8857
+872;Lina Lamont;3;13296
+872;R.F. Simpson;4;13297
+872;Dancer;5;41226
+872;Roscoe Dexter;6;13298
+872;Zelda Zanders;7;13299
+872;Hairdresser (uncredited);8;29814
+872;Audience Member (uncredited);9;121323
+372058;Tachibana Taki (voice);0;225730
+372058;Miyamizu Mitsuha (voice);1;1369100
+372058;Miyamizu Hitoha (voice);3;91288
+372058;Teshigawara Katsuhiko (voice);4;1668610
+372058;Natori Sayaka (voice);5;936275
+372058;Fujii Tsukasa (voice);6;1210634
+372058;Takagi Masahiro (voice);7;1324666
+372058;Miyamizu Yotsuba (voice);8;1344919
+372058;Taki's father (voice);9;89968
+9277;Henry Gondorff;0;3636
+9277;Johnny Hooker;1;4135
+9277;Doyle Lonnegan;2;8606
+9277;Lt. Wm. Snyder;3;1466
+9277;J.J. Singleton;4;4093
+9277;Billie;5;39015
+9277;Kid Twist;6;14833
+9277;Eddie Niles;7;171056
+9277;F.B.I. Agent Polk;8;37712
+9277;Erie Kid;9;1273
+862;Woody (voice);0;31
+862;Buzz Lightyear (voice);1;12898
+862;Mr. Potato Head (voice);2;7167
+862;Slinky Dog (voice);3;12899
+862;Rex (voice);4;12900
+862;Hamm (voice);5;7907
+862;Bo Peep (voice);6;8873
+862;Andy (voice);7;1116442
+862;Sid (voice);8;12901
+862;Mrs. Davis (voice);9;12133
+5156;Antonio Ricci;0;42416
+5156;Bruno Ricci;1;42417
+5156;Maria Ricci;2;42419
+5156;Baiocco;3;944148
+5156;The Thief;4;975006
+5156;The Beggar;5;42423
+5156;The Charitable Lady;6;974973
+5156;A Beggar;7;42421
+5156;Secretary of the Charity Organization;8;1077249
+5156;Amateur Actor;9;950960
+10098;A Tramp;0;13848
+10098;The Kid;1;19426
+10098;Mother;2;21301
+10098;Man in shelter;3;21306
+10098;Bride;4;63380
+10098;The Man;5;63378
+10098;Night shelter keeper;6;14438
+10098;Bride's mother;7;10531
+10098;Slum nurse;8;63381
+10098;His Assistant (uncredited);9;63382
+16869;Lieutenant Aldo "The Apache" Raine;0;287
+16869;Shosanna Dreyfus / Emmanuelle Mimieux;1;19119
+16869;SS Colonel Hans Landa;2;27319
+16869;Sergeant Donny "The Bear Jew" Donowitz;3;16847
+16869;Lieutenant Archie Hicox;4;17288
+16869;Bridget von Hammersmark;5;9824
+16869;Private First Class Fredrick Zoller;6;3872
+16869;Sergeant Hugo Stiglitz;7;1844
+16869;Corporal Wilhelm Wicki;8;32823
+16869;Marcel;9;51636
+20453;Rancho;0;52763
+20453;Pia;1;37233
+20453;Farhan;2;85519
+20453;Raju;3;53674
+20453;Viru Sahastrabudhhe;4;35779
+20453;Mona;5;99711
+20453;Chatur Ramalingam;6;169201
+20453;Ranchoddas Shamaldas Chanchad;7;86086
+20453;Mr. Qureshi;8;123317
+20453;Mrs. Rastogi;9;128734
+107;Turkish;0;976
+107;Mickey O'Neil;1;287
+107;Bullet Tooth Tony;2;980
+107;Abraham 'Cousin Avi' Denovitz;3;1117
+107;Franky Four Fingers;4;1121
+107;Tommy;5;1115
+107;Brick Top Polford;6;1116
+107;Boris 'The Blade' Yurinov;7;1118
+107;Vincent;8;1119
+107;Sol;9;1120
+762;King Arthur / Voice of God / Middle Head / Hiccoughing Guard;0;10722
+762;Second Swallow-Savvy Guard / The Black Knight / Peasant 3 / Sir Lancelot the Brave / Taunting French Guard / Tim the Enchanter;1;8930
+762;Patsy / Green Knight / Old Man from Scene 24 (Bridgekeeper) / Sir Bors / Animator / Gorrilla Hand;2;280
+762;Dead Collector / Peasant 1 / Sir Robin the Not-Quite-So-Brave-as-Sir Launcelot / First Swamp Castle Guard / Concorde / Roger the Shrubber / Brother Maynard;3;10713
+762;Dennis's Mother / Sir Bedevere / Left Head / Prince Herbert / Cartoon Scribe (voice);4;10707
+762;First Swallow-Savvy Guard / Dennis / Peasant 2 / Right Head / Sir Galahad the Pure / Narrator / King of Swamp Castle / Brother Maynard's Brother / Leader of The Knights Who Say NI!;5;383
+762;The Witch;6;149979
+762;Zoot / Dingo;7;10733
+762;First Monk / Singing Minstrel / Page Crushed by the Rabbit / Peasant #4;8;70624
+762;Old Crone;9;18760
+2118;Det. Sgt. Jack Vincennes;0;1979
+2118;Det. Lt. Edmund Jennings " Ed " Exley;1;529
+2118;Sid Hudgens;2;518
+2118;Cap. Dudley Liam Smith;3;2505
+2118;Lynn Bracken;4;326
+2118;Bud White;5;934
+2118;Pierce Patchett;6;11064
+2118;D.A. Ellis Loew;7;12122
+2118;'Badge of Honor' Star Brett Chase;8;42206
+2118;Mickey Cohen;9;925
+938;Monco;0;190
+938;Col. Douglas Mortimer;1;4078
+938;El Indio;2;14276
+938;Nino, Member of Indio's Gang;3;16318
+938;Wild;4;14277
+938;Groggy;5;5814
+938;Cuchillio;6;49895
+938;Yuri;7;4661
+938;Manuel, Member of Indio's Gang;8;1139165
+938;Sancho Perez;9;14280
+103663;Lucas;0;1019
+103663;Nadja;1;92416
+103663;Theo;2;4457
+103663;Agnes;3;6122
+103663;Bruun;4;588175
+103663;Grethe;5;47156
+103663;Godsejer / Advokat;6;1034508
+103663;Klara;7;1112385
+103663;Marcus;8;1188827
+103663;;9;4464
+489;Sean Maguire;0;2157
+489;Will Hunting;1;1892
+489;Chuckie Sullivan;2;880
+489;Prof. Gerald Lambeau;3;1640
+489;Skylar;4;6613
+489;Morgan O'Mally;5;1893
+489;Billy McBride;6;6614
+489;Tom;7;6615
+489;Krystyn;8;6616
+489;Cathy;9;6617
+111;Tony Montana;0;1158
+111;Manny Ribera;1;1159
+111;Elvira Hancock;2;1160
+111;Gina Montana;3;1161
+111;Frank Lopez;4;1162
+111;Mama Montana;5;1163
+111;Omar Suarez;6;1164
+111;Alejandro Sosa;7;1165
+111;Mel Bernstein;8;1166
+111;Chi Chi;9;1167
+13393;Hüseyin;0;93389
+13393;Sadik;1;93390
+13393;Hanife;2;115012
+13393;Birgül;3;66981
+13393;Aysun;4;142855
+13393;Nuran;5;145394
+284;C.C. Baxter;0;3151
+284;Fran Kubelik;1;4090
+284;Jeff D. Sheldrake;2;4091
+284;Joe Dobisch;3;4093
+284;Dr. Dreyfuss;4;4094
+284;Mrs. Mildred Dreyfuss;5;4096
+284;Mrs. Margie MacDougall;6;4097
+284;Miss Olsen;7;4098
+284;Sylvia;8;3161
+284;Karl Matuschka;9;4099
+548;Tajômaru;0;7450
+548;Masako;1;7451
+548;Takehiro;2;7452
+548;Woodcutter;3;7453
+548;Priest;4;7454
+548;Commoner;5;7455
+548;Medium;6;7456
+548;Policeman;7;7457
+60243;Simin;0;240240
+60243;Somayyeh;1;240242
+60243;Miss Ghahraii;2;240243
+60243;Nader;3;559566
+60243;Razieh;4;559567
+60243;Hojjat;5;229933
+60243;Nader's Father;6;559568
+60243;Simin's Mother;7;559569
+60243;Soldier;8;1141703
+60243;Mrs. Kalaani;9;1029121
+19;Maria;0;75
+19;Johann 'Joh' Fredersen;1;73
+19;Freder Fredersen;2;74
+19;C.A. Rotwang, the inventor;3;77
+19;Der Schmale;4;78
+19;Josaphat - Joseph;5;79
+19;No. 11811 - Georgy;6;80
+19;Grot;7;81
+19;Jan;8;82
+19;Arbeiterfrau;9;2350
+89;Indiana Jones;0;3
+89;Professor Henry Jones;1;738
+89;Dr. Marcus Brody;2;656
+89;Dr. Elsa Schneider;3;739
+89;Sallah;4;655
+89;Walter Donovan;5;740
+89;Indiana Jones (young);6;741
+89;Vogel;7;742
+89;Kazim;8;743
+89;Grail Knight;9;744
+705;Margo Channing;0;3380
+705;Eve Harrington;1;10606
+705;Addison DeWitt;2;3361
+705;Karen Richards;3;10607
+705;Bill Sampson;4;10608
+705;Lloyd Richards;5;10609
+705;Max Fabian;6;10610
+705;Birdie Coonan;7;7684
+705;Miss Caswell;8;3149
+705;Phoebe;9;10611
+11878;Sanjuro Kuwabatake / The Samurai;0;7450
+11878;Unosuke, gunfighter;1;70131
+11878;Nui;2;70811
+11878;Orin;3;33761
+11878;Inokichi;4;7457
+11878;Tokuemon, sake brewer;5;7453
+11878;Seibê - brothel operator;6;83202
+11878;Yoichiro;7;33763
+11878;Gonji, tavern keeper;8;106165
+11878;Tazaemon;9;96552
+272;Bruce Wayne / Batman;0;3894
+272;Alfred Pennyworth;1;3895
+272;Henri Ducard;2;3896
+272;Rachel Dawes;3;3897
+272;Jim Gordon;4;64
+272;Dr. Jonathan Crane / Scarecrow;5;2037
+272;Carmine Falcone;6;207
+272;Lucius Fox;7;192
+272;Earle;8;585
+272;Ra's Al Ghul;9;3899
+14160;Carl Fredricksen (voice);0;68812
+14160;Charles Muntz (voice);1;290
+14160;Russell (voice);2;80676
+14160;Dug / Alpha (voice);3;10
+14160;Beta (voice);4;18792
+14160;Gamma (voice);5;7960
+14160;Construction Foreman Tom (voice);6;7907
+14160;Newsreel Announcer (voice);7;84490
+14160;Young Ellie (voice);8;84491
+14160;Young Carl (voice);9;84492
+239;Sugar Kane Kowalczyk;0;3149
+239;Joe (Josephine);1;3150
+239;Jerry (Daphne);2;3151
+239;Spats Colombo;3;3152
+239;Det. Mulligan;4;3155
+239;Osgood Fielding III;5;3156
+239;Little Bonaparte;6;3160
+239;Sweet Sue;7;3161
+239;Sig Poliakoff;8;1700403
+239;Toothpick Charlie;9;3163
+3090;Fred C. Dobbs;0;4110
+3090;Howard;1;19020
+3090;Bob Curtin;2;14517
+3090;James Cody;3;30303
+3090;Pat McCormick;4;14451
+3090;Gold Hat;5;30304
+3090;El Presidente;6;30305
+3090;El Jefe;7;30306
+3090;Pablo;8;30307
+3090;Pancho;9;30308
+33;Bill Munny;0;190
+33;Little Bill Daggett;1;193
+33;Ned Logan;2;192
+33;English Bob;3;194
+33;The Schofield Kid;4;3710
+33;Delilah Fitzgerald;5;3711
+33;W.W. Beauchamp;6;3712
+33;Strawberry Alice;7;3713
+33;Quick Mike;8;3714
+33;Davey Bunting;9;2843
+613;Adolf Hitler;0;2310
+613;Traudl Junge;1;5644
+613;Magda Goebbels;2;680
+613;Joseph Goebbels;3;8796
+613;Eva Braun;4;8797
+613;Albert Speer;5;1086
+613;Prof. Dr. Ernst-Günter Schenck;6;7803
+613;SS-Gruppenführer Hermann Fegelein;8;3491
+613;Reichsführer SS Heinrich Himmler;9;8799
+1578;Jake La Motta;0;380
+1578;Joey La Motta;1;4517
+1578;Vickie Thailer;2;14702
+1578;Salvy Batts;3;7164
+1578;Tommy Como;4;17651
+1578;Lenore;5;17652
+1578;Mario;6;17653
+1578;Man at Webster Hall Table (uncredited);7;1241
+1578;Patsy;8;4692
+1578;Charlie - Man with Como;9;1006721
+562;John McClane;0;62
+562;Hans Gruber;1;4566
+562;Karl;2;7674
+562;Holly Gennero McClane;3;7673
+562;Sgt. Al Powell;4;7672
+562;Deputy Police Chief Dwayne T. Robinson;5;7675
+562;Argyle;6;7677
+562;Richard Thornburg;7;7676
+562;Theo;8;51581
+562;Harry Ellis;9;7678
+1092;Holly Martins;0;7664
+1092;Anna Schmidt;1;15385
+1092;Harry Lime;2;40
+1092;Major Calloway;3;12726
+1092;Sergeant Paine;4;9874
+1092;Porter;5;14120
+1092;Popescu;6;15386
+1092;Dr. Winkel;7;13376
+1092;'Baron' Kurtz;8;29177
+1092;Crabbin;9;15387
+21334;Ali's Father;0;87388
+21334;Ali;1;87389
+21334;Zahra;2;110696
+949;Lt. Vincent Hanna;0;1158
+949;Neil McCauley;1;380
+949;Chris Shiherlis;2;5576
+949;Nate;3;10127
+949;Michael Cheritto;4;3197
+949;Justine Hanna;5;6200
+949;Eady;6;15851
+949;Charlene Shiherlis;7;15852
+949;Sergeant Drucker;8;34
+949;Lauren Gustafson;9;524
+5925;Captain Hilts;0;13565
+5925;Flight Lt. Hendley;1;16896
+5925;Roger Bartlett;2;4786
+5925;Group Capt. Ramsey "The SBO";3;12250
+5925;Flight Lt. Danny Velinski;4;4960
+5925;Flight Lt. Colin Blythe "The Forger";5;9221
+5925;Flying Officer Louis Sedgwick "The Manufacturer";6;5563
+5925;Kommandant von Luger;7;23696
+5925;Lt. Cmdr. Eric Ashley-Pitt "Dispersal";8;24813
+5925;Flight Lt. Sandy MacDonald "Intelligence";9;41998
+829;Jake Gittes;0;514
+829;Evelyn Cross Mulwray;1;6450
+829;Noah Cross;2;6593
+829;Lieutenant Lou Escobar;3;12295
+829;Russ Yelburton;4;12296
+829;Man with Knife;5;3556
+829;Ida Sessions;6;6587
+829;Claude Mulvihill;7;12298
+829;Detective Loach;8;12299
+829;Evelyn's Butler;9;20904
+3782;Kanji Watanabe;0;7453
+3782;Sakai;1;34375
+3782;Mitsuo, son of Kanji;2;34376
+3782;Ohara;3;34377
+3782;Toyo;4;34378
+3782;Kimura;5;145251
+3782;Noguchi;6;7454
+3782;Subordinate Clerk Saito;7;980381
+3782;Sub-Section Chief Ono;8;96552
+3782;Kiichi Watanabe, Kanji's Brother;9;1121643
+1417;Ofelia;0;16970
+1417;Mercedes;1;16971
+1417;Capitán Vidal;2;16972
+1417;Fauno / Pale Man;3;17005
+1417;Carmen;4;17006
+1417;Dr. Ferreiro;5;3813
+1417;Pedro;6;17007
+1417;Garcés;7;592709
+1417;Serrano;8;25219
+1417;El Tarta;9;31422
+339403;Baby;0;1159982
+339403;Deborah;1;1016168
+339403;Doc;2;1979
+339403;Bats;3;134
+339403;Buddy;4;65717
+339403;Darling;5;1222992
+339403;Joseph;6;1635143
+339403;Griff;7;19498
+339403;Eddie;8;1237
+339403;J.D.;9;124495
+8392;Satsuki (voice);0;55662
+8392;Totoro (voice);1;55663
+8392;Mei (voice);2;55664
+8392;Tatsuo Kusakabe (voice);3;55665
+8392;Yasuko Kusakabe (voice);4;613
+8392;Kanta no obâsan (voz);5;55666
+8392;Kanta no otôsan (voice);8;553286
+150540;Joy (voice);0;56322
+150540;Sadness (voice);1;169200
+150540;Bing Bong (voice);2;21125
+150540;Fear (voice);3;19278
+150540;Anger (voice);4;59258
+150540;Disgust (voice);5;125167
+150540;Riley (voice);6;1371894
+150540;Mom (voice);7;2882
+150540;Dad (voice);8;6677
+150540;Forgetter Paula (voice);9;196502
+11645;Taro Takatora Ichimonji;0;70132
+11645;Jiro Masatora Ichimonji;1;70133
+11645;Saburo Naotora Ichimonji;2;70134
+11645;Lord Hidetora Ichimonji;3;70131
+11645;Lady Kaede;5;72607
+11645;Lady Sue;6;237362
+11645;Shuri Kurogane;7;96637
+11645;Kyoami;8;17538
+11645;Tango Hirayama;9;19049
+962;The Lone Prospector;0;13848
+962;Georgia;1;14434
+962;Big Jim McKay;2;14435
+962;Black Larsen;3;14437
+962;Hank Curtis;4;14438
+962;Jack Cameron;5;14439
+962;Man in Dance Hall (uncredited);6;1269183
+962;Man in Dance Hall (uncredited);7;1152705
+962;Man in Dance Hall (uncredited);8;1338708
+962;Man in Dance Hall (uncredited);9;1362976
+654;Terry Malloy;0;3084
+654;Father Barry;1;9857
+654;Johnny Friendly;2;5248
+654;Charlie Malloy;3;522
+654;Timothy Dugan;4;9862
+654;Glover;5;9865
+654;Big Mac;6;9866
+654;Truck;7;589670
+654;Tillio;8;977544
+654;'Pop' Doyle;9;89837
+25376;Benjamín Espósito;0;69310
+25376;Irene Menéndez Hastings;1;93647
+25376;Ricardo Morales;2;93648
+25376;Isidoro Gómez;3;93649
+25376;Pablo Sandoval;4;93650
+25376;Liliana Coloto;5;968350
+25376;Chica Piropo;6;968351
+25376;Pinche Mariano;7;968353
+25376;Juez Fortuna Lacalle;8;1016570
+25376;Ordóñez;9;1331799
+264644;Joy 'Ma' Newsome;0;60073
+264644;Jack Newsome;1;1277188
+264644;Nancy Newsome;2;11148
+264644;Old Nick;3;144160
+264644;Robert Newsome;4;3905
+264644;Leo;5;64712
+264644;Officer Parker;6;1232769
+264644;Officer Grabowski;7;86237
+264644;Dr. Mittal;8;59214
+264644;Talk Show Host;9;19957
+826;Cmdr. Shears;0;8252
+826;Col. Nicholson;1;12248
+826;Maj. Warden;2;10018
+826;Col. Saito;3;12249
+826;Maj. Clipton;4;12250
+826;Lt. Joyce;5;12251
+826;Col. Green;6;10029
+826;Capt. Reeves;7;12252
+826;Major Hughes;8;1075445
+826;Grogan;9;33220
+78;Rick Deckard;0;3
+78;Roy Batty;1;585
+78;Rachael;2;586
+78;Gaff;3;587
+78;Eldon Tyrell;4;592
+78;Pris;5;589
+78;J.F. Sebastian;6;590
+78;Leon Kowalski;7;591
+78;Bryant;8;588
+78;Zhora;9;593
+4935;Hauru;0;12670
+4935;Arechi no Majo;1;20338
+4935;Karushifâ;2;19592
+4935;Koshô;3;40449
+4935;Kakashi no Kabu;4;40450
+4935;Kokuô;5;40451
+4935;Hin;6;40452
+4935;Sariman;7;40453
+313369;Sebastian Wilder;0;30614
+313369;Mia Dolan;1;54693
+313369;Keith;2;113461
+313369;Laura Wilder;3;14892
+313369;Bill;4;18999
+313369;Greg Earnest;5;168877
+313369;Tracy;6;1486488
+313369;Alexis;7;1427680
+313369;Caitlin;8;1457238
+313369;David;9;16857
+46738;Nawal;0;77498
+46738;Jeanne Marwan;1;84573
+46738;Simon Marwan;2;88592
+46738;le notaire Lebel;3;38526
+46738;Notaire Maddad;4;196737
+46738;Abou Tarek/Nihad;5;970213
+46738;Professor Niv Cohen;6;241930
+46738;Médecin a l'urgence;7;592718
+46738;Bassem Marwan;8;1150158
+46738;Professeur Saïd Haidar;9;218899
+821;Chief Judge Dan Haywood;0;12147
+821;Dr. Ernst Janning;1;13784
+821;Col. Tad Lawson;2;12149
+821;Mrs. Bertholt;3;2896
+821;Hans Rolfe;4;12150
+821;Mrs. Irene Hoffman Wallner;5;9066
+821;Rudolph Petersen;6;12151
+821;Sen. Burkette;7;2651
+821;Emil Hahn;8;12152
+821;Werner Lampe;9;12153
+490;Antonius Block;0;2201
+490;Jöns;1;6649
+490;Death;2;6656
+490;Jof;3;6658
+490;Mia;4;6657
+490;Lisa, Plog's wife;5;6659
+490;Witch;6;6660
+490;Karin, Block's wife;7;6661
+490;Mute girl;8;6662
+490;Raval;9;6663
+100;Tom;0;973
+100;Soap;1;974
+100;Eddie;2;975
+100;Bacon;3;976
+100;Big Chris;4;980
+100;JD;5;982
+100;Winston;6;978
+100;J;7;984
+100;Barry the Baptist;8;987
+100;'Hatchet' Harry Lonsdale;9;989
+3083;Jefferson Smith;0;854
+3083;Clarissa Saunders;1;30210
+3083;Sen. Joseph Harrison Paine;2;4113
+3083;Jim Taylor;3;30211
+3083;Gov. Hubert 'Happy' Hopper;4;30002
+3083;Diz Moore;5;3383
+3083;Chick McGann;6;8728
+3083;Ma Smith;7;17755
+3083;Narrator;8;1686569
+3083;President of the Senate;9;30212
+524;Sam 'Ace' Rothstein;0;380
+524;Ginger McKenna;1;4430
+524;Nicky Santoro;2;4517
+524;Lester Diamond;3;4512
+524;Billy Sherbert;4;7167
+524;Andy Stone;5;7169
+524;Phillip Green;6;7166
+524;Remo Gaggi;7;7165
+524;Pat Webb;8;8262
+524;Sénateur;9;166789
+453;John Nash;0;934
+453;William Parcher;0;228
+453;Alicia Nash;1;6161
+453;Dr. Rosen;2;290
+453;Charles;3;6162
+453;Sol;4;6163
+453;Hansen;5;6164
+453;Bender;6;6165
+453;Ainsley;7;6166
+453;Helinger;8;6167
+263115;Logan / X-24;0;6968
+263115;Charles;1;2387
+263115;Laura;2;1464650
+263115;Pierce;3;467645
+263115;Caliban;4;39189
+263115;Gabriela;5;65421
+263115;Dr. Rice;6;20766
+263115;Will Munson;7;23628
+263115;Kathryn Munson;8;21215
+263115;Nate Munson;9;1788166
+1955;Dr. Frederick Treves;0;4173
+1955;John Merrick;1;5049
+1955;Mrs. Kendal;2;10774
+1955;Carr Gomm;3;11857
+1955;Mothershead;4;13325
+1955;Bytes;5;12517
+1955;Night Porter;6;1821
+1955;Dr. Fox;7;11282
+1955;Merrick's Mother;8;3930
+1955;Plumed Dwarf;9;130
+895;Andrej Rubljow;0;8475
+895;Kirill;1;13706
+895;Danil Chorny;2;1190992
+895;Der Narr;3;1191198
+895;Theophanes;4;13707
+895;Durochka;6;13708
+895;Boriska;7;13709
+895;Großer Prinz/Sein Bruder;8;13710
+614;Professor Isak Borg;0;8741
+614;Sara;1;6657
+614;Marianne Borg;2;8742
+614;Evald Borg;3;6649
+614;Agda;4;8743
+614;Sten Alman;5;8744
+614;Henrik Åkerman;6;2201
+614;Karins Liebhaber;7;6665
+614;Eva Åkerman;8;8745
+614;Mrs. Alman;9;589387
+752;Evey Hammond;0;524
+752;V / William Rookwood;1;1331
+752;Chief Inspector Eric Finch;2;9029
+752;Gordon Deitrich;3;11275
+752;Chancellor Adam Sutler;4;5049
+752;Creedy;5;11276
+752;Valerie Page;6;11277
+752;Dominic;7;11278
+752;Lewis Prothero;8;11279
+752;Dascomb;9;11280
+961;Johnny Gray;0;8635
+961;Annabelle Lee;1;14417
+961;Captain Anderson;2;14419
+961;General Thatcher;3;14420
+961;A Southern General;4;14421
+961;Annabelle's Father (as Charles Smith);5;14422
+961;Annabelle's Brother;6;14424
+961;Union General;7;10530
+961;Union General;8;14425
+961;Union General;9;14426
+106646;Jordan Belfort;0;6193
+106646;Donnie Azoff;1;21007
+106646;Naomi Lapaglia;2;234352
+106646;Agent Patrick Denham;3;3497
+106646;Max Belfort;4;3026
+106646;Mark Hanna;5;10297
+106646;Brad Bodnick;6;19498
+106646;Chester Ming;7;41561
+106646;Nicky Koskoff ('Rugrat');8;1211946
+106646;Robbie Feinberg ('Pinhead');9;1332746
+59440;Tom Conlon;0;2524
+59440;Tess Conlon;1;41421
+59440;Paddy Conlon;2;1733
+59440;Brendan Conlon;3;33192
+59440;Frank Campana;4;81685
+59440;Principal Zito;5;14721
+59440;Colt Boyd;6;1018947
+59440;Himself;7;78320
+59440;Himself;8;972459
+59440;Mark Bradford;9;51683
+26900;Baran;0;77349
+26900;cumali;1;109085
+26900;Sedat;2;106787
+26900;Emel;3;1258891
+26900;Berfo;4;1136675
+26900;Andref Miskin;5;1383768
+627;Mark Renton;0;3061
+627;Spud;1;1125
+627;Sick Boy;2;9012
+627;Begbie;3;18023
+627;Diane;4;9015
+627;Tommy;5;9013
+627;Swanney;6;3064
+627;Mr. Renton;7;2467
+627;Mrs. Renton;8;9016
+627;Allison;9;1837
+631;The Man (Anses);0;9087
+631;The Wife (Indre);1;9088
+631;The Woman from the City;2;9089
+631;The Maid;3;9090
+631;The Photographer;4;9091
+631;The Barber;5;9092
+631;The Manicure Gir;6;9093
+631;The Obtrusive Gentleman;7;9094
+631;The Obliging Gentleman;8;9095
+631;Manager of Hair Salon;9;9096
+521;Tony Wendice;0;7124
+521;Margot Mary Wendice;1;4070
+521;Mark Halliday;2;7125
+521;Chief Insp. Hubbard;3;5182
+521;Charles Alexander Swann aka Captain Lesgate;4;7682
+521;Storyteller;5;1217924
+521;Detective Pearson;6;73980
+521;Detective Williams;7;933880
+521;Woman exiting airplane;8;121323
+521;Police Sergeant O'Brien;9;87518
+13223;Walt Kowalski;0;190
+13223;Father Janovich;1;74308
+13223;Tao Vang Lor;2;74309
+13223;Sue Lor;3;74312
+13223;Mitch Kowalski;4;10138
+13223;Karen Kowalski;5;16502
+13223;Ashley Kowalski;6;74303
+13223;Steve Kowalski;7;1990
+13223;Barber Martin;8;3911
+13223;Tim Kennedy;9;1232496
+11778;Michael Vronsky;0;380
+11778;Stan;1;3096
+11778;Steven Pushkov;2;47879
+11778;Nikanor "Nick" Chevotarevich;3;4690
+11778;Linda;4;5064
+11778;John;5;10477
+11778;Angela;6;80135
+11778;Julien;7;133859
+11778;Bridesmaid;8;87007
+11778;Linda's Father;9;1222806
+770;Scarlett O'Hara;0;10538
+770;Rhett Butler;1;11492
+770;Melanie Hamilton;2;8725
+770;Gerald O'Hara;3;3383
+770;Ashley Wilkes;4;11493
+770;Ellen O'Hara;5;7642
+770;Suellen O'Hara;6;11494
+770;Carreen O'Hara;7;11495
+770;Stuart Tarleton;8;11496
+770;Brent Tarleton;9;11497
+324786;Desmond T. Doss;0;37625
+324786;Captain Glover;1;65731
+324786;Sergeant Howell;2;4937
+324786;Smitty Ryker;3;972356
+324786;Dorothy Schuttle;4;20374
+324786;Tom Doss;5;1331
+324786;Bertha Doss;6;3052
+324786;Lt. Manville;7;1213279
+324786;Colonel Stelzer;8;12206
+324786;Milt 'Hollywood' Zane;9;61907
+275;Jerry Lundegaard;0;3905
+275;Marge Gunderson;1;3910
+275;Carl Showalter;2;884
+275;Gaear Grimsrud;3;53
+275;Jean Lundegaard;4;3906
+275;Wade Gustafson;5;3907
+275;Scotty Lundegaard;6;3908
+275;Irate Customer;7;3909
+275;Norm Gunderson;8;3911
+275;Irate Customer's Wife;9;3912
+115;The Dude;0;1229
+115;Walter Sobchak;1;1230
+115;Maude Lebowski;2;1231
+115;Theodore Donald "Donny" Kerabatsos;3;884
+115;Jeffrey Lebowski - The Big Lebowski;4;1232
+115;Jesus Quintana;5;1241
+115;Bunny Lebowski;6;1234
+115;Brandt;7;1233
+115;The Stranger;8;16431
+115;Jackie Treehorn;9;856
+745;Malcolm Crowe;0;62
+745;Lynn Sear;1;3051
+745;Anna Crowe;2;11616
+745;Cole Sear;3;9640
+745;Vincent Grey;4;2680
+745;Sean;5;10694
+745;Kyra Collins;6;11617
+745;Tommy Tammisimo;7;4940
+745;Stanley Cunningham;8;11621
+745;Mrs. Collins;9;1106256
+1091;R.J. MacReady;0;6856
+1091;Childs;1;65827
+1091;Dr. Blair;2;11065
+1091;Garry;3;15417
+1091;Dr. Copper;4;15413
+1091;Norris;5;15414
+1091;Nauls;6;15411
+1091;Palmer;7;15412
+1091;Bennings;8;15415
+1091;Clark;9;15416
+12;Marlin (voice);0;13
+12;Dory (voice);1;14
+12;Nemo (voice);2;12
+12;Gill (voice);3;5293
+12;Bloat (voice);4;18
+12;Peach (voice);5;19
+12;Gurgle (voice);6;6168
+12;Bubbles (voice);7;17401
+12;Deb / Flo (voice);8;14723
+12;Jacques (voice);9;7911
+18148;Shukishi Hirayama;0;33135
+18148;Tomi Hirayama;1;134307
+18148;Noriko Hirayama;2;95504
+18148;Shige Kaneko;3;131013
+18148;Koichi Hirayama;4;68411
+18148;Fumiko Hirayama - his wife;5;131016
+18148;Kyôko Hirayama;6;34374
+18148;Sanpei Numata;7;106165
+18148;Kurazo Kaneko;8;30772
+18148;Keiso Hirayama;9;142469
+6977;Sheriff Ed Tom Bell;0;2176
+6977;Anton Chigurh;1;3810
+6977;Llewelyn Moss;2;16851
+6977;Carson Wells;3;57755
+6977;Carla Jean Moss;4;9015
+6977;Wendell;5;39520
+6977;Loretta Bell;6;41249
+6977;Ellis;7;12852
+6977;Man who hires Wells;8;17401
+6977;El Paso Sheriff;9;51732
+7913;DJ;0;52763
+7913;Sonia;1;53672
+7913;Sue;2;53673
+7913;Sukhi;3;53674
+7913;Aslam;4;53675
+7913;Laxman Pandey;5;53676
+7913;Ajay Rathod;6;85519
+7913;Karan Singhania;7;108216
+7913;Mitro;8;35777
+780;Jeanne d'Arc;0;11589
+780;Évêque Pierre Cauchon;1;11590
+780;Jean d'Estivet;2;11591
+780;Jean Massieu;3;11595
+780;Guillaume Evrard;4;11596
+780;Jean Beaupère;5;11597
+780;Juge;6;11598
+780;Juge;7;11599
+780;Juge;8;11600
+780;Juge;9;11601
+903;Luke Jackson;0;3636
+903;Dragline;1;12950
+903;Boss Paul;2;8962
+903;Boss Godfrey;3;13869
+903;Tramp;4;5048
+903;Babalugats;5;2778
+903;Koko;6;13871
+903;Loudmouth Steve;7;13872
+903;Captain;8;8260
+903;Arletta;9;2752
+223;'Maxim' de Winter;0;3359
+223;Mrs. de Winter (2nd);1;3360
+223;Jack Favell;2;3361
+223;Mrs. Danvers;3;3362
+223;Major Giles Lacy;4;3363
+223;Frank Crawley;5;3364
+223;Beatrice Lacy;6;3366
+223;Mrs. Edythe Van Hopper;7;3367
+223;Dr. Baker;8;2642
+223;Ben;9;3368
+19703;Prakash Rathod;0;6217
+19703;The Anonymous Caller;1;6497
+19703;Arif Khan;2;35792
+19703;Naina Roy;3;123226
+19703;Jai Singh;4;123228
+19703;Ikhlaque Ahmed;5;123230
+19703;Mohammad Zaheer;6;123231
+19703;Ibrahim Khan;7;86253
+19703;Ajay Khanna;8;1637692
+19703;Chief Minister;9;1637704
+7345;Daniel Plainview;0;11856
+7345;Paul Sunday / Eli Sunday;1;17142
+7345;H. W.;2;52564
+7345;Fletcher;3;8785
+7345;Henry;4;18916
+7345;Elizabeth;5;52565
+7345;Mary Sunday;6;52566
+7345;H. B. Ailman;7;8214
+7345;Abel Sunday;8;53668
+7345;Mr. Bandy;9;53669
+10191;Hiccup;0;449
+10191;Stoick;1;17276
+10191;Gobber;2;24264
+10191;Astrid;3;59174
+10191;Snotlout;4;21007
+10191;Fishlegs;5;54691
+10191;Tuffnut;6;51990
+10191;Ruffnut;7;41091
+10191;Ack;8;130081
+10191;Starkard;9;138619
+24;Beatrix 'The Bride' Kiddo;0;139
+24;O-Ren Ishii;1;140
+24;Vernita Green;2;2535
+24;Elle Driver;3;589
+24;Bill;4;141
+24;Budd;5;147
+24;Sofie Fatale;6;2539
+24;Gogo Yubari;7;2538
+24;Hattori Hanzo;8;2537
+24;Johnny Mo;9;240171
+25237;Florya Gaishun;0;93407
+25237;Glasha;1;93408
+25237;Kosach;2;93409
+25237;;3;139096
+25237;German officer, a nazi fanatic;4;1148739
+25237;;5;1148740
+25237;;6;1148741
+25237;Gezhel, German translator;7;1148742
+25237;;8;1148743
+25237;German;9;1406690
+24238;Mary Daisy Dinkle (voice);0;3051
+24238;Max Jerry Horovitz (voice);1;1233
+24238;Damien (voice);2;8783
+24238;Narrator (voice);3;22
+24238;Young Mary (voice);4;92731
+24238;Vera (voice);5;92732
+24238;Homeless Man (voice);6;218000
+24238;Additional Voices (voice);7;218254
+24238;Additional Voices (voice);8;77562
+24238;Additional Voices (voice);9;1214863
+210577;Nick Dunne;0;880
+210577;Amy Dunne;1;10882
+210577;Margo Dunne;2;1308445
+210577;Desi Collins;3;41686
+210577;Tanner Bolt;4;80602
+210577;Detective Rhonda Boney;5;21165
+210577;Detective Jim Gilpin;6;11663
+210577;Ellen Abbott;7;1294
+210577;Andie Fitzgerald;8;1186505
+210577;Noelle Hawthorne;9;83872
+5915;Christopher McCandless;0;46593
+5915;Billie McCandless;1;4726
+5915;Walt McCandless;2;227
+5915;Carine McCandless;3;20089
+5915;Rainey;4;46594
+5915;Jan Burres;5;2229
+5915;Wayne Westerberg;6;4937
+5915;Tracy Tatro;7;37917
+5915;Ron Franz;8;11066
+5915;Thomas;9;20258
+3078;Peter Warne;0;11492
+3078;Ellie Andrews;1;30155
+3078;Alexander Andrews;2;30156
+3078;Oscar Shapeley;3;30157
+3078;King Westley;4;30158
+3078;Danker;5;8729
+3078;Zeke;6;29263
+3078;Zeke's wife;7;30159
+3078;Joe Gordon, Editor;8;30160
+3078;Bus Driver #1 (uncredited);9;4303
+11324;Teddy Daniels;0;6193
+11324;Chuck Aule;1;103
+11324;Dr. John Cawley;2;2282
+11324;Rachel Solando;3;1246
+11324;Dolores Chanal;4;1812
+11324;Dr. Jeremiah Naehring;5;2201
+11324;George Noyce;6;17183
+11324;Rachel 2;7;1276
+11324;Warden;8;15854
+11324;Deputy Warden McPherson;9;3911
+583;Brian Cohen;0;10722
+583;Arthur;1;8930
+583;Crucifee;2;280
+583;Mr. Cheeky;3;10713
+583;Mandy Cohen;4;10707
+583;Wise Man #3;5;383
+583;Gregory;6;10732
+583;Mrs. Gregory;7;10733
+583;Jesus;8;10734
+583;A Weedy Samaritan;9;70624
+792;Staff Sergeant Bob Barnes;0;13022
+792;Private First Class Chris Taylor;1;6952
+792;Sergeant Elias Grodin;2;5293
+792;Big Harold;3;2178
+792;Sergeant Red O'Neill;4;11885
+792;Bunny;5;6863
+792;Private Gator Lerner;6;85
+792;Rhah;7;11886
+792;Sal;8;6396
+792;King;9;65827
+265195;Simon Fisher;1;69310
+265195;Diego;2;19803
+265195;Salgado;3;3618
+265195;Romina;4;141455
+265195;Victoria;6;114811
+265195;Helena;7;1051297
+265195;Cocinera;9;99113
+205;Paul Rusesabagina;0;1896
+205;Tatiana Rusesabagina;1;2598
+205;Colonel Oliver;2;1733
+205;General Bizimungu;3;2607
+205;Jack Daglish;4;73421
+205;Sabena Airlines President, Mr. Tillens;5;1003
+205;Dube;6;2602
+205;Roger Rusesabagina;7;2599
+205;Diane Rusesabagina;8;2600
+205;George Rutaganda;9;2603
+96721;Niki Lauda;0;3872
+96721;James Hunt;1;74568
+96721;Suzy Miller;2;59315
+96721;Marlene Lauda;3;5644
+96721;Gemma;4;58502
+96721;Lord Hesketh;5;28478
+96721;Harald Ertl;6;52639
+96721;Clay Regazzoni;7;17839
+96721;Louis Stanley;8;10779
+96721;Alastair Caldwell;9;21345
+204;Mario;0;2565
+204;M. Jo;1;2566
+204;Bimba;2;2567
+204;Camp;3;2568
+204;Linda;4;2569
+204;Camp Chief;5;2570
+204;Bernardo;6;2572
+204;Smerloff;7;2573
+204;Hernandez;8;397
+204;Bill O'Brien;9;2576
+10774;Diana Christensen;0;6450
+10774;Max Schumacher;1;8252
+10774;Howard Beale;2;29903
+10774;Frank Hackett;3;3087
+10774;Nelson Chaney;4;66712
+10774;Arthur Jensen;5;13726
+10774;Louise Schumacher;6;10083
+10774;Harry Hunter;7;51549
+10774;Edward George Ruddy;8;46099
+10774;Great Ahmed Kahn;9;66713
+7984;Gerry Conlon;0;11856
+7984;Giuseppe Conlon;1;4935
+7984;Gareth Peirce;2;7056
+7984;Paul Hill;3;28743
+7984;Robert Dixon;4;13328
+7984;Carole Richardson;5;53515
+7984;Chief PO Barker;6;42642
+7984;Benbay;7;19868
+7984;Sarah Conlon;8;76109
+7984;Detective Pavis;9;43131
+235;Gordie Lachance;0;3033
+235;Chris Chambers;1;741
+235;Teddy Duchamp;2;3034
+235;Vern Tessio;3;3035
+235;Ace Merrill;4;2628
+235;Gordon Lachance (Adult);5;3037
+235;Denny Lachance;6;3036
+235;Billy Tessio;7;1953
+235;Eyeball Chambers;8;3039
+235;Mr. Lachance;9;3041
+147;Antoine Doinel;0;1653
+147;Gilberte Doinel;1;1654
+147;Julien Doinel;2;1655
+147;Mr. Bigey;3;1658
+147;René;4;1659
+147;Director of the school;5;1660
+147;Mme Bigey;6;1661
+147;English Teacher;7;1662
+147;French Teacher;8;1656
+147;Betrand Mauricet;9;1077237
+665;Judah Ben-Hur;0;10017
+665;Quintus Arrius;1;10018
+665;Esther;2;10019
+665;Messala;3;10020
+665;Scheich Ildirim;4;10021
+665;Miriam;5;10022
+665;Tirzah;6;10023
+665;Pontius Pilatus;7;10025
+665;Simonides;8;10024
+665;Malluch;9;10026
+120467;M. Gustave;0;5469
+120467;Zero Moustafa;1;1291350
+120467;Mr. Moustafa;2;1164
+120467;Serge;3;8789
+120467;Dmitri;4;3490
+120467;Jopling;5;5293
+120467;Kovacs;6;4785
+120467;Ludwig;7;1037
+120467;Young Writer;8;9642
+120467;M. Ivan;9;1532
+314365;Michael Rezendes;0;103
+314365;Walter "Robby" Robinson;1;2232
+314365;Sacha Pfeiffer;2;53714
+314365;Marty Baron;3;23626
+314365;Ben Bradlee Jr.;4;21134
+314365;Mitchell Garabedian;5;2283
+314365;Matt Carroll;6;175829
+314365;Steve Kurkjian;7;1616703
+314365;Eric Macleish;8;8289
+314365;Eileen McNamara;9;69423
+76341;Max Rockatansky;0;2524
+76341;Imperator Furiosa;1;6885
+76341;Nux;2;3292
+76341;Immortan Joe;3;26060
+76341;Slit;4;1056053
+76341;Rictus Erectus;5;24898
+76341;Toast the Knowing;6;37153
+76341;The Splendid Angharad;7;236048
+76341;Capable;8;98522
+76341;The Dag;9;1036288
+76203;Solomon Northup;0;5294
+76203;Edwin Epps;1;17288
+76203;Patsey;2;1267329
+76203;William Ford;3;71580
+76203;John Tibeats;4;17142
+76203;Mary Epps;5;34490
+76203;Eliza;6;467633
+76203;Brown;7;59233
+76203;Theophilus Freeman;8;13242
+76203;Samuel Bass;9;287
+797;Alma;0;6657
+797;Elisabet Vogler;1;11916
+797;Arzt;2;11917
+797;Herr Vogler;3;6649
+797;Elisabet's Son (uncredited);4;11918
+278;Andy Dufresne;0;504
+278;Ellis Boyd 'Red' Redding;1;192
+278;Warden Samuel Norton;2;4029
+278;Captain Byron T. Hadley;3;6574
+278;Bogs Diamond;4;6576
+278;Brooks Hatlen;5;6577
+278;Tommy;6;6575
+278;Heywood;7;6573
+278;1946 D.A.;8;12645
+278;Skeet;9;92119
+70;Frankie Dunn;0;190
+70;Maggie Fitzgerald;1;448
+70;Eddie Scrap-Iron Dupris;2;192
+70;Danger Barch;3;449
+70;Big Willie Little;4;450
+70;Billie 'The Blue Bear';5;451
+70;Father Horvak;6;31713
+70;Shawrelle Berry;7;53650
+70;Earline Fitzgerald;8;452
+70;Mardell Fitzgerald;9;453
+642;Butch Cassidy;0;3636
+642;Sundance Kid;1;4135
+642;Etta Place;2;9594
+642;Percy Garris;3;8260
+642;Bike Salesman;4;5732
+642;Sheriff Ray Bledsoe;5;9596
+642;Woodcock;6;9597
+642;Agnes;7;9599
+642;Harvey Logan;8;9600
+642;Marshal;9;9601
+329;Dr. Alan Grant;0;4783
+329;Dr. Ellie Sattler;1;4784
+329;Dr. Ian Malcolm;2;4785
+329;John Hammond;3;4786
+329;Robert Muldoon;4;4789
+329;Donald Gennaro;5;4790
+329;Wu;6;14592
+329;Tim Murphy;7;4787
+329;Lex Murphy;8;4788
+329;Arnold;9;2231
+11423;Detective Park Doo-man;0;20738
+11423;Detective Seo Tae-yoon;1;69378
+11423;Detective Cho Yong-koo;2;69379
+11423;Sergeant Shin Dong-chul;3;1080904
+11423;Park Hyeon-gyu;4;21687
+11423;Officer Kwon Kwi-ok;6;1318428
+11423;Baek Kwang-ho;7;1117889
+11423;Doo-man's father;8;1278188
+11423;Kwak Seol-young;9;994248
+55;Octavio;0;258
+55;Susana;1;259
+55;Valeria;2;261
+55;Daniel;3;262
+55;El Chivo;4;263
+55;Luis;5;264
+55;Gustavo;6;265
+55;Jorge;7;266
+55;Mauricio;8;267
+55;Tía Luisa;9;268
+963;Sam Spade;0;4110
+963;Brigid O'Shaughnessy;1;13992
+963;Iva Archer;2;14450
+963;Joel Cairo;3;2094
+963;Det. Lt. Dundy;4;14451
+963;Effie Perine;5;5740
+963;Kasper Gutman;6;4114
+963;Det. Tom Polhaus;7;4303
+963;Miles Archer;8;14452
+963;Wilmer Cook;9;3339
+19625;Murli Prasad Sharma aka Munna Bhai;0;85881
+19625;Sankeshwar aka Circuit;1;85889
+19625;Shri Hari Prasad Sharma (Munna's father);2;14079
+19625;Dr. Suman Asthana (Chinki);3;85240
+19625;Parvati Sharma (Munna's mother);4;11849
+19625;Dr. J. C. Asthana;5;35779
+19625;Zaheer;6;35792
+19625;Dr. Rustam Pavri;7;85972
+19625;Anand Banerjee;8;85973
+19625;Actress;9;528638
+1398;Stalker;0;28078
+1398;Ecrivain;1;8475
+1398;Physicien;2;1190992
+1398;Femme du Stalker;3;28079
+1398;Martha, fille du Stalker;4;28080
+37165;Truman Burbank;0;206
+37165;Meryl Burbank / Hannah Gill;1;350
+37165;Marlon;2;11315
+37165;Lauren / Sylvia;3;11317
+37165;Christof;4;228
+37165;Truman's Mother;5;11318
+37165;Truman's Father;6;6579
+37165;Young Truman;7;116898
+37165;Vivien;8;11321
+37165;Ron;9;116899
+19426;Maria 'Cabiria' Ceccarelli;0;5402
+19426;Oscar D'Onofrio;1;27440
+19426;Wanda;2;543085
+19426;Alberto Lazzari;3;31989
+19426;Jessy;4;125357
+19426;The wizard;5;5404
+19426;Amleto, 'il magnaccia';6;128674
+19426;Uncle of Amleto;7;5409
+19426;Spectator on the Stage of the Cinema (uncredited);8;29431
+19426;Man on the Stage (uncredited);9;144992
+2493;Westley;0;2130
+2493;The Princess Bride;1;32
+2493;Inigo Montoya;2;25503
+2493;Fezzik;3;25504
+2493;Prince Humperdinck;4;14541
+2493;Count Tyrone Rugen;5;13524
+2493;Vizzini;6;12900
+2493;The Grandfather / Narrator;7;2314
+2493;Miracle Max;8;7904
+2493;The Grandson;9;2223
+28178;Parker Wilson;0;1205
+28178;Cate Wilson;1;11148
+28178;Carl;2;1206
+28178;Ken;3;11398
+28178;Andy;4;20376
+28178;Jasjeet;5;18917
+28178;Mary Anne;6;75620
+28178;Michael;7;557932
+28178;Heather;8;1158532
+28178;Harry Pinow;9;50588
+238;Don Vito Corleone;0;3084
+238;Michael Corleone;1;1158
+238;Santino 'Sonny' Corleone;2;3085
+238;Pete Clemenza;3;3086
+238;Tom Hagen;4;3087
+238;Capt. Mark McCluskey;5;3088
+238;Jack Woltz;6;3142
+238;Emilio Barzini;7;3090
+238;Virgil 'Der Türke' Sollozzo;8;3091
+238;Kay Adams;9;3092
+81;Nausicaä (voice);0;613
+81;Mito (voice);1;617
+81;Yupa (voice);2;616
+81;Asbel (voice);3;622
+81;Kushana (voice);4;624
+81;Kurotowa (voice);5;625
+81;Oh-Baba (voice);6;615
+81;Jihl (voice);7;614
+81;Lastel (voice);8;623
+81;Goru (voice);9;618
+76;Jesse;0;569
+76;Céline;1;1146
+76;Wife on Train;2;571
+76;Husband on Train;3;572
+76;Guy on Bridge;4;573
+76;Guy on Bridge;5;574
+76;Palm Reader;6;146859
+76;Street Poet;7;3735
+76;Bartender;8;3738
+76;Guitar Player in Club;9;3737
+140607;Rey;0;1315036
+140607;Finn;1;236695
+140607;Kylo Ren;2;1023139
+140607;Han Solo;3;3
+140607;Poe Dameron;4;25072
+140607;Princess Leia Organa;5;4
+140607;Luke Skywalker;6;2
+140607;Maz Kanata;7;1267329
+140607;Supreme Leader Snoke;8;1333
+140607;General Hux;9;93210
+12259;Jai;0;35780
+12259;Veeru;1;85655
+12259;Thakur Baldev Singh;2;86509
+12259;Basanti;3;35781
+12259;Radha;4;35743
+12259;Gabbar Singh;5;86510
+12259;Jailor;6;86019
+12259;Soorma Bhopali;7;618699
+12259;Imaam Saheb;8;230969
+12259;Ramlal;9;110099
+596;Tom Joad;0;4958
+596;Ma Joad;1;8515
+596;Casy;2;8516
+596;Grandpa Joad;3;8517
+596;Rosasharn;4;8518
+596;Pa Joad;5;8519
+596;Al Joad;6;8520
+596;Muley Graves;7;4119
+596;Connie Rivers;8;8521
+596;Grandma Joad;9;8522
+12445;Harry Potter;0;10980
+12445;Ron Weasley;1;10989
+12445;Hermione Granger;2;10990
+12445;Severus Snape;3;4566
+12445;Minerva McGonagall;4;10978
+12445;Bellatrix Lestrange;5;1283
+12445;Sybill Trelawney;6;7056
+12445;Rubeus Hagrid;7;1923
+12445;Lord Voldemort;8;5469
+12445;Poppy Pomfrey;9;9138
+1366;Rocky Balboa;0;16483
+1366;Adrianna "Adrian" Pennino;1;3094
+1366;Paulie;2;4521
+1366;Apollo Creed;3;1101
+1366;Mickey Goldmill;4;16523
+1366;Jergens;5;16524
+1366;Gazzo;6;16525
+1366;Duke;7;16504
+1366;Club Fighter;8;16508
+1366;Himself;9;107375
+146233;Keller Dover;0;6968
+146233;Detective Loki;1;131
+146233;Alex Jones;2;17142
+146233;Grace Dover;3;49
+146233;Holly Jones;4;6832
+146233;Nancy Birch;5;19492
+146233;Franklin Birch;6;18288
+146233;Ralph Dover;7;112476
+146233;Eliza Birch;8;1208406
+146233;Captain Richard O'Malley;9;1470
+240;Don Michael Corleone;0;1158
+240;Tom Hagen;1;3087
+240;Kay Corleone;2;3092
+240;Don Vito Corleone;3;380
+240;Fredo Corleone;4;3096
+240;Connie Corleone;5;3094
+240;Hyman Roth;6;3171
+240;Frankie Pentangeli;7;3172
+240;Senator Pat Geary;8;3173
+240;Al Neri;9;3174
+1480;Ramon Miguel Vargas;0;10017
+1480;Susan 'Susie' Vargas;1;7302
+1480;Police Captain Hank Quinlan;2;40
+1480;Police Sergeant Pete Menzies;3;33747
+1480;'Uncle' Joe Grandi;4;30719
+1480;Marcia Linnekar;5;94889
+1480;District Attorney Adair;6;14518
+1480;Mirador Motel Night Manager;7;12422
+1480;Pancho;8;94892
+1480;Al Schwartz - District Attorney's Assistant;9;45525
+783;Mahatma Gandhi;0;2282
+783;Margaret Bourke-White;1;11850
+783;General Dyer;2;9126
+783;Lord Irwin;3;11857
+783;Judge Broomfield;4;12726
+783;Kasturba Gandhi;5;11849
+783;Lord Chelmsford;6;11859
+783;Vince Walker;7;8349
+783;Reverend Charlie Andrews;8;11854
+783;Pandit Nehru;9;693
+827;Nicole Horner;0;12266
+827;Christina Delassalle;1;2569
+827;Michel Delassalle;2;12267
+827;Alfred Fichet, le commissaire;3;2566
+827;Plantiveau, le concierge;4;12268
+827;M.Drain, professeur;5;12269
+827;M. Raymond, le surveillant;6;12270
+827;Mme. Herboux;7;12271
+827;M. Herboux;8;12272
+827;Moinet, une jeune Moynet;9;12273
+703;Alvy Singer;0;1243
+703;Annie Hall;1;3092
+703;Rob;2;10555
+703;Allison;3;10556
+703;Tony Lacey;4;10557
+703;Pam;5;10409
+703;Robin;6;10558
+703;Mrs. Hall;7;10559
+703;Duane Hall;8;4690
+703;Dad Hall;9;10560
+640;Frank William Abagnale, Jr.;0;6193
+640;Carl Hanratty;1;31
+640;Roger Strong;2;8349
+640;Paula Abagnale;3;136761
+640;Brenda Strong;4;9273
+640;Jack Barnes;5;9274
+640;Cheryl Ann;6;9278
+640;Earl Amdursky;7;1990
+640;Tom Fox;8;9275
+640;Paul Morgan;9;9276
+141;Donnie Darko;0;131
+141;Gretchen Ross;1;20089
+141;Jim Cunningham;2;723
+141;Elizabeth Darko;3;1579
+141;Karen Pomeroy;4;69597
+141;Kitty Farmer;5;5151
+141;Eddie Darko;6;1578
+141;Samantha Darko;7;1580
+141;Mrs. Rose Darko;8;1581
+141;Frank;9;1582
+585;Sullivan (voice);0;1230
+585;Mike (voice);1;7904
+585;Boo (voice);2;7905
+585;Randall (voice);3;884
+585;Waternoose (voice);4;5563
+585;Celia (voice);5;7906
+585;Roz (voice);6;10
+585;Yeti (voice);7;7907
+585;Fungus (voice);8;7908
+21614;Raju;0;35070
+21614;Ghanshyam (Shyam);1;85730
+21614;Baburao Ganpatrao Apte;2;85033
+21614;Anuradha Shivshankar Panikar;3;55062
+21614;Kabira;4;42208
+21614;Kharak Singh;5;11851
+21614;Chiman Jinga;6;86057
+21614;Ms. Jinga;7;87849

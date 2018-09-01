@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   logicalFilePath="db.changelog.netify.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.table.movie.genre.create" runAlways="true">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="TA_MOVIE_GENRE"/>
+            </not>
+        </preConditions>
+        <comment>Create table TA_MOVIE_GENRE if not exists</comment>
+        <createTable tableName="TA_MOVIE_GENRE">
+            <column autoIncrement="true" name="ID" type="INTEGER">
+                <constraints nullable="false" primaryKey="true"/></column>
+            <column name="MOVIE_ID" type="INTEGER"/>
+            <column name="GENRE_ID" type="INTEGER"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="testautomatisering@duo.nl" id="netify.movie.genre.loaddata" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="TA_MOVIE_GENRE"/>
+        </preConditions>
+        <comment>Load data from csv</comment>
+        <loadData encoding="UTF-8"
+                  relativeToChangelogFile="true"
+                  file="TA_MOVIE_GENRE.csv"
+                  separator=";"
+                  tableName="TA_MOVIE_GENRE">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

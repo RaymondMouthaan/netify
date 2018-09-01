@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+	logicalFilePath="db.changelog.set.db.rights-xldeploy.xml">
+
+	<changeSet id="set_objaut" author="testautomatisering@duo.nl" dbms="db2i"
+		runAlways="true">
+		<sql>
+			CALL QSYS2.QCMDEXC('CALL PGM(IN999DEP/DEP_OBJAUT) PARM(${defaultSchemaName})')
+		</sql>
+	</changeSet> 
+
+</databaseChangeLog>
