@@ -1,4 +1,4 @@
-MOVIE_ID;CHARACTER;ROLE_ORDER;ACTOR_ID
+movie_id;character;role_order;actor_id
 2503;Jason Bourne;0;1892
 2503;Nicky Parsons;1;12041
 2503;Noah Vosen;2;11064

@@ -4,33 +4,32 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <changeSet author="testautomatisering@duo.nl" id="netify.table.role.create" runAlways="true">
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.table.role.create" runAlways="true">
         <preConditions onFail="MARK_RAN">
             <not>
-                <tableExists tableName="TA_ROLE"/>
+                <tableExists tableName="ntfy_role"/>
             </not>
         </preConditions>
-        <comment>Create table TA_ROLE if not exists</comment>
-        <createTable tableName="TA_ROLE">
+        <comment>Create table NTFY_ROLE if not exists</comment>
+        <createTable tableName="ntfy_role">
             <column autoIncrement="true" startWith="2500" name="ID" type="INTEGER">
                 <constraints nullable="false" primaryKey="true"/></column>
-            <column name="CHARACTER" type="VARCHAR(255)"/>
-            <column name="ROLE_ORDER" type="SMALLINT"/>
-            <column name="ACTOR_ID" type="INTEGER"/>
-            <column name="MOVIE_ID" type="INTEGER"/>
+            <column name="character" type="VARCHAR(255)"/>
+            <column name="role_order" type="SMALLINT"/>
+            <column name="actor_id" type="INTEGER"/>
+            <column name="movie_id" type="INTEGER"/>
         </createTable>
     </changeSet>
 
-    <changeSet author="testautomatisering@duo.nl" id="netify.role.loaddata" runAlways="true">
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.role.loaddata" runAlways="true">
         <preConditions onFail="CONTINUE">
-            <tableExists tableName="TA_ROLE"/>
+            <tableExists tableName="ntfy_role"/>
         </preConditions>
         <comment>Load data from csv</comment>
-        <loadData encoding="UTF-8"
-                  relativeToChangelogFile="true"
-                  file="TA_ROLE.csv"
+        <loadData relativeToChangelogFile="true"
+                  file="NTFY_ROLE.csv"
                   separator=";"
-                  tableName="TA_ROLE">
+                  tableName="ntfy_role">
         </loadData>
     </changeSet>
 

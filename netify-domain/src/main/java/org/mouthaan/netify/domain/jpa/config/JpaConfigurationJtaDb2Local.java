@@ -32,9 +32,9 @@
 //    }
 //
 //    @Bean
-//    public DataSource taDataSource() {
+//    public DataSource ntfyDataSource() {
 //        JndiDataSourceLookup lookup = new JndiDataSourceLookup();
-//        return lookup.getDataSource("jdbc/tadta");
+//        return lookup.getDataSource("jdbc/ntfydta");
 //    }
 //
 //    @Bean
@@ -47,7 +47,7 @@
 //        Properties properties = new Properties();
 //        properties.put(org.hibernate.cfg.Environment.DIALECT, DB2400Dialect.class.getName());
 //        LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
-//        emf.setDataSource(taDataSource());
+//        emf.setDataSource(ntfyDataSource());
 //        emf.setJpaVendorAdapter(jpaVendorAdapter);
 //        emf.setPackagesToScan("org.mouthaan.netify.domain.model");   // <- package for entities
 //        emf.setPersistenceUnitName("netifyPU");

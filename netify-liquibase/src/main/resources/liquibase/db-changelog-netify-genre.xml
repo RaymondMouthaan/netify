@@ -4,38 +4,38 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <changeSet author="testautomatisering@duo.nl" id="netify.table.genre.create" runAlways="true">
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.table.genre.create" runAlways="true">
         <preConditions onFail="MARK_RAN">
             <not>
-                <tableExists tableName="TA_GENRE"/>
+                <tableExists tableName="ntfy_genre"/>
             </not>
         </preConditions>
-        <comment>Create table TA_GENRE if not exists</comment>
-        <createTable tableName="TA_GENRE">
-            <column name="ID" type="INTEGER" autoIncrement="true" startWith="11000">
+        <comment>Create table NTFY_GENRE if not exists</comment>
+        <createTable tableName="ntfy_genre">
+            <column name="id" type="INTEGER" autoIncrement="true" startWith="11000">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
-            <column name="NAME" type="VARCHAR(255)" >
+            <column name="name" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
         <addUniqueConstraint
-                             columnNames="NAME"
-                             constraintName="UK_TA_GENRE"
-                             tableName="TA_GENRE"
+                columnNames="name"
+                constraintName="uk_ntfy_genre"
+                tableName="ntfy_genre"
         />
     </changeSet>
 
-    <changeSet author="testautomatisering@duo.nl" id="netify.genre.loaddata" runAlways="true">
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.genre.loaddata" runAlways="true">
         <preConditions onFail="CONTINUE">
-            <tableExists tableName="TA_GENRE"/>
+            <tableExists tableName="ntfy_genre"/>
         </preConditions>
         <comment>Load data from csv</comment>
-        <loadData encoding="UTF-8"
-                  relativeToChangelogFile="true"
-                  file="TA_GENRE.csv"
-                  separator=";"
-                  tableName="TA_GENRE">
+        <loadData
+                relativeToChangelogFile="true"
+                file="NTFY_GENRE.csv"
+                separator=";"
+                tableName="ntfy_genre">
         </loadData>
     </changeSet>
 

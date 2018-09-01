@@ -3,15 +3,15 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"
                    logicalFilePath="master-changelog.xml">
 
-    <!--enable changes to tables -->
-    <changeSet id="0" author="raymondmmouthaan@gmail.com" dbms="db2i" runAlways="true">
-        <sql>
-            CALL QSYS2.QCMDEXC('CHGJOB INQMSGRPY(*SYSRPYL)')
-        </sql>
-        <!--<customChange class="EncryptCsv">-->
-        <!--<param name="file" value="liquibase/TA_BUG.csv"/>-->
-        <!--</customChange>-->
-    </changeSet>
+    <!--&lt;!&ndash;enable changes to tables &ndash;&gt;-->
+    <!--<changeSet id="0" author="raymondmmouthaan@gmail.com" dbms="db2i" runAlways="true">-->
+        <!--<sql>-->
+            <!--CALL QSYS2.QCMDEXC('CHGJOB INQMSGRPY(*SYSRPYL)')-->
+        <!--</sql>-->
+        <!--&lt;!&ndash;<customChange class="EncryptCsv">&ndash;&gt;-->
+        <!--&lt;!&ndash;<param name="file" value="liquibase/NTFY_BUG.csv"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</customChange>&ndash;&gt;-->
+    <!--</changeSet>-->
 
 
 
@@ -21,15 +21,15 @@
 
     <!-- include changelog(s) -->
     <include relativeToChangelogFile="true" file="db-changelog-netify-cleanup.xml" />
-    <!--<include relativeToChangelogFile="true" file="db-changelog-netify-genre.xml" />-->
+    <include relativeToChangelogFile="true" file="db-changelog-netify-genre.xml" />
     <include relativeToChangelogFile="true" file="db-changelog-netify-actor.xml" />
-    <!--<include relativeToChangelogFile="true" file="db.changelog.netify-role.xml" />-->
-    <!--<include relativeToChangelogFile="true" file="db.changelog.netify-movie.xml" />-->
-    <!--<include relativeToChangelogFile="true" file="db.changelog.netify-bug.xml" />-->
+    <include relativeToChangelogFile="true" file="db-changelog-netify-role.xml" />
+    <include relativeToChangelogFile="true" file="db-changelog-netify-movie.xml" />
+    <include relativeToChangelogFile="true" file="db-changelog-netify-bug.xml" />
 
-    <!--<include relativeToChangelogFile="true" file="db.changelog.netify-movie-genre.xml" />-->
+    <include relativeToChangelogFile="true" file="db-changelog-netify-movie-genre.xml" />
 
-    <!--<include relativeToChangelogFile="true" file="db.changelog.netify-foreignkeys.xml" />-->
+    <include relativeToChangelogFile="true" file="db-changelog-netify-foreignkeys.xml" />
 
     <!-- setting authorization on created tables , sequences etc-->
     <!--<include relativeToChangelogFile="true" file="db.changelog.set.db.rights-xldeploy.xml" />-->

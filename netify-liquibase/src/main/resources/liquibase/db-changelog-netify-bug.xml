@@ -4,37 +4,34 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <changeSet author="raymondmmouthaan@gmail.com" id="netify.table.actor.create" runAlways="true">
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.table.bug.create" runAlways="true">
         <preConditions onFail="MARK_RAN">
             <not>
-                <tableExists tableName="ntfy_actor"/>
+                <tableExists tableName="ntfy_bug"/>
             </not>
         </preConditions>
-        <comment>Create table NTFY_ACTOR if not exists</comment>
-        <createTable tableName="ntfy_actor">
-            <column name="id" type="INTEGER" autoIncrement="true" startWith="1800000">
+        <comment>Create table NTFY_BUG if not exists</comment>
+        <createTable tableName="ntfy_bug">
+            <column name="bug_key" type="VARCHAR(255)">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
-            <column name="name" type="VARCHAR(255)"/>
-            <column name="gender_id" type="SMALLINT"/>
+            <column name="bug_location" type="VARCHAR(255)"/>
+            <column name="bug_enabled" type="BOOLEAN"/>
+            <column name="bug_group" type="INTEGER"/>
+            <column name="bug_description" type="VARCHAR(255)"/>
         </createTable>
-        <addUniqueConstraint
-                columnNames="name"
-                constraintName="uk_ntfy_actor"
-                tableName="ntfy_actor"
-        />
     </changeSet>
 
-    <changeSet author="raymondmmouthaan@gmail.com" id="netify.actor.loaddata" runAlways="true">
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.bug.loaddata" runAlways="true">
         <preConditions onFail="CONTINUE">
-            <tableExists tableName="ntfy_actor"/>
+            <tableExists tableName="ntfy_bug"/>
         </preConditions>
         <comment>Load data from csv</comment>
         <loadData
                 relativeToChangelogFile="true"
-                file="NTFY_ACTOR.csv"
+                file="NTFY_BUG.csv"
                 separator=";"
-                tableName="ntfy_actor">
+                tableName="ntfy_bug">
         </loadData>
     </changeSet>
 

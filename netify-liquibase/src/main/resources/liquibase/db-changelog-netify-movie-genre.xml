@@ -4,31 +4,30 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <changeSet author="testautomatisering@duo.nl" id="netify.table.movie.genre.create" runAlways="true">
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.table.movie.genre.create" runAlways="true">
         <preConditions onFail="MARK_RAN">
             <not>
-                <tableExists tableName="TA_MOVIE_GENRE"/>
+                <tableExists tableName="ntfy_movie_genre"/>
             </not>
         </preConditions>
-        <comment>Create table TA_MOVIE_GENRE if not exists</comment>
-        <createTable tableName="TA_MOVIE_GENRE">
-            <column autoIncrement="true" name="ID" type="INTEGER">
+        <comment>Create table NTFY_MOVIE_GENRE if not exists</comment>
+        <createTable tableName="ntfy_movie_genre">
+            <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true"/></column>
-            <column name="MOVIE_ID" type="INTEGER"/>
-            <column name="GENRE_ID" type="INTEGER"/>
+            <column name="movie_id" type="INTEGER"/>
+            <column name="genre_id" type="INTEGER"/>
         </createTable>
     </changeSet>
 
-    <changeSet author="testautomatisering@duo.nl" id="netify.movie.genre.loaddata" runAlways="true">
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.movie.genre.loaddata" runAlways="true">
         <preConditions onFail="CONTINUE">
-            <tableExists tableName="TA_MOVIE_GENRE"/>
+            <tableExists tableName="ntfy_movie_genre"/>
         </preConditions>
         <comment>Load data from csv</comment>
-        <loadData encoding="UTF-8"
-                  relativeToChangelogFile="true"
-                  file="TA_MOVIE_GENRE.csv"
+        <loadData relativeToChangelogFile="true"
+                  file="NTFY_MOVIE_GENRE.csv"
                   separator=";"
-                  tableName="TA_MOVIE_GENRE">
+                  tableName="ntfy_movie_genre">
         </loadData>
     </changeSet>
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   logicalFilePath="db.changelog.netify.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.table.movie.create" runAlways="true">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="ntfy_movie"/>
+            </not>
+        </preConditions>
+        <comment>Create table NTFY_MOVIE if not exists</comment>
+        <createTable tableName="ntfy_movie">
+            <column autoIncrement="true" name="id" type="INTEGER" startWith="380000"><constraints nullable="false" primaryKey="true"/></column>
+            <column name="imdb_id" type="VARCHAR(25)"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="original_title" type="VARCHAR(255)"/>
+            <column name="release_date" type="DATE"/>
+            <column name="runtime" type="INTEGER"/>
+            <column name="original_language" type="VARCHAR(2)"/>
+            <column name="popularity" type="DOUBLE"/>
+            <column name="homepage" type="VARCHAR(255)"/>
+            <column name="budget" type="INTEGER"/>
+            <column name="revenue" type="INTEGER"/>
+            <column name="status" type="VARCHAR(25)"/>
+            <column name="tagline" type="VARCHAR(511)"/>
+            <column name="overview" type="VARCHAR(1023)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.movies.loaddata" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="ntfy_movie"/>
+        </preConditions>
+        <comment>Load data from csv</comment>
+        <loadData
+                relativeToChangelogFile="true"
+                  file="NTFY_MOVIE.csv"
+                  separator=";"
+                  tableName="ntfy_movie">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

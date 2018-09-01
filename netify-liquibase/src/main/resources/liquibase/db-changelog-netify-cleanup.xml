@@ -4,56 +4,56 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <!--<changeSet author="raymondmmouthaan@gmail.com" id="netify.role.delete" runAlways="true">-->
-        <!--<preConditions onFail="CONTINUE">-->
-            <!--<tableExists tableName="NTFY_ROLE"/>-->
-        <!--</preConditions>-->
-        <!--<comment>Drop constrains then delete table content NTFY_ROLE if exists</comment>-->
-        <!--<dropForeignKeyConstraint baseTableName="NTFY_ROLE" constraintName="NTFY_ROLE_NTFY_MOVIE_FK"/>-->
-        <!--<dropForeignKeyConstraint baseTableName="NTFY_ROLE" constraintName="NTFY_ROLE_NTFY_ACTOR_FK"/>-->
-        <!--<delete tableName="NTFY_ROLE"/>-->
-    <!--</changeSet>-->
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.role.delete" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="ntfy_role"/>
+        </preConditions>
+        <comment>Drop constrains then delete table content NTFY_ROLE if exists</comment>
+        <dropForeignKeyConstraint baseTableName="ntfy_role" constraintName="ntfy_role_ntfy_movie_fk"/>
+        <dropForeignKeyConstraint baseTableName="ntfy_role" constraintName="ntfy_role_ntfy_actor_fk"/>
+        <delete tableName="ntfy_role"/>
+    </changeSet>
 
-    <!--<changeSet author="raymondmmouthaan@gmail.com" id="netify.movie_genre.delete" runAlways="true">-->
-        <!--<preConditions onFail="CONTINUE">-->
-            <!--<tableExists tableName="NTFY_MOVIE_GENRE"/>-->
-        <!--</preConditions>-->
-        <!--<comment>Drop constrains then delete table content NTFY_MOVIE_GENRE if exists</comment>-->
-        <!--<dropForeignKeyConstraint baseTableName="NTFY_MOVIE_GENRE" constraintName="NTFY_MOVIE_GENRE_NTFY_GENRE_FK"/>-->
-        <!--<dropForeignKeyConstraint baseTableName="NTFY_MOVIE_GENRE" constraintName="NTFY_MOVIE_GENRE_NTFY_MOVIE_FK"/>-->
-        <!--<delete tableName="NTFY_MOVIE_GENRE"/>-->
-    <!--</changeSet>-->
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.movie_genre.delete" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="ntfy_movie_genre"/>
+        </preConditions>
+        <comment>Drop constrains then delete table content NTFY_MOVIE_GENRE if exists</comment>
+        <dropForeignKeyConstraint baseTableName="ntfy_movie_genre" constraintName="ntfy_movie_genre_ntfy_genre_fk"/>
+        <dropForeignKeyConstraint baseTableName="ntfy_movie_genre" constraintName="ntfy_movie_genre_ntfy_movie_fk"/>
+        <delete tableName="ntfy_movie_genre"/>
+    </changeSet>
 
-    <!--<changeSet author="raymondmmouthaan@gmail.com" id="netify.movies.delete" runAlways="true">-->
-        <!--<preConditions onFail="CONTINUE">-->
-            <!--<tableExists tableName="NTFY_MOVIE"/>-->
-        <!--</preConditions>-->
-        <!--<comment>Delete table content NTFY_MOVIE if exists</comment>-->
-        <!--<delete tableName="NTFY_MOVIE"/>-->
-    <!--</changeSet>-->
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.movies.delete" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="ntfy_movie"/>
+        </preConditions>
+        <comment>Delete table content NTFY_MOVIE if exists</comment>
+        <delete tableName="ntfy_movie"/>
+    </changeSet>
 
     <changeSet author="raymondmmouthaan@gmail.com" id="netify.actor.delete" runAlways="true">
         <preConditions onFail="CONTINUE">
-            <tableExists tableName="NTFY_ACTOR"/>
+            <tableExists tableName="ntfy_actor"/>
         </preConditions>
         <comment>Delete table content NTFY_ACTOR if exists</comment>
-        <delete tableName="NTFY_ACTOR"/>
+        <delete tableName="ntfy_actor"/>
     </changeSet>
 
-    <!--<changeSet author="raymondmmouthaan@gmail.com" id="netify.genre.delete" runAlways="true">-->
-        <!--<preConditions onFail="CONTINUE">-->
-            <!--<tableExists tableName="NTFY_GENRE"/>-->
-        <!--</preConditions>-->
-        <!--<comment>Delete table content NTFY_GENRE if exists</comment>-->
-        <!--<delete tableName="NTFY_GENRE"/>-->
-    <!--</changeSet>-->
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.genre.delete" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="ntfy_genre"/>
+        </preConditions>
+        <comment>Delete table content NTFY_GENRE if exists</comment>
+        <delete tableName="ntfy_genre"/>
+    </changeSet>
 
-    <!--<changeSet author="raymondmmouthaan@gmail.com" id="netify.bug.delete" runAlways="true">-->
-        <!--<preConditions onFail="CONTINUE">-->
-            <!--<tableExists tableName="NTFY_BUG"/>-->
-        <!--</preConditions>-->
-        <!--<comment>Delete table content NTFY_BUG if exists</comment>-->
-        <!--<delete tableName="NTFY_BUG"/>-->
-    <!--</changeSet>-->
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.bug.delete" runAlways="true">
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="ntfy_bug"/>
+        </preConditions>
+        <comment>Delete table content NTFY_BUG if exists</comment>
+        <delete tableName="ntfy_bug"/>
+    </changeSet>
 
 </databaseChangeLog>

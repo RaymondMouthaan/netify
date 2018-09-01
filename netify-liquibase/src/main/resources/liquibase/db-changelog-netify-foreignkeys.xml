@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   logicalFilePath="db.changelog.netify.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="raymondmmouthaan@gmail.com" id="netify.foreignkeys.add" runAlways="true">
+        <!--<preConditions onFail="MARK_RAN">-->
+            <!--<not>-->
+                <!--<tableExists tableName="ROLES"/>-->
+            <!--</not>-->
+        <!--</preConditions>-->
+
+        <comment>Add foreign keys</comment>
+        <addForeignKeyConstraint baseColumnNames="movie_id"
+                                 baseTableName="ntfy_role"
+                                 constraintName="ntfy_role_ntfy_movie_fk"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ntfy_movie"/>
+
+        <addForeignKeyConstraint baseColumnNames="actor_id"
+                                 baseTableName="ntfy_role"
+                                 constraintName="ntfy_role_ntfy_actor_fk"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ntfy_actor"/>
+
+        <addForeignKeyConstraint baseColumnNames="genre_id"
+                                 baseTableName="ntfy_movie_genre"
+                                 constraintName="ntfy_movie_genre_ntfy_genre_fk"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ntfy_genre"/>
+
+        <addForeignKeyConstraint baseColumnNames="movie_id"
+                                 baseTableName="ntfy_movie_genre"
+                                 constraintName="ntfy_movie_genre_ntfy_movie_fk"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ntfy_movie"/>
+    </changeSet>
+
+</databaseChangeLog>
