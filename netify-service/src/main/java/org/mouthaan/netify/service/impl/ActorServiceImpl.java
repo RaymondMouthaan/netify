@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service("actorService")
@@ -99,29 +100,29 @@ public class ActorServiceImpl implements ActorService {
 
     @Override
     public ActorDto update(Integer id, ActorDto actorDto) throws NotFoundException {
-//        Optional<Actor> actor = this.actorRepository.findById(id);
-//        if (null == actor) {
-//            throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//
-//        // Copy notNulls from updateActorDto to actor
-//        actorServiceMapper.map(actorDto, actor);
-//
-//        // save and flush actor
-//        Actor returnActor = this.actorRepository.saveAndFlush(actor);
-//
-//        // return saved actor
-//        return actorServiceMapper.map(returnActor, ActorDto.class);
-        return null;
+        Optional<Actor> actor = this.actorRepository.findById(id);
+
+        if (!actor.isPresent()) {
+            throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
+        }
+
+        // Copy notNulls from updateActorDto to actor
+        actorServiceMapper.map(actorDto, actor);
+
+        // save and flush actor
+        Actor returnActor = this.actorRepository.saveAndFlush(actor.get());
+
+        // return saved actor
+        return actorServiceMapper.map(returnActor, ActorDto.class);
     }
 
     @Override
     public void delete(Integer id) {
-//        Optional<Actor> actor = this.actorRepository.findById(id);
-//        if (null == actor) {
-//            throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//        this.actorRepository.delete(actor);
+        Optional<Actor> actor = this.actorRepository.findById(id);
+        if (!actor.isPresent()) {
+            throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
+        }
+        this.actorRepository.delete(actor.get());
     }
 
     @Override
