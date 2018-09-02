@@ -69,7 +69,7 @@ public class MovieServiceImpl implements MovieService {
             if (k.equalsIgnoreCase("max_popularity"))queryParams.add(new SearchCriteria("popularity", "<", v));
             if (k.equalsIgnoreCase("genreid")) {
                 String[] genres = v.split(",");
-                Arrays.stream(genres).forEach(genreIds::add);
+                genreIds.addAll(Arrays.asList(genres));
             }
         });
 
@@ -141,22 +141,21 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public MovieDto update(Integer id, MovieDto movieDto) {
-//        Movie movie = this.movieRepository.findById(id);
-//        if (null == movie) {
-//            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//
-//        // Ignore genres for update: Set genres to null
-//        if (movieDto.getGenres() != null) { movieDto.setGenres(null); }
-//
-//        // Ignore cast for update: Set cast to null
-//        if (movieDto.getCast() != null) { movieDto.setCast(null); }
-//
-//        // Map movieDto fields to updated movie (nulls are ignored)
-//        movieServiceMapper.map(movieDto, movie);
-//        Movie updateMovie = movieRepository.saveAndFlush(movie);
-//        return movieServiceMapper.map(updateMovie, MovieDto.class);
-        return null;
+        Optional<Movie> movie = this.movieRepository.findById(id);
+        if (movie.isPresent()) {
+            // Ignore genres for update: Set genres to null
+            if (movieDto.getGenres() != null) { movieDto.setGenres(null); }
+
+            // Ignore cast for update: Set cast to null
+            if (movieDto.getCast() != null) { movieDto.setCast(null); }
+
+            // Map movieDto fields to updated movie (nulls are ignored)
+            movieServiceMapper.map(movieDto, movie);
+            Movie updateMovie = movieRepository.saveAndFlush(movie.get());
+            return movieServiceMapper.map(updateMovie, MovieDto.class);
+        } else {
+            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+        }
     }
 
     /**
@@ -168,32 +167,32 @@ public class MovieServiceImpl implements MovieService {
      */
     @Override
     public MovieDto updateMovieAddGenre(Integer id, List<GenreDto> genresDto) {
-//        Movie movie = this.movieRepository.findById(id);
-//        if (null == movie) {
-//            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//
-//        // Map found movie to movieDto
-//        MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
-//
-//        // For each genre check if it exists and add it to movieDto
-//        genresDto.forEach(genreDto -> {
-//            if (genreService.isExist(genreDto)) {
-//                movieDto.getGenres().add(genreService.findByName(genreDto.getName()));
-//            } else {
-//                movieDto.getGenres().add(genreService.add(genreDto));
-//            }
-//        });
-//
-//        // Map movieDto to movie
-//        Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
-//
-//        // Save and flush updated movie
-//        Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
-//
-//        // Return returnedMovie
-//        return movieServiceMapper.map(returnedMovie, MovieDto.class);
-        return null;
+        Optional<Movie> movie = this.movieRepository.findById(id);
+        if (!movie.isPresent()) {
+            // Map found movie to movieDto
+            MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+
+            // For each genre check if it exists and add it to movieDto
+            genresDto.forEach(genreDto -> {
+                if (genreService.isExists(genreDto)) {
+                    movieDto.getGenres().add(genreService.findByName(genreDto.getName()));
+                } else {
+                    movieDto.getGenres().add(genreService.add(genreDto));
+                }
+            });
+
+            // Map movieDto to movie
+            Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
+
+            // Save and flush updated movie
+            Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
+
+            // Return returnedMovie
+            return movieServiceMapper.map(returnedMovie, MovieDto.class);
+        }
+        else {
+            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+        }
     }
 
     /**
@@ -205,38 +204,35 @@ public class MovieServiceImpl implements MovieService {
      */
     @Override
     public MovieDto updateMovieRemoveGenre(Integer id, List<GenreDto> genresDto) {
-//        Movie movie = this.movieRepository.findById(id);
-//        if (null == movie) {
-//            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//
-//        // Map found movie to movieDto
-//        MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
-//
-//        // For each genre check if it exists and add it to a new list
-//        List<GenreDto> genresDtoToRemove = new ArrayList<>();
-//        genresDto.forEach(genreDto -> {
-//            if (genreService.isExist(genreDto)) {
-//                genresDtoToRemove.add(genreService.findByName(genreDto.getName()));
-//            }
-//        });
-//
-//        // For each genre check if it exists in movieDto and remove it
-//        genresDtoToRemove.forEach(genreDto -> {
-//            if (movieDto.getGenres().contains(genreDto)) {
-//                movieDto.getGenres().remove(genreDto);
-//            }
-//        });
-//
-//        // Map movieDto to movie
-//        Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
-//
-//        // Save and flush updated movie
-//        Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
-//
-//        // Return returnedMovie
-//        return movieServiceMapper.map(returnedMovie, MovieDto.class);
-        return null;
+        Optional<Movie> movie = this.movieRepository.findById(id);
+        if (!movie.isPresent()) {
+            // Map found movie to movieDto
+            MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+
+            // For each genre check if it exists and add it to a new list
+            List<GenreDto> genresDtoToRemove = new ArrayList<>();
+            genresDto.forEach(genreDto -> {
+                if (genreService.isExists(genreDto)) {
+                    genresDtoToRemove.add(genreService.findByName(genreDto.getName()));
+                }
+            });
+
+            // For each genre check if it exists in movieDto and remove it
+            genresDtoToRemove.forEach(genreDto -> {
+                movieDto.getGenres().remove(genreDto);
+            });
+
+            // Map movieDto to movie
+            Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
+
+            // Save and flush updated movie
+            Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
+
+            // Return returnedMovie
+            return movieServiceMapper.map(returnedMovie, MovieDto.class);
+        } else {
+            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+        }
     }
 
     /**
@@ -248,25 +244,25 @@ public class MovieServiceImpl implements MovieService {
      */
     @Override
     public MovieDto updateMovieAddCast(Integer id, List<RoleDto> cast) {
-//        Movie movie = this.movieRepository.findById(id);
-//        if (null == movie) {
-//            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//
-//        // Map found movie to movieDto
-//        MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
-//
-//        processRoles(movieDto, new LinkedHashSet<>(cast));
-//
-//        // Map movieDto to movie
-//        Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
-//
-//        // Save and flush updated movie
-//        Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
-//
-//        // Return returnedMovie
-//        return movieServiceMapper.map(returnedMovie, MovieDto.class);
-        return null;
+        Optional<Movie> movie = this.movieRepository.findById(id);
+        if (movie.isPresent()) {
+            // Map found movie to movieDto
+            MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+
+            processRoles(movieDto, new LinkedHashSet<>(cast));
+
+            // Map movieDto to movie
+            Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
+
+            // Save and flush updated movie
+            Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
+
+            // Return returnedMovie
+            return movieServiceMapper.map(returnedMovie, MovieDto.class);
+        } else {
+            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+        }
+
     }
 
     /**
@@ -278,44 +274,47 @@ public class MovieServiceImpl implements MovieService {
      */
     @Override
     public MovieDto updateMovieRemoveCast(Integer id, List<RoleDto> cast) {
-//        Movie movie = this.movieRepository.findById(id);
-//        if (null == movie) {
-//            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//
-//        // Map found movie to movieDto
-//        MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
-//
-//        Set<RoleDto> currentCast = new HashSet<>(movieDto.getCast());
-//        cast.forEach(castDto ->
-//                movieDto.getCast().forEach(currentRole -> {
-//                    if (currentRole.equals(castDto)) {
-//                        currentCast.remove(currentRole);
-//                    }
-//                }));
-//
-//        movieDto.setCast(currentCast);
-//
-//
-//        // Map movieDto to movie
-//        Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
-//
-//
-//        // Save and flush updated movie
-//        Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
-//
-//        // Return returnedMovie
-//        return movieServiceMapper.map(returnedMovie, MovieDto.class);
-        return null;
+        Optional<Movie> movie = this.movieRepository.findById(id);
+        if (movie.isPresent()) {
+            // Map found movie to movieDto
+            MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+
+            Set<RoleDto> currentCast = new HashSet<>(movieDto.getCast());
+            cast.forEach(castDto ->
+                    movieDto.getCast().forEach(currentRole -> {
+                        if (currentRole.equals(castDto)) {
+                            currentCast.remove(currentRole);
+                        }
+                    }));
+
+            movieDto.setCast(currentCast);
+
+
+            // Map movieDto to movie
+            Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
+
+
+            // Save and flush updated movie
+            Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
+
+            // Return returnedMovie
+            return movieServiceMapper.map(returnedMovie, MovieDto.class);
+        } else {
+            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+        }
     }
 
     @Override
     public void delete(Integer id) {
-//        Movie movie = this.movieRepository.findById(id);
-//        if (null == movie) {
-//            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//        this.movieRepository.delete(id);
+        Optional<Movie> movie = this.movieRepository.findById(id);
+        if (movie.isPresent()) {
+            this.movieRepository.deleteById(id);
+//            this.movieRepository.deleteById(movie.get);
+        }
+        else {
+            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+        }
+
     }
 
     @Override
@@ -351,24 +350,23 @@ public class MovieServiceImpl implements MovieService {
     }
 
     private MovieDto processRoles(MovieDto movieDto, Set<RoleDto> newRoles) {
-//        if (movieDto.getId() != null) {
-//            if (!movieRepository.exists(movieDto.getId())) {
-//                movieDto = movieServiceMapper.map(this.movieRepository.saveAndFlush(movieServiceMapper.map(movieDto, Movie.class)), MovieDto.class);
-//            }
-//        }
-//        for (RoleDto roleDto : newRoles) {
-//            ActorDto actor;
-//            if (actorService.isExists(roleDto.getActor())) {
-//                actor = actorService.findByName(roleDto.getActor().getName());
-//            } else {
-//                actor = actorService.add(roleDto.getActor());
-//            }
-//            roleDto.setActor(actor);
-//            roleDto.setMovieId(movieDto.getId());
-//            RoleDto newRole = roleService.add(roleDto);
-//            movieDto.getCast().add(newRole);
-//        }
-//        return movieDto;
-        return null;
+        if (movieDto.getId() != null) {
+            if (!movieRepository.existsById(movieDto.getId())) {
+                movieDto = movieServiceMapper.map(this.movieRepository.saveAndFlush(movieServiceMapper.map(movieDto, Movie.class)), MovieDto.class);
+            }
+        }
+        for (RoleDto roleDto : newRoles) {
+            ActorDto actor;
+            if (actorService.isExists(roleDto.getActor())) {
+                actor = actorService.findByName(roleDto.getActor().getName());
+            } else {
+                actor = actorService.add(roleDto.getActor());
+            }
+            roleDto.setActor(actor);
+            roleDto.setMovieId(movieDto.getId());
+            RoleDto newRole = roleService.add(roleDto);
+            movieDto.getCast().add(newRole);
+        }
+        return movieDto;
     }
 }

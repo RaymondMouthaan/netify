@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service("genreService")
@@ -90,22 +91,25 @@ public class GenreServiceImpl implements GenreService {
 
     @Override
     public GenreDto update(Integer id, GenreDto genreDto) {
-//        Genre genre = this.genreRepository.findById(id);
-//        if (null == genre) {
-//            throw new NotFoundException("element.type.genre", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//        genre.setName(genreDto.getName());
-//        return genreServiceMapper.map(genreRepository.saveAndFlush(genre), GenreDto.class);
-        return null;
+        Optional<Genre> genre = this.genreRepository.findById(id);
+
+        if (genre.isPresent()) {
+            genre.get().setName(genreDto.getName());
+            return genreServiceMapper.map(genreRepository.saveAndFlush(genre.get()), GenreDto.class);
+        } else {
+            throw new NotFoundException("element.type.genre", "id=\'" + String.valueOf(id) + "\'");
+        }
     }
 
     @Override
     public void delete(Integer id) {
-//        Genre genre = this.genreRepository.findById(id);
-//        if (null == genre) {
-//            throw new NotFoundException("element.type.genre", "id=\'" + String.valueOf(id) + "\'");
-//        }
-//        this.genreRepository.delete(genre);
+        Optional<Genre> genre = this.genreRepository.findById(id);
+
+        if (genre.isPresent()) {
+            this.genreRepository.delete(genre.get());
+        } else {
+            throw new NotFoundException("element.type.genre", "id=\'" + String.valueOf(id) + "\'");
+        }
     }
 
     @Override

@@ -15,8 +15,6 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     List<T> findAll();
     Page<T> findAll(Pageable pageable);
 
-
-//    T findOne(ID id);
     Optional<T> findById(ID id);
 
     //    @Modifying

@@ -102,27 +102,31 @@ public class ActorServiceImpl implements ActorService {
     public ActorDto update(Integer id, ActorDto actorDto) throws NotFoundException {
         Optional<Actor> actor = this.actorRepository.findById(id);
 
-        if (!actor.isPresent()) {
+        if (actor.isPresent()) {
+            // Copy notNulls from updateActorDto to actor
+            actorServiceMapper.map(actorDto, actor);
+
+            // save and flush actor
+            Actor returnActor = this.actorRepository.saveAndFlush(actor.get());
+
+            // return saved actor
+            return actorServiceMapper.map(returnActor, ActorDto.class);
+        }
+        else {
             throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
         }
 
-        // Copy notNulls from updateActorDto to actor
-        actorServiceMapper.map(actorDto, actor);
-
-        // save and flush actor
-        Actor returnActor = this.actorRepository.saveAndFlush(actor.get());
-
-        // return saved actor
-        return actorServiceMapper.map(returnActor, ActorDto.class);
     }
 
     @Override
     public void delete(Integer id) {
         Optional<Actor> actor = this.actorRepository.findById(id);
-        if (!actor.isPresent()) {
+        if (actor.isPresent()) {
+            this.actorRepository.delete(actor.get());
+        } else {
             throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
         }
-        this.actorRepository.delete(actor.get());
+
     }
 
     @Override

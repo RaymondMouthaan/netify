@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service("roleService")
@@ -94,27 +95,26 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public RoleDto update(Integer id, RoleDto roleDto) {
-//        Role role = this.roleRepository.findById(id);
-//        if (null == role) {
-//            throw new NotFoundException("element.type.role", "id=\'" + String.valueOf(id) + "\'");
+        Optional<Role> role = this.roleRepository.findById(id);
+        if (!role.isPresent()) {
+            throw new NotFoundException("element.type.role", "id=\'" + String.valueOf(id) + "\'");
+        }
+        if (null != roleDto.getCharacter()) {
+            role.get().setCharacter(roleDto.getCharacter());
+        }
+        if (null != roleDto.getOrder()) {
+            role.get().setOrder(roleDto.getOrder());
+        }
+        if (null != roleDto.getActor()) {
+            role.get().setActor(roleServiceMapper.map(roleDto.getActor(), Actor.class));
+        }
+//        if (null != roleDto.getMovie()) {
+//            role.setMovie(roleServiceMapper.map(roleDto.getMovie(), Movie.class));
 //        }
-//        if (null != roleDto.getCharacter()) {
-//            role.setCharacter(roleDto.getCharacter());
-//        }
-//        if (null != roleDto.getOrder()) {
-//            role.setOrder(roleDto.getOrder());
-//        }
-//        if (null != roleDto.getActor()) {
-//            role.setActor(roleServiceMapper.map(roleDto.getActor(), Actor.class));
-//        }
-////        if (null != roleDto.getMovie()) {
-////            role.setMovie(roleServiceMapper.map(roleDto.getMovie(), Movie.class));
-////        }
-//        if (null != roleDto.getId()) {
-//            role.setId(roleDto.getId());
-//        }
-//        return roleServiceMapper.map(this.roleRepository.saveAndFlush(role), RoleDto.class);
-        return null;
+        if (null != roleDto.getId()) {
+            role.get().setId(roleDto.getId());
+        }
+        return roleServiceMapper.map(this.roleRepository.saveAndFlush(role.get()), RoleDto.class);
     }
 
     @Override
@@ -128,7 +128,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public boolean isExists(RoleDto role) {
-        return roleRepository.findById(role.getId()) != null;
+        return roleRepository.findById(role.getId()).isPresent();
     }
 
 }
