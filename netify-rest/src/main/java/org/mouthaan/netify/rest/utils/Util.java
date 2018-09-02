@@ -1,6 +1,6 @@
 package org.mouthaan.netify.rest.utils;
 
-//import nl.ocwduo.testautomatisering.netflux.schema.GetHandleSuccessMessageResponse;
+//import nl.ocwduo.testautomatisering.netify.schema.GetHandleSuccessMessageResponse;
 
 
 import org.mouthaan.netify.service.dto.MessageDto;

@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://duo.nl/namespace/netify/general"
+                  xmlns:act="http://duo.nl/namespace/netify/datatypes/actor">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gen:AddActorRequest>
+            <gen:actor>
+                <act:name>Chantal Janzen</act:name>
+                <act:gender>FEMALE</act:gender>
+            </gen:actor>
+        </gen:AddActorRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

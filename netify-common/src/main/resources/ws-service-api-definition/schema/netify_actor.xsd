@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://mouthaan.org/namespace/netify/datatypes/actor"
+            xmlns="http://mouthaan.org/namespace/netify/datatypes/actor"
+            xmlns:actor="http://mouthaan.org/namespace/netify/datatypes/actor"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            version="1.0">
+
+    <xsd:complexType name="actor">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="id" type="xsd:int"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="gender" type="gender"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="gender" final="restriction" >
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="UNKNOWN" />
+            <xsd:enumeration value="FEMALE" />
+            <xsd:enumeration value="MALE" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="actors">
+        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="actor" type="actor:actor"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="actorFilters">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="gender" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

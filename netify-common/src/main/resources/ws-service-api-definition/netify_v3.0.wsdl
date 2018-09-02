@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Netify"
+                  targetNamespace="http://mouthaan.org/namespace/netify/"
+                  xmlns:netify="http://mouthaan.org/namespace/netify/"
+                  xmlns:general="http://mouthaan.org/namespace/netify/general"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://mouthaan.org/namespace/netify/"
+                    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                    elementFormDefault="qualified"
+                    attributeFormDefault="qualified"
+                    version="1.0">
+            <xsd:include schemaLocation="netify_schema_v3.0.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <!--Actor Section-->
+    <wsdl:message name="GetActorCountInput">
+        <wsdl:part name="getActorCountInput" element="general:GetActorCountRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetActorCountOutput">
+        <wsdl:part name="getActorCountOutput" element="general:GetActorCountResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetActorAllInput">
+        <wsdl:part name="getActorAllInput" element="general:GetActorAllRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetActorAllOutput">
+        <wsdl:part name="getActorAllOutput" element="general:GetActorAllResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetActorByIdInput">
+        <wsdl:part name="getActorByIdInput" element="general:GetActorByIdRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetActorByIdOutput">
+        <wsdl:part name="getActorByIdOutput" element="general:GetActorByIdResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddActorInput">
+        <wsdl:part name="addActorInput" element="general:AddActorRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddActorOutput">
+        <wsdl:part name="addActorOutput" element="general:AddActorResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateActorInput">
+        <wsdl:part name="updateActorInput" element="general:UpdateActorRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateActorOutput">
+        <wsdl:part name="updateActorOutput" element="general:UpdateActorResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="DeleteActorInput">
+        <wsdl:part name="deleteActorInput" element="general:DeleteActorRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="DeleteActorOutput">
+        <wsdl:part name="deleteActorOutput" element="general:DeleteActorResponse"/>
+    </wsdl:message>
+
+    <!--Role Section-->
+    <wsdl:message name="GetRoleCountInput">
+        <wsdl:part name="getRoleCountInput" element="general:GetRoleCountRequest"/>
+    </wsdl:message>
+    
+    <wsdl:message name="GetRoleCountOutput">
+        <wsdl:part name="getRoleCountOutput" element="general:GetRoleCountResponse"/>
+    </wsdl:message>
+    
+    <wsdl:message name="GetRoleAllInput">
+        <wsdl:part name="getRoleAllInput" element="general:GetRoleAllRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetRoleAllOutput">
+        <wsdl:part name="getRoleAllOutput" element="general:GetRoleAllResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetRoleByIdInput">
+        <wsdl:part name="getRoleByIdInput" element="general:GetRoleByIdRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetRoleByIdOutput">
+        <wsdl:part name="getRoleByIdOutput" element="general:GetRoleByIdResponse"/>
+    </wsdl:message>
+    
+    <!--Genre Section-->
+    <wsdl:message name="GetGenreCountInput">
+        <wsdl:part name="getGenreCountInput" element="general:GetGenreCountRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetGenreCountOutput">
+        <wsdl:part name="getGenreCountOutput" element="general:GetGenreCountResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetGenreAllInput">
+        <wsdl:part name="getGenreAllInput" element="general:GetGenreAllRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetGenreAllOutput">
+        <wsdl:part name="getGenreAllOutput" element="general:GetGenreAllResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetGenreByIdInput">
+        <wsdl:part name="getGenreByIdInput" element="general:GetGenreByIdRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetGenreByIdOutput">
+        <wsdl:part name="getGenreByIdOutput" element="general:GetGenreByIdResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddGenreInput">
+        <wsdl:part name="addGenreInput" element="general:AddGenreRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddGenreOutput">
+        <wsdl:part name="addGenreOutput" element="general:AddGenreResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateGenreInput">
+        <wsdl:part name="updateGenreInput" element="general:UpdateGenreRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateGenreOutput">
+        <wsdl:part name="updateGenreOutput" element="general:UpdateGenreResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="DeleteGenreInput">
+        <wsdl:part name="deleteGenreInput" element="general:DeleteGenreRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="DeleteGenreOutput">
+        <wsdl:part name="deleteGenreOutput" element="general:DeleteGenreResponse"/>
+    </wsdl:message>
+
+    <!--Movie Section-->
+    <wsdl:message name="GetMovieCountInput">
+        <wsdl:part name="getMovieCountInput" element="general:GetMovieCountRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetMovieCountOutput">
+        <wsdl:part name="getMovieCountOutput" element="general:GetMovieCountResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetMovieAllInput">
+        <wsdl:part name="getMovieAllInput" element="general:GetMovieAllRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetMovieAllOutput">
+        <wsdl:part name="getMovieAllOutput" element="general:GetMovieAllResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetMovieByIdInput">
+        <wsdl:part name="getMovieByIdInput" element="general:GetMovieByIdRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetMovieByIdOutput">
+        <wsdl:part name="getMovieByIdOutput" element="general:GetMovieByIdResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddMovieInput">
+        <wsdl:part name="addMovieInput" element="general:AddMovieRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddMovieOutput">
+        <wsdl:part name="addMovieOutput" element="general:AddMovieResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieInput">
+        <wsdl:part name="updateMovieInput" element="general:UpdateMovieRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieOutput">
+        <wsdl:part name="updateMovieOutput" element="general:UpdateMovieResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieAddGenreInput">
+        <wsdl:part name="updateMovieAddGenreInput" element="general:UpdateMovieAddGenreRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieAddGenreOutput">
+        <wsdl:part name="updateMovieAddGenreOutput" element="general:UpdateMovieAddGenreResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieRemoveGenreInput">
+        <wsdl:part name="updateMovieRemoveGenreInput" element="general:UpdateMovieRemoveGenreRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieRemoveGenreOutput">
+        <wsdl:part name="updateMovieRemoveGenreOutput" element="general:UpdateMovieRemoveGenreResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieAddCastInput">
+        <wsdl:part name="updateMovieAddCastInput" element="general:UpdateMovieAddCastRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieAddCastOutput">
+        <wsdl:part name="updateMovieAddCastOutput" element="general:UpdateMovieAddCastResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieRemoveCastInput">
+        <wsdl:part name="updateMovieRemoveCastInput" element="general:UpdateMovieRemoveCastRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMovieRemoveCastOutput">
+        <wsdl:part name="updateMovieRemoveCastOutput" element="general:UpdateMovieRemoveCastResponse"/>
+    </wsdl:message>
+    
+    <wsdl:message name="DeleteMovieInput">
+        <wsdl:part name="deleteMovieInput" element="general:DeleteMovieRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="DeleteMovieOutput">
+        <wsdl:part name="deleteMovieOutput" element="general:DeleteMovieResponse"/>
+    </wsdl:message>
+
+    <wsdl:portType name="Netify_PortType">
+
+        <!--Actor Section-->
+        <wsdl:operation name="getActorCount">
+            <wsdl:input message="netify:GetActorCountInput"/>
+            <wsdl:output message="netify:GetActorCountOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="getActorAll">
+            <wsdl:input message="netify:GetActorAllInput"/>
+            <wsdl:output message="netify:GetActorAllOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="getActorById">
+            <wsdl:input message="netify:GetActorByIdInput"/>
+            <wsdl:output message="netify:GetActorByIdOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="addActor">
+            <wsdl:input message="netify:AddActorInput"/>
+            <wsdl:output message="netify:AddActorOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateActor">
+            <wsdl:input message="netify:UpdateActorInput"/>
+            <wsdl:output message="netify:UpdateActorOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="deleteActor">
+            <wsdl:input message="netify:DeleteActorInput"/>
+            <wsdl:output message="netify:DeleteActorOutput"/>
+        </wsdl:operation>
+
+        <!--Role Section-->
+        <wsdl:operation name="getRoleCount">
+            <wsdl:input message="netify:GetRoleCountInput"/>
+            <wsdl:output message="netify:GetRoleCountOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="getRoleAll">
+            <wsdl:input message="netify:GetRoleAllInput"/>
+            <wsdl:output message="netify:GetRoleAllOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="getRoleById">
+            <wsdl:input message="netify:GetRoleByIdInput"/>
+            <wsdl:output message="netify:GetRoleByIdOutput"/>
+        </wsdl:operation>
+        
+        <!--Genre Section-->
+        <wsdl:operation name="getGenreCount">
+            <wsdl:input message="netify:GetGenreCountInput"/>
+            <wsdl:output message="netify:GetGenreCountOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="getGenreAll">
+            <wsdl:input message="netify:GetGenreAllInput"/>
+            <wsdl:output message="netify:GetGenreAllOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="getGenreById">
+            <wsdl:input message="netify:GetGenreByIdInput"/>
+            <wsdl:output message="netify:GetGenreByIdOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="addGenre">
+            <wsdl:input message="netify:AddGenreInput"/>
+            <wsdl:output message="netify:AddGenreOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateGenre">
+            <wsdl:input message="netify:UpdateGenreInput"/>
+            <wsdl:output message="netify:UpdateGenreOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="deleteGenre">
+            <wsdl:input message="netify:DeleteGenreInput"/>
+            <wsdl:output message="netify:DeleteGenreOutput"/>
+        </wsdl:operation>
+
+        <!--Movie Section-->
+        <wsdl:operation name="getMovieCount">
+            <wsdl:input message="netify:GetMovieCountInput"/>
+            <wsdl:output message="netify:GetMovieCountOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="getMovieAll">
+            <wsdl:input message="netify:GetMovieAllInput"/>
+            <wsdl:output message="netify:GetMovieAllOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="getMovieById">
+            <wsdl:input message="netify:GetMovieByIdInput"/>
+            <wsdl:output message="netify:GetMovieByIdOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="addMovie">
+            <wsdl:input message="netify:AddMovieInput"/>
+            <wsdl:output message="netify:AddMovieOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovie">
+            <wsdl:input message="netify:UpdateMovieInput"/>
+            <wsdl:output message="netify:UpdateMovieOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovieAddGenre">
+            <wsdl:input message="netify:UpdateMovieAddGenreInput"/>
+            <wsdl:output message="netify:UpdateMovieAddGenreOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovieRemoveGenre">
+            <wsdl:input message="netify:UpdateMovieRemoveGenreInput"/>
+            <wsdl:output message="netify:UpdateMovieRemoveGenreOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovieAddCast">
+            <wsdl:input message="netify:UpdateMovieAddCastInput"/>
+            <wsdl:output message="netify:UpdateMovieAddCastOutput"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovieRemoveCast">
+            <wsdl:input message="netify:UpdateMovieRemoveCastInput"/>
+            <wsdl:output message="netify:UpdateMovieRemoveCastOutput"/>
+        </wsdl:operation>
+        
+        <wsdl:operation name="deleteMovie">
+            <wsdl:input message="netify:DeleteMovieInput"/>
+            <wsdl:output message="netify:DeleteMovieOutput"/>
+        </wsdl:operation>
+
+    </wsdl:portType>
+
+    <wsdl:binding name="Netify_SoapBinding" type="netify:Netify_PortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+        <!--Actor Section-->
+        <wsdl:operation name="getActorCount">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getActorCount"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="getActorAll">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getActorAll"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="getActorById">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getActorById"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="addActor">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/addActor"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateActor">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/updateActor"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="deleteActor">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/deleteActor"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!--Role Section-->
+        <wsdl:operation name="getRoleCount">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getRoleCount"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="getRoleAll">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getRoleAll"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="getRoleById">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getRoleById"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        
+        <!--Genre Section-->
+        <wsdl:operation name="getGenreCount">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getGenreCount"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="getGenreAll">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getGenreAll"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="getGenreById">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getGenreById"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="addGenre">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/addGenre"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateGenre">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/updateGenre"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="deleteGenre">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/deleteGenre"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!--Movie Section-->
+        <wsdl:operation name="getMovieCount">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getMovieCount"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="getMovieAll">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getMovieAll"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="getMovieById">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/getMovieById"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="addMovie">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/addMovie"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovie">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/updateMovie"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovieAddGenre">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/updateMovieAddGenre"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovieRemoveGenre">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/updateMovieRemoveGenre"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovieAddCast">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/updateMovieAddCast"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="updateMovieRemoveCast">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/updateMovieRemoveCast"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        
+        <wsdl:operation name="deleteMovie">
+            <soap:operation soapAction="http://mouthaan.org/namespace/netify/deleteMovie"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+    </wsdl:binding>
+
+    <wsdl:service name="Netify_Service">
+        <wsdl:documentation>Netify service</wsdl:documentation>
+        <wsdl:port name="Netify_Port" binding="netify:Netify_SoapBinding">
+            <soap:address location="http://localhost:8081/movies/netify_3.0"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

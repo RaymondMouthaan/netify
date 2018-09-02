@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://duo.nl/namespace/netify/general"
+                  xmlns:act="http://duo.nl/namespace/netify/datatypes/actor">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gen:GetActorAllRequest>
+            <!--Optional:-->
+            <gen:filters>
+                <!--Optional:-->
+                <act:name>Matt Damon</act:name>
+                <!--Optional:-->
+                <act:gender>MALE</act:gender>
+            </gen:filters>
+        </gen:GetActorAllRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://duo.nl/namespace/netify/general"
+                  xmlns:mov="http://duo.nl/namespace/netify/datatypes/movie">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gen:GetMovieAllRequest>
+            <!--Optional:-->
+            <gen:filters>
+                <!--Optional:-->
+                <mov:title>Unforgiven</mov:title>
+            </gen:filters>
+        </gen:GetMovieAllRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

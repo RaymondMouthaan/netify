@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://duo.nl/namespace/netify/general" xmlns:gen1="http://duo.nl/namespace/netify/datatypes/genre">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gen:UpdateMovieAddGenreRequest>
+            <gen:movieId>11</gen:movieId>
+            <gen:genre>
+                <gen1:name>Chickflick</gen1:name>
+            </gen:genre>
+            <gen:genre>
+                <gen1:name>Comedy</gen1:name>
+            </gen:genre>
+        </gen:UpdateMovieAddGenreRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://duo.nl/namespace/netify/general"
+                  xmlns:gen1="http://duo.nl/namespace/netify/datatypes/genre">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gen:GetGenreAllRequest>
+            <!--Optional:-->
+            <gen:filters>
+                <!--Optional:-->
+                <gen1:name>Horror</gen1:name>
+            </gen:filters>
+        </gen:GetGenreAllRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>netify</artifactId>
+        <groupId>org.mouthaan.netify</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>netify-soap</artifactId>
+    <packaging>jar</packaging>
+
+    <name>netify-soap</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <skipIntegrationTest>true</skipIntegrationTest>
+    </properties>
+
+    <dependencies>
+        <!-- Internal dependencies -->
+        <dependency>
+            <groupId>org.mouthaan.netify</groupId>
+            <artifactId>netify-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Spring dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Test Dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!--<build>-->
+        <!--<finalName>netify-soap</finalName>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-failsafe-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<skipITs>${skipIntegrationTest}</skipITs>-->
+                    <!--<includes>-->
+                        <!--<include>**/*IT.java</include>-->
+                    <!--</includes>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<groupId>com.xebialabs.xldeploy</groupId>-->
+                <!--<artifactId>xldeploy-maven-plugin</artifactId>-->
+                <!--<version>5.1.0</version>-->
+                <!--<extensions>true</extensions>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>generate-deployment-package</id>-->
+                        <!--<phase>verify</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>generate-deployment-package</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<configuration>-->
+                    <!--<serverAddress>${xldeploy.server}</serverAddress>-->
+                    <!--<context>${xldeploy.contextroot}</context>-->
+                    <!--<port>${xldeploy.port}</port>-->
+                    <!--<secured>${xldeploy.secured}</secured>-->
+                    <!--<applicationName>basisvoorzieningen/testautomatisering/netify-soap</applicationName>-->
+                    <!--<environmentId>${xldeploy.environmentId}</environmentId>-->
+                    <!--<deletePreviouslyDeployedDar>true</deletePreviouslyDeployedDar>-->
+                    <!--<generateDeployedOnUpgrade>true</generateDeployedOnUpgrade>-->
+                    <!--<deployables combine.self="override">-->
+                        <!--&lt;!&ndash; system property &ndash;&gt;-->
+                        <!--&lt;!&ndash;<duo.JbossSystemPropertySpec name="OMGEVING">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<systemPropertyValue>{{data.omgeving}}</systemPropertyValue>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</duo.JbossSystemPropertySpec>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<duo.JbossSystemPropertySpec name="APP_ENCRYPTION_PASSWORD">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<systemPropertyValue>{{system.app_encryption_password}}</systemPropertyValue>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</duo.JbossSystemPropertySpec>&ndash;&gt;-->
+                        <!--<duo.JbossSystemPropertySpec name="spring.config.location">-->
+                            <!--<systemPropertyValue>{{spring.config.location}}</systemPropertyValue>-->
+                            <!--<tags>-->
+                                <!--<value>${project.artifactId}</value>-->
+                            <!--</tags>-->
+                        <!--</duo.JbossSystemPropertySpec>-->
+
+                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+                        <!--&lt;!&ndash;Datasources&ndash;&gt;-->
+                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+                        <!--<duo.JbossdmDb2ServerDataSourceSpec name="tadta">-->
+                            <!--<jndiName>java:/jdbc/tadta</jndiName>-->
+                            <!--<username>{{database.tadta.username}}</username>-->
+                            <!--<password>{{database.tadta.password}}</password>-->
+                            <!--<maxPoolSize>{{database.tadta.maxPoolSize}}</maxPoolSize>-->
+                            <!--<connectionUrl>-->
+                                <!--jdbc:as400://{{database.tadta.hostname}}/{{database.tadta.schemaname}};dateformat=iso-->
+                            <!--</connectionUrl>-->
+                            <!--<tags>-->
+                                <!--<value>${project.artifactId}</value>-->
+                            <!--</tags>-->
+                        <!--</duo.JbossdmDb2ServerDataSourceSpec>-->
+
+                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+                        <!--&lt;!&ndash;Application Properties&ndash;&gt;-->
+                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+                        <!--<duo.JbossApplicationConfigFile name="application.properties" location="../netify-soap/config/xldeploy/application.properties">-->
+                            <!--<tags>-->
+                                <!--<value>${project.artifactId}</value>-->
+                            <!--</tags>-->
+                        <!--</duo.JbossApplicationConfigFile>-->
+
+                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+                        <!--&lt;!&ndash;WAR&ndash;&gt;-->
+                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+                        <!--<jbossdm.War name="netify-soap" location="../netify-soap/target/netify-soap.war">-->
+                            <!--<tags>-->
+                                <!--<value>${project.artifactId}</value>-->
+                            <!--</tags>-->
+                        <!--</jbossdm.War>-->
+                    <!--</deployables>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <activatedProperties>local</activatedProperties>
+            </properties>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.mouthaan.netify</groupId>
+                    <artifactId>netify-liquibase</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>dev</id>
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+            </properties>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.mariadb.jdbc</groupId>
+                    <artifactId>mariadb-java-client</artifactId>
+                    <version>2.2.6</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.mouthaan.netify</groupId>
+                    <artifactId>netify-liquibase</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>integration-test</id>
+            <properties>
+                <activatedProperties>local</activatedProperties>
+                <skipIntegrationTest>false</skipIntegrationTest>
+            </properties>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.mouthaan.netify</groupId>
+                    <artifactId>netify-liquibase</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+</project>

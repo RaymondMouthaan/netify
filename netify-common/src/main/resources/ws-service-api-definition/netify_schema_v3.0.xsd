@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://mouthaan.org/namespace/netify/"
+            xmlns="http://mouthaan.org/namespace/netify/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            version="1.0">
+
+    <xsd:import namespace="http://mouthaan.org/namespace/netify/general"
+                schemaLocation="schema/netify_general.xsd"/>
+</xsd:schema>

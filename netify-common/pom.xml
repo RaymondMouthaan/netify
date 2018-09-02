@@ -11,6 +11,11 @@
 
     <artifactId>netify-common</artifactId>
 
+    <properties>
+        <jaxb2-maven-plugin.version>2.5</jaxb2-maven-plugin.version>
+        <orika-core.version>RELEASE</orika-core.version>
+    </properties>
+
     <dependencies>
 
         <!-- Internal Dependencies -->
@@ -20,5 +25,65 @@
             <version>${project.version}</version>
         </dependency>
 
+        <!-- Orika Mapper -->
+        <dependency>
+            <groupId>ma.glasnost.orika</groupId>
+            <artifactId>orika-core</artifactId>
+            <version>${orika-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>${jaxb2-maven-plugin.version}</version>
+                <configuration>
+                    <wsdlUrls>
+                        <wsdlUrl>src/main/resources/ws-service-api-definition/netify_v3.0.wsdl</wsdlUrl>
+                    </wsdlUrls>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>target/generated-sources/wsdlimport/Netify_v3.0</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

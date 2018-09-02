@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://mouthaan.org/namespace/netify/general"
+            xmlns="http://mouthaan.org/namespace/netify/general"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:actor="http://mouthaan.org/namespace/netify/datatypes/actor"
+            xmlns:role="http://mouthaan.org/namespace/netify/datatypes/role"
+            xmlns:genre="http://mouthaan.org/namespace/netify/datatypes/genre"
+            xmlns:movie="http://mouthaan.org/namespace/netify/datatypes/movie"
+            elementFormDefault="qualified"
+            version="1.0">
+    <xsd:import namespace="http://mouthaan.org/namespace/netify/datatypes/actor"
+                schemaLocation="netify_actor.xsd"/>
+
+    <xsd:import namespace="http://mouthaan.org/namespace/netify/datatypes/role"
+                schemaLocation="netify_role.xsd"/>
+
+    <xsd:import namespace="http://mouthaan.org/namespace/netify/datatypes/genre"
+                schemaLocation="netify_genre.xsd"/>
+
+    <xsd:import namespace="http://mouthaan.org/namespace/netify/datatypes/movie"
+                schemaLocation="netify_movie.xsd"/>
+
+    <!--Actor Section-->
+    <xsd:element name="GetActorCountRequest" nillable="true"/>
+
+    <xsd:element name="GetActorCountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="count" type="xsd:long"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetActorAllRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="filters" type="actor:actorFilters"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetActorAllResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="actors" type="actor:actors"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetActorByIdRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="id" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetActorByIdResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="actor" type="actor:actor"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="AddActorRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="actor" type="actor:actor"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="AddActorResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="actor" type="actor:actor"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateActorRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="actor" type="actor:actor"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateActorResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="actor" type="actor:actor"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DeleteActorRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="id" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DeleteActorResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="actor" type="actor:actor"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!--Role Section-->
+    <xsd:element name="GetRoleCountRequest" nillable="true"/>
+
+    <xsd:element name="GetRoleCountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="count" type="xsd:long"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetRoleAllRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="filters" type="role:roleFilters"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetRoleAllResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="cast" type="role:cast"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetRoleByIdRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="id" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetRoleByIdResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="cast" type="role:cast"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!--Genre Section-->
+    <xsd:element name="GetGenreCountRequest" nillable="true"/>
+
+    <xsd:element name="GetGenreCountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="count" type="xsd:long"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetGenreAllRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="filters" type="genre:genreFilters"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetGenreAllResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="genres" type="genre:genres"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetGenreByIdRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="id" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetGenreByIdResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="genre" type="genre:genre"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="AddGenreRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="genre" type="genre:genre"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="AddGenreResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="genre" type="genre:genre"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateGenreRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="genre" type="genre:genre"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateGenreResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="genre" type="genre:genre"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DeleteGenreRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="id" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DeleteGenreResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="genre" type="genre:genre"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!--Movie Section-->
+    <xsd:element name="GetMovieCountRequest" nillable="true"/>
+
+    <xsd:element name="GetMovieCountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="count" type="xsd:long"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetMovieAllRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="filters" type="movie:movieFilters"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetMovieAllResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="movies" type="movie:movies"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetMovieByIdRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="id" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetMovieByIdResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="AddMovieRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="AddMovieResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieAddGenreRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="movieId" type="xsd:int"/>
+                <xsd:element minOccurs="1" maxOccurs="unbounded" name="genre" type="genre:genre"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieAddGenreResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieRemoveGenreRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="movieId" type="xsd:int"/>
+                <xsd:element minOccurs="1" maxOccurs="unbounded" name="genre" type="genre:genre"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieRemoveGenreResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieAddCastRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="movieId" type="xsd:int"/>
+                <xsd:element minOccurs="1" maxOccurs="1" name="cast" type="role:cast"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieAddCastResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieRemoveCastRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="movieId" type="xsd:int"/>
+                <xsd:element minOccurs="1" maxOccurs="1" name="cast" type="role:cast"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="UpdateMovieRemoveCastResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="DeleteMovieRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" name="id" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DeleteMovieResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="movie" type="movie:movie"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

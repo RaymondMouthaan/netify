@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://mouthaan.org/namespace/netify/datatypes/role"
+            xmlns="http://mouthaan.org/namespace/netify/datatypes/role"
+            xmlns:actor="http://mouthaan.org/namespace/netify/datatypes/actor"
+            xmlns:role="http://mouthaan.org/namespace/netify/datatypes/role"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            version="1.0">
+
+    <xsd:import namespace="http://mouthaan.org/namespace/netify/datatypes/actor"
+                schemaLocation="netify_actor.xsd"/>
+
+    <xsd:complexType name="cast">
+        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="role" type="role:role"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="role">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="id" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="character" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="order" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="actor" type="actor:actor"/>
+            <xsd:element minOccurs="0" name="movieId" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="roleFilters">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="character" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="order" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="movieId" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="actorId" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

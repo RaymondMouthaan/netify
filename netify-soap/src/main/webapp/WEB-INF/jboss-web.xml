@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<jboss-web>
+    <resource-ref>
+        <res-ref-name>jdbc/tadta</res-ref-name>
+        <jndi-name>java:/jdbc/tadta</jndi-name>
+    </resource-ref>
+    <!--<resource-ref>-->
+        <!--<res-ref-name>jdbc/perfmon</res-ref-name>-->
+        <!--<jndi-name>java:/jdbc/perfmon</jndi-name>-->
+    <!--</resource-ref>-->
+</jboss-web>

@@ -30,6 +30,7 @@
         <module>netify-service</module>
         <module>netify-common</module>
         <module>netify-rest</module>
+        <module>netify-soap</module>
     </modules>
 
     <profiles>

@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://duo.nl/namespace/netify/general"
+                  xmlns:mov="http://duo.nl/namespace/netify/datatypes/movie">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gen:UpdateMovieRequest>
+            <gen:movie>
+                <mov:id>11</mov:id>
+                <mov:title>Star Wars</mov:title>
+                <mov:runtime>150</mov:runtime>
+            </gen:movie>
+        </gen:UpdateMovieRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
