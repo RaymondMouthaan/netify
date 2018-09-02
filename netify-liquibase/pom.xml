@@ -54,7 +54,7 @@
                         <configuration>
                             <changeLogFile>src\main\resources\liquibase\master-changelog.xml</changeLogFile>
                             <driver>org.h2.Driver</driver>
-                            <url>jdbc:h2:mem:test_mem</url>
+                            <url>jdbc:h2:mem:testdb</url>
                             <clearCheckSums>true</clearCheckSums>
                             <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
                             <username>sa</username>

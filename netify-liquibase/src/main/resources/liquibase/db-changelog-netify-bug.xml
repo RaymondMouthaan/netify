@@ -16,7 +16,7 @@
                 <constraints nullable="false" primaryKey="true"/>
             </column>
             <column name="bug_location" type="VARCHAR(255)"/>
-            <column name="bug_enabled" type="BOOLEAN"/>
+            <column name="bug_enabled" type="TINYINT(1)"/>
             <column name="bug_group" type="INTEGER"/>
             <column name="bug_description" type="VARCHAR(255)"/>
         </createTable>
