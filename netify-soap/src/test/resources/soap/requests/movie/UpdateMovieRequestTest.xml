@@ -1,5 +1,5 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://duo.nl/namespace/netify/general"
-                  xmlns:mov="http://duo.nl/namespace/netify/datatypes/movie">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://mouthaan.org/namespace/netify/general"
+                  xmlns:mov="http://mouthaan.org/namespace/netify/datatypes/movie">
     <soapenv:Header/>
     <soapenv:Body>
         <gen:UpdateMovieRequest>

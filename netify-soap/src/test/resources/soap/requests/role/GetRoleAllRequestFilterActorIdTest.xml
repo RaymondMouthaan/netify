@@ -1,5 +1,5 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://duo.nl/namespace/netify/general"
-                  xmlns:role="http://duo.nl/namespace/netify/datatypes/role">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://mouthaan.org/namespace/netify/general"
+                  xmlns:role="http://mouthaan.org/namespace/netify/datatypes/role">
     <soapenv:Header/>
     <soapenv:Body>
         <gen:GetRoleAllRequest>

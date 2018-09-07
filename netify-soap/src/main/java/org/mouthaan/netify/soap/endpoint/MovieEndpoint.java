@@ -28,7 +28,7 @@ import java.util.Map;
 @Endpoint
 @AllArgsConstructor
 public class MovieEndpoint {
-    private static final String NAMESPACE_URI = "http://duo.nl/namespace/netify/general";
+    private static final String NAMESPACE_URI = "http://mouthaan.org/namespace/netify/general";
 
     private final MovieFacade movieFacade;
     private final MessageSource messageSource;

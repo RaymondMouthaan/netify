@@ -15,7 +15,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @AllArgsConstructor
 public class ActorEndpoint {
 
-    private static final String NAMESPACE_URI = "http://duo.nl/namespace/netify/general";
+    private static final String NAMESPACE_URI = "http://mouthaan.org/namespace/netify/general";
     private final ActorFacade actorFacade;
     private final MessageSource messageSource;
 

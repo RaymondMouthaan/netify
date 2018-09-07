@@ -27,7 +27,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class RoleEndpoint {
 
-    private static final String NAMESPACE_URI = "http://duo.nl/namespace/netify/general";
+    private static final String NAMESPACE_URI = "http://mouthaan.org/namespace/netify/general";
     private final RoleFacade roleFacade;
     private final MessageSource messageSource;
 
