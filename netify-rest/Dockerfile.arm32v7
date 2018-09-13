@@ -1,9 +1,11 @@
 # Start with a base image containing Java runtime
 #FROM openjdk:8-jdk-alpine
-FROM openjdk:10-jre
+FROM arm32v7/openjdk:8-jre-slim
 
 # Add Maintainer Info
 LABEL maintainer="raymondmmouthaan@gmail.com"
+
+COPY tmp/qemu-arm-static /usr/bin/qemu-arm-static
 
 # Add a volume pointing to /tmp
 VOLUME /tmp
