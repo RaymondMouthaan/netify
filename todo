@@ -1,4 +1,6 @@
 // Todo: replace Orika by MapStruct
 
 // Commands
-/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/bin/java -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=dev -jar target/netify-rest.jar
+
+// Run netify-rest from Mac
+- Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/bin/java -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=dev -jar target/netify-rest.jar
