@@ -6,8 +6,6 @@ import org.mouthaan.netify.service.BugService;
 import org.mouthaan.netify.service.GenreService;
 import org.mouthaan.netify.service.dto.CountDto;
 import org.mouthaan.netify.service.dto.GenreDto;
-import org.mouthaan.netify.rest.utils.Util;
-import org.mouthaan.netify.service.BugService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Page;

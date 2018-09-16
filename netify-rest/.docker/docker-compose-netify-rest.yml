@@ -1,0 +1,27 @@
+################################################################################
+# Netify Stack
+################################################################################
+#$ docker stack deploy netify-rest --compose-file docker-compose-netify-rest.yml
+################################################################################
+version: "3.7"
+
+services:
+  netify-rest:
+    image: raymondmm/netify-rest:0.0.1-SNAPSHOT
+    environment:
+    - SPRING_PROFILES_ACTIVE=dev
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/TZ:ro
+    deploy:
+      replicas: 1
+
+  netify-soap:
+    image: raymondmm/netify-rest:0.0.1-SNAPSHOT
+    environment:
+    - SPRING_PROFILES_ACTIVE=dev
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/TZ:ro
+    deploy:
+      replicas: 1

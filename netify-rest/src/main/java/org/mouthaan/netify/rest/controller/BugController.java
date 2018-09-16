@@ -1,11 +1,11 @@
 package org.mouthaan.netify.rest.controller;
 
 import io.swagger.annotations.*;
+import org.apache.commons.logging.Log;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.mouthaan.netify.domain.dao.SearchCriteria;
 import org.mouthaan.netify.service.BugService;
 import org.mouthaan.netify.service.dto.BugDto;
-import org.apache.commons.logging.Log;
-import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

@@ -1,7 +1,6 @@
 package org.mouthaan.netify.rest.controller;
 
 import io.swagger.annotations.*;
-
 import org.mouthaan.netify.rest.utils.Util;
 import org.mouthaan.netify.service.ActorService;
 import org.mouthaan.netify.service.dto.ActorDto;

@@ -1,29 +1,13 @@
 package org.mouthaan.netify.soap.endpoint;
 
 import lombok.AllArgsConstructor;
-import org.mouthaan.namespace.netify.datatypes.movie.Movie;
-import org.mouthaan.namespace.netify.datatypes.movie.Movies;
 import org.mouthaan.namespace.netify.general.*;
-import org.mouthaan.netify.common.mapper.GenreSoapMapper;
-import org.mouthaan.netify.common.mapper.MovieSoapMapper;
-import org.mouthaan.netify.common.mapper.RoleSoapMapper;
 import org.mouthaan.netify.common.soap.MovieFacade;
-import org.mouthaan.netify.domain.dao.SearchCriteria;
-import org.mouthaan.netify.service.MovieService;
-import org.mouthaan.netify.service.dto.GenreDto;
-import org.mouthaan.netify.service.dto.MovieDto;
-import org.mouthaan.netify.service.dto.RoleDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Endpoint
 @AllArgsConstructor

@@ -1,24 +1,13 @@
 package org.mouthaan.netify.soap.endpoint;
 
 import lombok.AllArgsConstructor;
-import org.mouthaan.namespace.netify.datatypes.genre.Genre;
-import org.mouthaan.namespace.netify.datatypes.genre.Genres;
 import org.mouthaan.namespace.netify.general.*;
-import org.mouthaan.netify.common.mapper.GenreSoapMapper;
 import org.mouthaan.netify.common.soap.GenreFacade;
-import org.mouthaan.netify.service.GenreService;
-import org.mouthaan.netify.service.dto.GenreDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Endpoint
 @AllArgsConstructor
