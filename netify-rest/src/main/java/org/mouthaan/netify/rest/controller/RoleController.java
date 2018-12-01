@@ -32,7 +32,7 @@ import java.util.Map;
 @RestController
 @Validated
 @RequestMapping(value = "/roles")
-@Api(value = "netify-roles", description = "Operations pertaining to roles of actors in movies in Netflux")
+@Api(value = "netify-roles", description = "Operations pertaining to roles of actors in movies in Netify")
 public class RoleController {
     private final RoleService roleService;
     private final MessageSource messageSource;

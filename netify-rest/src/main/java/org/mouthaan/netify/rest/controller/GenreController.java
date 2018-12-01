@@ -35,7 +35,7 @@ import java.util.Map;
 @RestController
 @Validated
 @RequestMapping(value = "/genres")
-@Api(value = "netify-genres", description = "Operations pertaining to genres in Netflux")
+@Api(value = "netify-genres", description = "Operations pertaining to genres in Netify")
 public class GenreController {
     private GenreService genreService;
     private final BugService bugService;

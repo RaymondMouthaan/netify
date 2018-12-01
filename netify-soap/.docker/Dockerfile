@@ -1,12 +1,12 @@
 # Start with a base image containing Java runtime
+FROM amd64/openjdk:11-jre-slim
 #FROM openjdk:8-jdk-alpine
-FROM openjdk:8-jre-alpine
+#FROM openjdk:10-jre
 
 # Add Maintainer Info
 LABEL maintainer="raymondmmouthaan@gmail.com"
 
-# Add a volume pointing to /tmp
-VOLUME /tmp
+ENV SPRING_PROFILES_ACTIVE dev
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8081

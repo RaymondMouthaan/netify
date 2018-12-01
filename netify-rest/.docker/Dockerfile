@@ -1,5 +1,6 @@
 # Start with a base image containing Java runtime
-FROM openjdk:8-jdk-alpine
+FROM amd64/openjdk:11-jre-slim
+#FROM openjdk:8-jdk-alpine
 #FROM openjdk:10-jre
 
 # Add Maintainer Info

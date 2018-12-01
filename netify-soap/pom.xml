@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>netify</artifactId>
         <groupId>org.mouthaan.netify</groupId>
@@ -47,6 +48,25 @@
             <scope>test</scope>
         </dependency>
 
+
+        <!--<dependency>-->
+            <!--<groupId>javax.xml.bind</groupId>-->
+            <!--<artifactId>jaxb-api</artifactId>-->
+            <!--<version>2.3.1</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-core</artifactId>
+            <version>2.3.0.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -58,122 +78,122 @@
             </plugin>
 
             <!--<plugin>-->
-                <!--<groupId>com.spotify</groupId>-->
-                <!--<artifactId>dockerfile-maven-plugin</artifactId>-->
-                <!--<version>${dockerfile-maven-version}</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>default</id>-->
-                        <!--<goals>-->
-                            <!--<goal>build</goal>-->
-                            <!--<goal>push</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<configuration>-->
-                    <!--<repository>raymondmm/netify-soap</repository>-->
-                    <!--<tag>${project.version}</tag>-->
-                    <!--<buildArgs>-->
-                        <!--<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>-->
-                    <!--</buildArgs>-->
-                <!--</configuration>-->
+            <!--<groupId>com.spotify</groupId>-->
+            <!--<artifactId>dockerfile-maven-plugin</artifactId>-->
+            <!--<version>${dockerfile-maven-version}</version>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>default</id>-->
+            <!--<goals>-->
+            <!--<goal>build</goal>-->
+            <!--<goal>push</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--<configuration>-->
+            <!--<repository>raymondmm/netify-soap</repository>-->
+            <!--<tag>${project.version}</tag>-->
+            <!--<buildArgs>-->
+            <!--<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>-->
+            <!--</buildArgs>-->
+            <!--</configuration>-->
             <!--</plugin>-->
 
         </plugins>
     </build>
 
     <!--<build>-->
-        <!--<finalName>netify-soap</finalName>-->
-        <!--<plugins>-->
-            <!--<plugin>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-            <!--</plugin>-->
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-failsafe-plugin</artifactId>-->
-                <!--<configuration>-->
-                    <!--<skipITs>${skipIntegrationTest}</skipITs>-->
-                    <!--<includes>-->
-                        <!--<include>**/*IT.java</include>-->
-                    <!--</includes>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-            <!--<plugin>-->
-                <!--<groupId>com.xebialabs.xldeploy</groupId>-->
-                <!--<artifactId>xldeploy-maven-plugin</artifactId>-->
-                <!--<version>5.1.0</version>-->
-                <!--<extensions>true</extensions>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>generate-deployment-package</id>-->
-                        <!--<phase>verify</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>generate-deployment-package</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<configuration>-->
-                    <!--<serverAddress>${xldeploy.server}</serverAddress>-->
-                    <!--<context>${xldeploy.contextroot}</context>-->
-                    <!--<port>${xldeploy.port}</port>-->
-                    <!--<secured>${xldeploy.secured}</secured>-->
-                    <!--<applicationName>basisvoorzieningen/testautomatisering/netify-soap</applicationName>-->
-                    <!--<environmentId>${xldeploy.environmentId}</environmentId>-->
-                    <!--<deletePreviouslyDeployedDar>true</deletePreviouslyDeployedDar>-->
-                    <!--<generateDeployedOnUpgrade>true</generateDeployedOnUpgrade>-->
-                    <!--<deployables combine.self="override">-->
-                        <!--&lt;!&ndash; system property &ndash;&gt;-->
-                        <!--&lt;!&ndash;<duo.JbossSystemPropertySpec name="OMGEVING">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<systemPropertyValue>{{data.omgeving}}</systemPropertyValue>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</duo.JbossSystemPropertySpec>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<duo.JbossSystemPropertySpec name="APP_ENCRYPTION_PASSWORD">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<systemPropertyValue>{{system.app_encryption_password}}</systemPropertyValue>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</duo.JbossSystemPropertySpec>&ndash;&gt;-->
-                        <!--<duo.JbossSystemPropertySpec name="spring.config.location">-->
-                            <!--<systemPropertyValue>{{spring.config.location}}</systemPropertyValue>-->
-                            <!--<tags>-->
-                                <!--<value>${project.artifactId}</value>-->
-                            <!--</tags>-->
-                        <!--</duo.JbossSystemPropertySpec>-->
+    <!--<finalName>netify-soap</finalName>-->
+    <!--<plugins>-->
+    <!--<plugin>-->
+    <!--<groupId>org.springframework.boot</groupId>-->
+    <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+    <!--</plugin>-->
+    <!--<plugin>-->
+    <!--<groupId>org.apache.maven.plugins</groupId>-->
+    <!--<artifactId>maven-failsafe-plugin</artifactId>-->
+    <!--<configuration>-->
+    <!--<skipITs>${skipIntegrationTest}</skipITs>-->
+    <!--<includes>-->
+    <!--<include>**/*IT.java</include>-->
+    <!--</includes>-->
+    <!--</configuration>-->
+    <!--</plugin>-->
+    <!--<plugin>-->
+    <!--<groupId>com.xebialabs.xldeploy</groupId>-->
+    <!--<artifactId>xldeploy-maven-plugin</artifactId>-->
+    <!--<version>5.1.0</version>-->
+    <!--<extensions>true</extensions>-->
+    <!--<executions>-->
+    <!--<execution>-->
+    <!--<id>generate-deployment-package</id>-->
+    <!--<phase>verify</phase>-->
+    <!--<goals>-->
+    <!--<goal>generate-deployment-package</goal>-->
+    <!--</goals>-->
+    <!--</execution>-->
+    <!--</executions>-->
+    <!--<configuration>-->
+    <!--<serverAddress>${xldeploy.server}</serverAddress>-->
+    <!--<context>${xldeploy.contextroot}</context>-->
+    <!--<port>${xldeploy.port}</port>-->
+    <!--<secured>${xldeploy.secured}</secured>-->
+    <!--<applicationName>basisvoorzieningen/testautomatisering/netify-soap</applicationName>-->
+    <!--<environmentId>${xldeploy.environmentId}</environmentId>-->
+    <!--<deletePreviouslyDeployedDar>true</deletePreviouslyDeployedDar>-->
+    <!--<generateDeployedOnUpgrade>true</generateDeployedOnUpgrade>-->
+    <!--<deployables combine.self="override">-->
+    <!--&lt;!&ndash; system property &ndash;&gt;-->
+    <!--&lt;!&ndash;<duo.JbossSystemPropertySpec name="OMGEVING">&ndash;&gt;-->
+    <!--&lt;!&ndash;<systemPropertyValue>{{data.omgeving}}</systemPropertyValue>&ndash;&gt;-->
+    <!--&lt;!&ndash;</duo.JbossSystemPropertySpec>&ndash;&gt;-->
+    <!--&lt;!&ndash;<duo.JbossSystemPropertySpec name="APP_ENCRYPTION_PASSWORD">&ndash;&gt;-->
+    <!--&lt;!&ndash;<systemPropertyValue>{{system.app_encryption_password}}</systemPropertyValue>&ndash;&gt;-->
+    <!--&lt;!&ndash;</duo.JbossSystemPropertySpec>&ndash;&gt;-->
+    <!--<duo.JbossSystemPropertySpec name="spring.config.location">-->
+    <!--<systemPropertyValue>{{spring.config.location}}</systemPropertyValue>-->
+    <!--<tags>-->
+    <!--<value>${project.artifactId}</value>-->
+    <!--</tags>-->
+    <!--</duo.JbossSystemPropertySpec>-->
 
-                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
-                        <!--&lt;!&ndash;Datasources&ndash;&gt;-->
-                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
-                        <!--<duo.JbossdmDb2ServerDataSourceSpec name="tadta">-->
-                            <!--<jndiName>java:/jdbc/tadta</jndiName>-->
-                            <!--<username>{{database.tadta.username}}</username>-->
-                            <!--<password>{{database.tadta.password}}</password>-->
-                            <!--<maxPoolSize>{{database.tadta.maxPoolSize}}</maxPoolSize>-->
-                            <!--<connectionUrl>-->
-                                <!--jdbc:as400://{{database.tadta.hostname}}/{{database.tadta.schemaname}};dateformat=iso-->
-                            <!--</connectionUrl>-->
-                            <!--<tags>-->
-                                <!--<value>${project.artifactId}</value>-->
-                            <!--</tags>-->
-                        <!--</duo.JbossdmDb2ServerDataSourceSpec>-->
+    <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+    <!--&lt;!&ndash;Datasources&ndash;&gt;-->
+    <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+    <!--<duo.JbossdmDb2ServerDataSourceSpec name="tadta">-->
+    <!--<jndiName>java:/jdbc/tadta</jndiName>-->
+    <!--<username>{{database.tadta.username}}</username>-->
+    <!--<password>{{database.tadta.password}}</password>-->
+    <!--<maxPoolSize>{{database.tadta.maxPoolSize}}</maxPoolSize>-->
+    <!--<connectionUrl>-->
+    <!--jdbc:as400://{{database.tadta.hostname}}/{{database.tadta.schemaname}};dateformat=iso-->
+    <!--</connectionUrl>-->
+    <!--<tags>-->
+    <!--<value>${project.artifactId}</value>-->
+    <!--</tags>-->
+    <!--</duo.JbossdmDb2ServerDataSourceSpec>-->
 
-                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
-                        <!--&lt;!&ndash;Application Properties&ndash;&gt;-->
-                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
-                        <!--<duo.JbossApplicationConfigFile name="application.properties" location="../netify-soap/config/xldeploy/application.properties">-->
-                            <!--<tags>-->
-                                <!--<value>${project.artifactId}</value>-->
-                            <!--</tags>-->
-                        <!--</duo.JbossApplicationConfigFile>-->
+    <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+    <!--&lt;!&ndash;Application Properties&ndash;&gt;-->
+    <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+    <!--<duo.JbossApplicationConfigFile name="application.properties" location="../netify-soap/config/xldeploy/application.properties">-->
+    <!--<tags>-->
+    <!--<value>${project.artifactId}</value>-->
+    <!--</tags>-->
+    <!--</duo.JbossApplicationConfigFile>-->
 
-                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
-                        <!--&lt;!&ndash;WAR&ndash;&gt;-->
-                        <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
-                        <!--<jbossdm.War name="netify-soap" location="../netify-soap/target/netify-soap.war">-->
-                            <!--<tags>-->
-                                <!--<value>${project.artifactId}</value>-->
-                            <!--</tags>-->
-                        <!--</jbossdm.War>-->
-                    <!--</deployables>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-        <!--</plugins>-->
+    <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+    <!--&lt;!&ndash;WAR&ndash;&gt;-->
+    <!--&lt;!&ndash; - = - = - = - = - = - = - = - = - = - = - = - = - = - &ndash;&gt;-->
+    <!--<jbossdm.War name="netify-soap" location="../netify-soap/target/netify-soap.war">-->
+    <!--<tags>-->
+    <!--<value>${project.artifactId}</value>-->
+    <!--</tags>-->
+    <!--</jbossdm.War>-->
+    <!--</deployables>-->
+    <!--</configuration>-->
+    <!--</plugin>-->
+    <!--</plugins>-->
     <!--</build>-->
 
     <profiles>

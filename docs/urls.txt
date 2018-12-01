@@ -1,0 +1,4 @@
+Rest
+
+Soap
+wsdl: http://localhost:8081/movies/netify_v3.0.wsdl

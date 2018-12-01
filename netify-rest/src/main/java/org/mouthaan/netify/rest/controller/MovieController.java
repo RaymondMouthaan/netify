@@ -37,7 +37,7 @@ import java.util.*;
 @RestController
 @Validated
 @RequestMapping(value = "/movies")
-@Api(value = "netify-movies", description = "Operations pertaining to movies in Netflux")
+@Api(value = "netify-movies", description = "Operations pertaining to movies in Netify")
 public class MovieController {
     private MovieService movieService;
 

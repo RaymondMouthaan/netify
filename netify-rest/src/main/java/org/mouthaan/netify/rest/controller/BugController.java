@@ -29,7 +29,7 @@ import java.util.List;
 @RestController
 @Validated
 @RequestMapping(value = "/bugs")
-@Api(value = "netify-bugs", description = "Operations pertaining to bugs in Netflux")
+@Api(value = "netify-bugs", description = "Operations pertaining to bugs in Netify")
 public class BugController {
 
     private static final String SECRET_KEY_1 = "ssdkF$HUy2A#D%kd";
