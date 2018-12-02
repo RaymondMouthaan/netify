@@ -20,7 +20,6 @@ import java.util.Map;
 @AllArgsConstructor
 public class GenreFacade {
     private final GenreService genreService;
-    private final GenreSoapMapper genreSoapMapper;
 
     public GetGenreCountResponse getSoapGenreCount() {
         CountDto countDto = genreService.countAll();
@@ -30,7 +29,7 @@ public class GenreFacade {
     }
 
     public GetGenreAllResponse getSoapGenreAll(GetGenreAllRequest getGenreAllRequest) {
-        Map<String,String> filterParams = new HashMap();
+        Map<String,String> filterParams = new HashMap<>();
         if (null != getGenreAllRequest.getFilters()
                 && null != getGenreAllRequest.getFilters().getName()){
             filterParams.put("name",getGenreAllRequest.getFilters().getName());
@@ -42,7 +41,7 @@ public class GenreFacade {
         getGenreAllResponse.setGenres(new Genres());
         genreDtos.forEach(genreDto -> {
             // Add genreDto to response
-            getGenreAllResponse.getGenres().getGenre().add(genreSoapMapper.map(genreDto, Genre.class));
+            getGenreAllResponse.getGenres().getGenre().add(GenreSoapMapper.MAPPER.toGenre(genreDto));
         });
         return getGenreAllResponse;
     }
@@ -53,26 +52,26 @@ public class GenreFacade {
 
         // Add genreDto to response
         GetGenreByIdResponse getGenreByIdResponse = new GetGenreByIdResponse();
-        getGenreByIdResponse.setGenre(genreSoapMapper.map(genreDto, Genre.class));
+        getGenreByIdResponse.setGenre(GenreSoapMapper.MAPPER.toGenre(genreDto));
         return getGenreByIdResponse;
     }
 
     public AddGenreResponse addSoapGenre(AddGenreRequest addGenreRequest) {
-        GenreDto genreDto = genreSoapMapper.map(addGenreRequest.getGenre(), GenreDto.class);
+        GenreDto genreDto = GenreSoapMapper.MAPPER.toGenreDto(addGenreRequest.getGenre());
 
         // Add genreDto to addGenreResponse
         AddGenreResponse addGenreResponse = new AddGenreResponse();
-        addGenreResponse.setGenre(genreSoapMapper.map(genreService.add(genreDto), Genre.class));
+        addGenreResponse.setGenre(GenreSoapMapper.MAPPER.toGenre(genreService.add(genreDto)));
         return addGenreResponse;
     }
 
     public UpdateGenreResponse updateSoapGenre(UpdateGenreRequest updateGenreRequest) {
         GenreDto genreDto = genreService.update(updateGenreRequest.getGenre().getId(),
-                genreSoapMapper.map(updateGenreRequest.getGenre(), GenreDto.class));
+                GenreSoapMapper.MAPPER.toGenreDto(updateGenreRequest.getGenre()));
 
         // Add genreDto to response
         UpdateGenreResponse updateGenreResponse = new UpdateGenreResponse();
-        updateGenreResponse.setGenre(genreSoapMapper.map(genreDto, Genre.class));
+        updateGenreResponse.setGenre(GenreSoapMapper.MAPPER.toGenre(genreDto));
         return updateGenreResponse;
     }
 

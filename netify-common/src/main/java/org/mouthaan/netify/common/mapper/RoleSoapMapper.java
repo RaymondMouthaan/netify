@@ -1,17 +1,16 @@
 package org.mouthaan.netify.common.mapper;
 
-import ma.glasnost.orika.MapperFactory;
-import ma.glasnost.orika.impl.ConfigurableMapper;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 import org.mouthaan.namespace.netify.datatypes.role.Role;
 import org.mouthaan.netify.service.dto.RoleDto;
-import org.springframework.stereotype.Component;
 
-@Component
-public class RoleSoapMapper extends ConfigurableMapper {
-    @Override
-    protected void configure(MapperFactory factory) {
-        factory.classMap(Role.class, RoleDto.class)
-                .byDefault()
-                .register();
-    }
+@Mapper
+public interface RoleSoapMapper {
+
+    RoleSoapMapper MAPPER = Mappers.getMapper(RoleSoapMapper.class);
+
+    RoleDto toRoleDto(Role role);
+
+    Role toRole(RoleDto roleDto);
 }

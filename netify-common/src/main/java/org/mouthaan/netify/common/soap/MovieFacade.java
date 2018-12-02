@@ -27,9 +27,6 @@ import java.util.Map;
 public class MovieFacade {
 
     private final MovieService movieService;
-    private final MovieSoapMapper movieSoapMapper;
-    private final GenreSoapMapper genreSoapMapper;
-    private final RoleSoapMapper roleSoapMapper;
 
     public GetMovieCountResponse getSoapMovieCount() {
         CountDto countDto = movieService.countAll();
@@ -40,7 +37,7 @@ public class MovieFacade {
 
     public GetMovieAllResponse getSoapMovieAll(GetMovieAllRequest getMovieAllRequest) {
         List<SearchCriteria> queryParams = new ArrayList<>();
-        Map<String,String> filterParams = new HashMap();
+        Map<String,String> filterParams = new HashMap<>();
         if (null != getMovieAllRequest.getFilters()) {
             if (getMovieAllRequest.getFilters().getTitle() != null)
                 filterParams.put("title",getMovieAllRequest.getFilters().getTitle());
@@ -68,7 +65,7 @@ public class MovieFacade {
         // Map each movieDto to getMovieAllResponse
         movieDtoS.forEach(movieDto -> {
             // Add movieDto to getMovieAllResponse
-            getMovieAllResponse.getMovies().getMovie().add(movieSoapMapper.map(movieDto, Movie.class));
+            getMovieAllResponse.getMovies().getMovie().add(MovieSoapMapper.MAPPER.toMovie(movieDto));
         });
 
         // return getMovieAllResponse
@@ -82,7 +79,7 @@ public class MovieFacade {
         // Create getMovieByIdResponse
         GetMovieByIdResponse getMovieByIdResponse = new GetMovieByIdResponse();
         // Map movieDto to Movie and set Movie to getMovieByIdResponse
-        getMovieByIdResponse.setMovie(movieSoapMapper.map(movieDto, Movie.class));
+        getMovieByIdResponse.setMovie(MovieSoapMapper.MAPPER.toMovie(movieDto));
 
         // Return getMovieByIdResponse
         return getMovieByIdResponse;
@@ -90,13 +87,13 @@ public class MovieFacade {
 
     public AddMovieResponse addSoapMovie(AddMovieRequest addMovieRequest) {
         // Map incoming movie request to movieDto
-        MovieDto movieDto = movieSoapMapper.map(addMovieRequest.getMovie(), MovieDto.class);
+        MovieDto movieDto = MovieSoapMapper.MAPPER.toMovieDto(addMovieRequest.getMovie());
 
         // Add movieDto
         MovieDto movieResponseDto = movieService.add(movieDto);
 
         // Map movieResponseDto to movieResponse
-        Movie movieResponse = movieSoapMapper.map(movieResponseDto, Movie.class);
+        Movie movieResponse = MovieSoapMapper.MAPPER.toMovie(movieResponseDto);
 
         // Add movieResponse to addMovieResponse
         AddMovieResponse addMovieResponse = new AddMovieResponse();
@@ -107,11 +104,11 @@ public class MovieFacade {
     }
 
     public UpdateMovieResponse updateSoapMovie(UpdateMovieRequest updateMovieRequest) {
-        MovieDto movieDto = movieService.update(updateMovieRequest.getMovie().getId(), movieSoapMapper.map(updateMovieRequest.getMovie(), MovieDto.class));
+        MovieDto movieDto = movieService.update(updateMovieRequest.getMovie().getId(), MovieSoapMapper.MAPPER.toMovieDto(updateMovieRequest.getMovie()));
 
         // Add movieDto to response
         UpdateMovieResponse updateMovieResponse = new UpdateMovieResponse();
-        updateMovieResponse.setMovie(movieSoapMapper.map(movieDto, Movie.class));
+        updateMovieResponse.setMovie(MovieSoapMapper.MAPPER.toMovie(movieDto));
         return updateMovieResponse;
     }
 
@@ -121,13 +118,13 @@ public class MovieFacade {
 
         // Get genres to add
         List<GenreDto> genreDtos = new ArrayList<>();
-        updateMovieAddGenreRequest.getGenre().forEach(genre -> genreDtos.add(genreSoapMapper.map(genre, GenreDto.class)));
+        updateMovieAddGenreRequest.getGenre().forEach(genre -> genreDtos.add(GenreSoapMapper.MAPPER.toGenreDto(genre)));
 
         // Update movie with genres to add
         MovieDto movieResponseDto = movieService.updateMovieAddGenre(movieId, genreDtos);
 
         // Map movieResponseDto to movieResponse
-        Movie movieResponse = movieSoapMapper.map(movieResponseDto, Movie.class);
+        Movie movieResponse = MovieSoapMapper.MAPPER.toMovie(movieResponseDto);
 
         // Create updateMovieAddGenreResponse with movieResponse
         UpdateMovieAddGenreResponse updateMovieAddGenreResponse = new UpdateMovieAddGenreResponse();
@@ -143,13 +140,13 @@ public class MovieFacade {
 
         // Get genres to remove
         List<GenreDto> genreDtos = new ArrayList<>();
-        updateMovieRemoveGenreRequest.getGenre().forEach(genre -> genreDtos.add(genreSoapMapper.map(genre, GenreDto.class)));
+        updateMovieRemoveGenreRequest.getGenre().forEach(genre -> genreDtos.add(GenreSoapMapper.MAPPER.toGenreDto(genre)));
 
         // Update movie with genres to remove
         MovieDto movieResponseDto = movieService.updateMovieRemoveGenre(movieId, genreDtos);
 
         // Map movieResponseDto to movieResponse
-        Movie movieResponse = movieSoapMapper.map(movieResponseDto, Movie.class);
+        Movie movieResponse = MovieSoapMapper.MAPPER.toMovie(movieResponseDto);
 
         // Create updateMovieRemoveGenreResponse with movieResponse
         UpdateMovieRemoveGenreResponse updateMovieRemoveGenreResponse = new UpdateMovieRemoveGenreResponse();
@@ -165,13 +162,13 @@ public class MovieFacade {
 
         // Get cast to add
         List<RoleDto> castDto = new ArrayList<>();
-        updateMovieAddCastRequest.getCast().getRole().forEach(role -> castDto.add(roleSoapMapper.map(role, RoleDto.class)));
+        updateMovieAddCastRequest.getCast().getRole().forEach(role -> castDto.add(RoleSoapMapper.MAPPER.toRoleDto(role)));
 
         // Update movie with genres to add
         MovieDto movieResponseDto = movieService.updateMovieAddCast(movieId, castDto);
 
         // Map movieResponseDto to movieResponse
-        Movie movieResponse = movieSoapMapper.map(movieResponseDto, Movie.class);
+        Movie movieResponse = MovieSoapMapper.MAPPER.toMovie(movieResponseDto);
 
         // Create updateMovieAddCastResponse with movieResponse
         UpdateMovieAddCastResponse updateMovieAddCastResponse = new UpdateMovieAddCastResponse();
@@ -187,13 +184,13 @@ public class MovieFacade {
 
         // Get genres to remove
         List<RoleDto> castDto = new ArrayList<>();
-        updateMovieRemoveCastRequest.getCast().getRole().forEach(role -> castDto.add(roleSoapMapper.map(role, RoleDto.class)));
+        updateMovieRemoveCastRequest.getCast().getRole().forEach(role -> castDto.add(RoleSoapMapper.MAPPER.toRoleDto(role)));
 
         // Update movie with genres to remove
         MovieDto movieResponseDto = movieService.updateMovieRemoveCast(movieId, castDto);
 
         // Map movieResponseDto to movieResponse
-        Movie movieResponse = movieSoapMapper.map(movieResponseDto, Movie.class);
+        Movie movieResponse = MovieSoapMapper.MAPPER.toMovie(movieResponseDto);
 
         // Create updateMovieRemoveCastResponse with movieResponse
         UpdateMovieRemoveCastResponse updateMovieRemoveCastResponse = new UpdateMovieRemoveCastResponse();

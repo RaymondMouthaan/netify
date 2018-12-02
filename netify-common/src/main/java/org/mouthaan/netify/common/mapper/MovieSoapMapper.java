@@ -1,19 +1,21 @@
 package org.mouthaan.netify.common.mapper;
 
-import ma.glasnost.orika.MapperFactory;
-import ma.glasnost.orika.impl.ConfigurableMapper;
+import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.factory.Mappers;
 import org.mouthaan.namespace.netify.datatypes.movie.Movie;
 import org.mouthaan.netify.service.dto.MovieDto;
-import org.springframework.stereotype.Component;
 
-@Component
-public class MovieSoapMapper extends ConfigurableMapper {
-    @Override
-    protected void configure(MapperFactory factory) {
-        factory.classMap(Movie.class, MovieDto.class)
-                .field("genres.genre", "genres")
-                .field("cast.role", "cast")
-                .byDefault()
-                .register();
-    }
+@Mapper
+public interface MovieSoapMapper {
+
+    MovieSoapMapper MAPPER = Mappers.getMapper(MovieSoapMapper.class);
+
+    @Mapping(source = "genres.genre", target = "genres")
+    @Mapping(source = "cast.role", target = "cast")
+    MovieDto toMovieDto(Movie movie);
+
+    @InheritInverseConfiguration
+    Movie toMovie(MovieDto movieDto);
 }

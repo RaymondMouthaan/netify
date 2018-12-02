@@ -20,7 +20,6 @@ import java.util.Map;
 @AllArgsConstructor
 public class ActorFacade {
     private final ActorService actorService;
-    private final ActorSoapMapper actorSoapMapper;
 
     public GetActorCountResponse getSoapActorCount() {
         CountDto countDto = actorService.countAll();
@@ -30,7 +29,7 @@ public class ActorFacade {
     }
 
     public GetActorAllResponse getSoapActorAll(GetActorAllRequest getActorAllRequest) {
-        Map<String,String> filterParams = new HashMap();
+        Map<String,String> filterParams = new HashMap<>();
         if (null != getActorAllRequest.getFilters()) {
             if (getActorAllRequest.getFilters().getName() != null)
                 filterParams.put("name",getActorAllRequest.getFilters().getName());
@@ -44,7 +43,7 @@ public class ActorFacade {
         getActorAllResponse.setActors(new Actors());
         actorDtos.forEach(actorDto -> {
             // Add actorDto to response
-            getActorAllResponse.getActors().getActor().add(actorSoapMapper.map(actorDto, Actor.class));
+            getActorAllResponse.getActors().getActor().add(ActorSoapMapper.MAPPER.toActor(actorDto));
         });
         return getActorAllResponse;
     }
@@ -55,26 +54,26 @@ public class ActorFacade {
 
         // Add actorDto to response
         GetActorByIdResponse getActorByIdResponse = new GetActorByIdResponse();
-        getActorByIdResponse.setActor(actorSoapMapper.map(actorDto, Actor.class));
+        getActorByIdResponse.setActor(ActorSoapMapper.MAPPER.toActor(actorDto));
         return getActorByIdResponse;
     }
 
     public AddActorResponse addSoapActor(AddActorRequest addActorRequest) {
-        ActorDto actorDto = actorSoapMapper.map(addActorRequest.getActor(), ActorDto.class);
+        ActorDto actorDto = ActorSoapMapper.MAPPER.toActorDto(addActorRequest.getActor());
 
         // Add actorDto to addActorResponse
         AddActorResponse addActorResponse = new AddActorResponse();
-        addActorResponse.setActor(actorSoapMapper.map(actorService.add(actorDto), Actor.class));
+        addActorResponse.setActor(ActorSoapMapper.MAPPER.toActor(actorService.add(actorDto)));
         return addActorResponse;
     }
 
     public UpdateActorResponse updateSoapActor(UpdateActorRequest updateActorRequest) {
         ActorDto actorDto = actorService.update(updateActorRequest.getActor().getId(),
-                actorSoapMapper.map(updateActorRequest.getActor(), ActorDto.class));
+                ActorSoapMapper.MAPPER.toActorDto(updateActorRequest.getActor()));
 
         // Add actorDto to response
         UpdateActorResponse updateActorResponse = new UpdateActorResponse();
-        updateActorResponse.setActor(actorSoapMapper.map(actorDto, Actor.class));
+        updateActorResponse.setActor(ActorSoapMapper.MAPPER.toActor(actorDto));
         return updateActorResponse;
     }
 

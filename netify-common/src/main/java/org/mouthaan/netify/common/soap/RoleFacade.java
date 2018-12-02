@@ -3,7 +3,6 @@ package org.mouthaan.netify.common.soap;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.mouthaan.namespace.netify.datatypes.role.Cast;
-import org.mouthaan.namespace.netify.datatypes.role.Role;
 import org.mouthaan.namespace.netify.general.*;
 import org.mouthaan.netify.common.mapper.RoleSoapMapper;
 import org.mouthaan.netify.service.RoleService;
@@ -20,7 +19,6 @@ import java.util.Map;
 @AllArgsConstructor
 public class RoleFacade {
     private final RoleService roleService;
-    private final RoleSoapMapper roleSoapMapper;
 
     public GetRoleCountResponse getSoapRoleCount() {
         CountDto countDto = roleService.countAll();
@@ -30,7 +28,7 @@ public class RoleFacade {
     }
 
     public GetRoleAllResponse getSoapRoleAll(GetRoleAllRequest getRoleAllRequest) {
-        Map<String,String> filterParams = new HashMap();
+        Map<String,String> filterParams = new HashMap<>();
         if (null != getRoleAllRequest.getFilters()){
             if(null != getRoleAllRequest.getFilters().getCharacter())
                 filterParams.put("character",getRoleAllRequest.getFilters().getCharacter());
@@ -48,7 +46,7 @@ public class RoleFacade {
         getRoleAllResponse.setCast(new Cast());
         castDto.forEach(roleDto -> {
             // Add roleDto to response
-            getRoleAllResponse.getCast().getRole().add(roleSoapMapper.map(roleDto, Role.class));
+            getRoleAllResponse.getCast().getRole().add(RoleSoapMapper.MAPPER.toRole(roleDto));
         });
         return getRoleAllResponse;
     }
@@ -60,7 +58,7 @@ public class RoleFacade {
         // Add roleDto to response
         GetRoleByIdResponse getRoleByIdResponse = new GetRoleByIdResponse();
         getRoleByIdResponse.setCast(new Cast());
-        getRoleByIdResponse.getCast().getRole().add(roleSoapMapper.map(roleDto, Role.class));
+        getRoleByIdResponse.getCast().getRole().add(RoleSoapMapper.MAPPER.toRole(roleDto));
         return getRoleByIdResponse;
     }
 }
