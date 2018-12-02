@@ -1,19 +1,14 @@
 package org.mouthaan.netify.service.mapper;
 
-import ma.glasnost.orika.MapperFactory;
-import ma.glasnost.orika.impl.ConfigurableMapper;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 import org.mouthaan.netify.domain.model.Bug;
 import org.mouthaan.netify.service.dto.BugDto;
-import org.springframework.stereotype.Component;
 
-@Component
-public class BugServiceMapper extends ConfigurableMapper {
+@Mapper
+public interface BugServiceMapper {
 
-    @Override
-    protected void configure(MapperFactory factory) {
-        factory.classMap(Bug.class, BugDto.class)
-                .mapNulls(false).mapNullsInReverse(false) // don't map nulls in both directions
-                .byDefault()
-                .register();
-    }
+    BugServiceMapper INSTANCE = Mappers.getMapper(BugServiceMapper.class);
+    BugDto toBugDto(Bug bug);
+    Bug toBug(BugDto bugDto);
 }

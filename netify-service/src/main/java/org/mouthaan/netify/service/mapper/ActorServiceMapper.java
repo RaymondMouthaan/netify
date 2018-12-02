@@ -1,19 +1,22 @@
 package org.mouthaan.netify.service.mapper;
 
-import ma.glasnost.orika.MapperFactory;
-import ma.glasnost.orika.impl.ConfigurableMapper;
+import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.factory.Mappers;
 import org.mouthaan.netify.domain.model.Actor;
 import org.mouthaan.netify.service.dto.ActorDto;
-import org.springframework.stereotype.Component;
 
-@Component
-public class ActorServiceMapper extends ConfigurableMapper {
+@Mapper
+public interface ActorServiceMapper {
 
-    @Override
-    protected void configure(MapperFactory factory) {
-        factory.classMap(Actor.class, ActorDto.class)
-                .mapNulls(false).mapNullsInReverse(false) // don't map nulls in both directions
-                .byDefault()
-                .register();
-    }
+    ActorServiceMapper MAPPER = Mappers.getMapper(ActorServiceMapper.class);
+
+    @Mapping(target = "id", source = "id")
+    @Mapping(target = "name", source = "name")
+    @Mapping(target = "gender", source = "gender")
+    ActorDto toActorDto(Actor actor);
+
+    @InheritInverseConfiguration
+    Actor toActor(ActorDto actorDto);
 }

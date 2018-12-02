@@ -20,13 +20,11 @@ import java.util.stream.Collectors;
 public class BugServiceImpl implements BugService {
 
     private final BugRepository bugRepository;
-    private final BugServiceMapper bugServiceMapper;
     private final BaseDao baseDao;
 
     @Autowired
-    public BugServiceImpl(BugRepository bugRepository, BugServiceMapper bugServiceMapper, BaseDao baseDao) {
+    public BugServiceImpl(BugRepository bugRepository, BaseDao baseDao) {
         this.bugRepository = bugRepository;
-        this.bugServiceMapper = bugServiceMapper;
         this.baseDao = baseDao;
 
     }
@@ -39,21 +37,21 @@ public class BugServiceImpl implements BugService {
     @Override
     public List<BugDto> findAll(List<SearchCriteria> queryParams) {
         return this.baseDao.findAllPredicated(queryParams, Bug.class).stream()
-                .map(bug -> bugServiceMapper.map(bug, BugDto.class))
+                .map(BugServiceMapper.INSTANCE::toBugDto)
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<BugDto> findAll() {
         return this.bugRepository.findAll().stream()
-                .map(bug -> bugServiceMapper.map(bug, BugDto.class))
+                .map(BugServiceMapper.INSTANCE::toBugDto)
                 .collect(Collectors.toList());
     }
 
     @Override
     public BugDto findByBugKey(String bugKey) {
         Bug bug = this.bugRepository.getOne(bugKey);
-        BugDto bugDto = bugServiceMapper.map(bug, BugDto.class);
+        BugDto bugDto = BugServiceMapper.INSTANCE.toBugDto(bug);
         if (bugDto == null) {
             return new BugDto(bugKey, "unknown", false, 0, "bug with key='" + bugKey + "' not found, return default false.");
         }
@@ -65,22 +63,24 @@ public class BugServiceImpl implements BugService {
         if (this.isExist(bugDto)) {
             throw new AlreadyExistException("element.type.bug", bugDto.getBugKey());
         }
-        return bugServiceMapper.map(this.bugRepository.saveAndFlush(bugServiceMapper.map(bugDto, Bug.class)), BugDto.class);
+        return BugServiceMapper.INSTANCE.toBugDto(this.bugRepository.saveAndFlush(BugServiceMapper.INSTANCE.toBug(bugDto)));
     }
 
     @Override
     public BugDto update(BugDto bugDto) {
         Bug bug = this.bugRepository.getOne(bugDto.getBugKey());
-        bugServiceMapper.map(bugDto, bug);
+
+        // Todo: copy updated fields to bug
+//        bugServiceMapper.map(bugDto, bug);
         Bug updatedBug = bugRepository.saveAndFlush(bug);
-        log.debug("Updated bug [bugKey='{}', bugLocation='{}', bugEnabled='{}', bugGroup='{}', bugDescription='{}']",
-                updatedBug.getBugKey(),
-                updatedBug.getBugLocation(),
-                updatedBug.getBugEnabled(),
-                updatedBug.getBugGroup(),
-                updatedBug.getBugDescription()
-        );
-        return bugServiceMapper.map(updatedBug, BugDto.class);
+//        log.debug("Updated bug [bugKey='{}', bugLocation='{}', bugEnabled='{}', bugGroup='{}', bugDescription='{}']",
+//                updatedBug.getBugKey(),
+//                updatedBug.getBugLocation(),
+//                updatedBug.getBugEnabled(),
+//                updatedBug.getBugGroup(),
+//                updatedBug.getBugDescription()
+//        );
+        return BugServiceMapper.INSTANCE.toBugDto(updatedBug);
     }
 
     @Override

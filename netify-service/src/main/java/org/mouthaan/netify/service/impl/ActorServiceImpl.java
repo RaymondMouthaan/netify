@@ -28,14 +28,12 @@ import java.util.stream.Collectors;
 public class ActorServiceImpl implements ActorService {
 
     private final ActorRepository actorRepository;
-    private final ActorServiceMapper actorServiceMapper;
 
     private final BaseDao baseDAO;
 
     @Autowired
-    public ActorServiceImpl(ActorRepository actorRepository, ActorServiceMapper actorServiceMapper, BaseDao baseDAO) {
+    public ActorServiceImpl(ActorRepository actorRepository, BaseDao baseDAO) {
         this.actorRepository = actorRepository;
-        this.actorServiceMapper = actorServiceMapper;
         this.baseDAO = baseDAO;
     }
 
@@ -54,7 +52,7 @@ public class ActorServiceImpl implements ActorService {
         });
 
         List<ActorDto> actorDtoS = this.baseDAO.findAllPredicated(queryParams, Actor.class).stream()
-                .map(entity -> actorServiceMapper.map(entity, ActorDto.class))
+                .map(ActorServiceMapper.MAPPER::toActorDto)
                 .collect(Collectors.toList());
         if (actorDtoS.size() == 0) {
             String filter = queryParams.stream().map(SearchCriteria::toString)
@@ -67,7 +65,7 @@ public class ActorServiceImpl implements ActorService {
     @Override
     public Page<ActorDto> findPaginated(Pageable pageable) {
         return this.actorRepository.findAll(pageable)
-                .map(entity -> actorServiceMapper.map(entity, ActorDto.class));
+                .map(ActorServiceMapper.MAPPER::toActorDto);
     }
 
     @Override
@@ -75,9 +73,9 @@ public class ActorServiceImpl implements ActorService {
         Actor actor = this.actorRepository.getOne(id);
 
         if (null == actor) {
-            throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.actor", "id=\'" + id + "\'");
         }
-        return actorServiceMapper.map(actor, ActorDto.class);
+        return ActorServiceMapper.MAPPER.toActorDto(actor);
     }
 
     @Override
@@ -86,7 +84,7 @@ public class ActorServiceImpl implements ActorService {
         if (null == actor) {
             throw new NotFoundException("element.type.actor", name);
         }
-        return actorServiceMapper.map(actor, ActorDto.class);
+        return ActorServiceMapper.MAPPER.toActorDto(actor);
     }
 
     @Override
@@ -94,7 +92,7 @@ public class ActorServiceImpl implements ActorService {
         if (this.isExists(actorDto)) {
             throw new AlreadyExistException("element.type.actor", actorDto.getName());
         }
-        return actorServiceMapper.map(this.actorRepository.saveAndFlush(actorServiceMapper.map(actorDto, Actor.class)), ActorDto.class);
+        return ActorServiceMapper.MAPPER.toActorDto(this.actorRepository.saveAndFlush(ActorServiceMapper.MAPPER.toActor(actorDto)));
     }
 
     @Override
@@ -102,17 +100,17 @@ public class ActorServiceImpl implements ActorService {
         Optional<Actor> actor = this.actorRepository.findById(id);
 
         if (actor.isPresent()) {
-            // Copy notNulls from updateActorDto to actor
-            actorServiceMapper.map(actorDto, actor);
+//            // Todo: Copy notNulls from updateActorDto to actor
+//            ActorServiceMapper.MAPPER.toActor(actorDto);
 
             // save and flush actor
             Actor returnActor = this.actorRepository.saveAndFlush(actor.get());
 
             // return saved actor
-            return actorServiceMapper.map(returnActor, ActorDto.class);
+            return ActorServiceMapper.MAPPER.toActorDto(returnActor);
         }
         else {
-            throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.actor", "id=\'" + id + "\'");
         }
 
     }
@@ -123,7 +121,7 @@ public class ActorServiceImpl implements ActorService {
         if (actor.isPresent()) {
             this.actorRepository.delete(actor.get());
         } else {
-            throw new NotFoundException("element.type.actor", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.actor", "id=\'" + id + "\'");
         }
 
     }

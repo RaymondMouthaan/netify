@@ -26,19 +26,15 @@ public class MovieServiceImpl implements MovieService {
     private final GenreService genreService;
     private final ActorService actorService;
     private final RoleService roleService;
-    private final MovieServiceMapper movieServiceMapper;
     private final BaseDao baseDAO;
     private final BugServiceImpl bugService;
 
-
-
     @Autowired
-    public MovieServiceImpl(MovieRepository movieRepository, GenreService genreService, ActorService actorService, RoleService roleService, MovieServiceMapper movieServiceMapper, BaseDao baseDAO, BugServiceImpl bugService) {
+    public MovieServiceImpl(MovieRepository movieRepository, GenreService genreService, ActorService actorService, RoleService roleService, BaseDao baseDAO, BugServiceImpl bugService) {
         this.movieRepository = movieRepository;
         this.genreService = genreService;
         this.actorService = actorService;
         this.roleService = roleService;
-        this.movieServiceMapper = movieServiceMapper;
         this.baseDAO = baseDAO;
         this.bugService = bugService;
     }
@@ -50,7 +46,7 @@ public class MovieServiceImpl implements MovieService {
 
     public List<MovieDto> findAll() {
         return this.movieRepository.findAll().stream()
-                .map(entity -> movieServiceMapper.map(entity, MovieDto.class))
+                .map(MovieServiceMapper.MAPPER::toMovieDto)
                 .collect(Collectors.toList());
     }
 
@@ -74,7 +70,7 @@ public class MovieServiceImpl implements MovieService {
         });
 
         List<MovieDto> movies = this.baseDAO.findAllPredicated(queryParams, Movie.class).stream()
-                .map(entity -> movieServiceMapper.map(entity, MovieDto.class))
+                .map(MovieServiceMapper.MAPPER::toMovieDto)
                 .collect(Collectors.toList());
         if (movies.size() == 0) {
             String filter = queryParams.stream().map(SearchCriteria::toString)
@@ -115,7 +111,7 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public Page<MovieDto> findPaginated(Pageable pageable) {
         return this.movieRepository.findAll(pageable)
-                .map(entity -> movieServiceMapper.map(entity, MovieDto.class));
+                .map(MovieServiceMapper.MAPPER::toMovieDto);
     }
 
     @Override
@@ -124,7 +120,7 @@ public class MovieServiceImpl implements MovieService {
         if (null == movie) {
             throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
         }
-        return movieServiceMapper.map(movie, MovieDto.class);
+        return MovieServiceMapper.MAPPER.toMovieDto(movie);
     }
 
     @Override
@@ -136,7 +132,7 @@ public class MovieServiceImpl implements MovieService {
         processGenres(movieDto);
         movieDto = processRoles(movieDto);
 
-        return movieServiceMapper.map(this.movieRepository.saveAndFlush(movieServiceMapper.map(movieDto, Movie.class)), MovieDto.class);
+        return MovieServiceMapper.MAPPER.toMovieDto(this.movieRepository.saveAndFlush(MovieServiceMapper.MAPPER.toMovie(movieDto)));
     }
 
     @Override
@@ -149,10 +145,10 @@ public class MovieServiceImpl implements MovieService {
             // Ignore cast for update: Set cast to null
             if (movieDto.getCast() != null) { movieDto.setCast(null); }
 
-            // Map movieDto fields to updated movie (nulls are ignored)
-            movieServiceMapper.map(movieDto, movie);
+            //Todo:  Map movieDto fields to updated movie (nulls are ignored)
+            //movieServiceMapper.map(movieDto, movie);
             Movie updateMovie = movieRepository.saveAndFlush(movie.get());
-            return movieServiceMapper.map(updateMovie, MovieDto.class);
+            return MovieServiceMapper.MAPPER.toMovieDto(updateMovie);
         } else {
             throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
         }
@@ -168,9 +164,11 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public MovieDto updateMovieAddGenre(Integer id, List<GenreDto> genresDto) {
         Optional<Movie> movie = this.movieRepository.findById(id);
-        if (!movie.isPresent()) {
+        if (movie.isPresent()) {
             // Map found movie to movieDto
-            MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+            // old MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+
+            MovieDto movieDto = MovieServiceMapper.MAPPER.toMovieDto(movie.get());
 
             // For each genre check if it exists and add it to movieDto
             genresDto.forEach(genreDto -> {
@@ -182,16 +180,16 @@ public class MovieServiceImpl implements MovieService {
             });
 
             // Map movieDto to movie
-            Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
+            Movie updatedMovie = MovieServiceMapper.MAPPER.toMovie(movieDto);
 
             // Save and flush updated movie
             Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
 
             // Return returnedMovie
-            return movieServiceMapper.map(returnedMovie, MovieDto.class);
+            return MovieServiceMapper.MAPPER.toMovieDto(returnedMovie);
         }
         else {
-            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.movie", "id=\'" + id + "\'");
         }
     }
 
@@ -205,9 +203,9 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public MovieDto updateMovieRemoveGenre(Integer id, List<GenreDto> genresDto) {
         Optional<Movie> movie = this.movieRepository.findById(id);
-        if (!movie.isPresent()) {
+        if (movie.isPresent()) {
             // Map found movie to movieDto
-            MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+            MovieDto movieDto = MovieServiceMapper.MAPPER.toMovieDto(movie.get());
 
             // For each genre check if it exists and add it to a new list
             List<GenreDto> genresDtoToRemove = new ArrayList<>();
@@ -223,15 +221,15 @@ public class MovieServiceImpl implements MovieService {
             });
 
             // Map movieDto to movie
-            Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
+            Movie updatedMovie = MovieServiceMapper.MAPPER.toMovie(movieDto);
 
             // Save and flush updated movie
             Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
 
             // Return returnedMovie
-            return movieServiceMapper.map(returnedMovie, MovieDto.class);
+            return MovieServiceMapper.MAPPER.toMovieDto(returnedMovie);
         } else {
-            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.movie", "id=\'" + id + "\'");
         }
     }
 
@@ -247,20 +245,20 @@ public class MovieServiceImpl implements MovieService {
         Optional<Movie> movie = this.movieRepository.findById(id);
         if (movie.isPresent()) {
             // Map found movie to movieDto
-            MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+            MovieDto movieDto = MovieServiceMapper.MAPPER.toMovieDto(movie.get());
 
             processRoles(movieDto, new LinkedHashSet<>(cast));
 
             // Map movieDto to movie
-            Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
+            Movie updatedMovie = MovieServiceMapper.MAPPER.toMovie(movieDto);
 
             // Save and flush updated movie
             Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
 
             // Return returnedMovie
-            return movieServiceMapper.map(returnedMovie, MovieDto.class);
+            return MovieServiceMapper.MAPPER.toMovieDto(returnedMovie);
         } else {
-            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.movie", "id=\'" + id + "\'");
         }
 
     }
@@ -277,7 +275,7 @@ public class MovieServiceImpl implements MovieService {
         Optional<Movie> movie = this.movieRepository.findById(id);
         if (movie.isPresent()) {
             // Map found movie to movieDto
-            MovieDto movieDto = movieServiceMapper.map(movie, MovieDto.class);
+            MovieDto movieDto = MovieServiceMapper.MAPPER.toMovieDto(movie.get());
 
             Set<RoleDto> currentCast = new HashSet<>(movieDto.getCast());
             cast.forEach(castDto ->
@@ -291,16 +289,16 @@ public class MovieServiceImpl implements MovieService {
 
 
             // Map movieDto to movie
-            Movie updatedMovie = movieServiceMapper.map(movieDto, Movie.class);
+            Movie updatedMovie = MovieServiceMapper.MAPPER.toMovie(movieDto);
 
 
             // Save and flush updated movie
             Movie returnedMovie = movieRepository.saveAndFlush(updatedMovie);
 
             // Return returnedMovie
-            return movieServiceMapper.map(returnedMovie, MovieDto.class);
+            return MovieServiceMapper.MAPPER.toMovieDto(returnedMovie);
         } else {
-            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.movie", "id=\'" + id + "\'");
         }
     }
 
@@ -312,14 +310,14 @@ public class MovieServiceImpl implements MovieService {
 //            this.movieRepository.deleteById(movie.get);
         }
         else {
-            throw new NotFoundException("element.type.movie", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.movie", "id=\'" + id + "\'");
         }
 
     }
 
     @Override
     public boolean isExists(MovieDto movieDto) {
-        Movie movie = movieServiceMapper.map(movieDto, Movie.class);
+        Movie movie = MovieServiceMapper.MAPPER.toMovie(movieDto);
         return movieRepository.findByTitleAndReleaseDate(movie.getTitle(), movie.getReleaseDate()) != null;
     }
 
@@ -352,7 +350,7 @@ public class MovieServiceImpl implements MovieService {
     private MovieDto processRoles(MovieDto movieDto, Set<RoleDto> newRoles) {
         if (movieDto.getId() != null) {
             if (!movieRepository.existsById(movieDto.getId())) {
-                movieDto = movieServiceMapper.map(this.movieRepository.saveAndFlush(movieServiceMapper.map(movieDto, Movie.class)), MovieDto.class);
+                movieDto = MovieServiceMapper.MAPPER.toMovieDto(this.movieRepository.saveAndFlush(MovieServiceMapper.MAPPER.toMovie(movieDto)));
             }
         }
         for (RoleDto roleDto : newRoles) {

@@ -24,13 +24,11 @@ import java.util.stream.Collectors;
 @Service("genreService")
 public class GenreServiceImpl implements GenreService {
     private final GenreRepository genreRepository;
-    private final GenreServiceMapper genreServiceMapper;
     private final BaseDao baseDAO;
 
     @Autowired
-    public GenreServiceImpl(GenreRepository genreRepository, GenreServiceMapper genreServiceMapper, BaseDao baseDAO) {
+    public GenreServiceImpl(GenreRepository genreRepository, BaseDao baseDAO) {
         this.genreRepository = genreRepository;
-        this.genreServiceMapper = genreServiceMapper;
         this.baseDAO = baseDAO;
     }
 
@@ -48,7 +46,7 @@ public class GenreServiceImpl implements GenreService {
         });
 
         List<GenreDto> genreDtoS = this.baseDAO.findAllPredicated(queryParams, Genre.class).stream()
-                .map(entity -> genreServiceMapper.map(entity,GenreDto.class))
+                .map(GenreServiceMapper.MAPPER::toGenreDto)
                 .collect(Collectors.toList());
         if(genreDtoS.size()==0){
             String filter = queryParams.stream().map(SearchCriteria::toString)
@@ -60,16 +58,16 @@ public class GenreServiceImpl implements GenreService {
 
     @Override
     public Page<GenreDto> findPaginated(Pageable pageable) {
-        return this.genreRepository.findAll(pageable).map(entity -> genreServiceMapper.map(entity,GenreDto.class));
+        return this.genreRepository.findAll(pageable).map(GenreServiceMapper.MAPPER::toGenreDto);
     }
 
     @Override
     public GenreDto findById(Integer id) {
         Genre genre = this.genreRepository.getOne(id);
         if (null == genre) {
-            throw new NotFoundException("element.type.genre", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.genre", "id=\'" + id + "\'");
         }
-        return genreServiceMapper.map(genre, GenreDto.class);
+        return GenreServiceMapper.MAPPER.toGenreDto(genre);
     }
 
     @Override
@@ -78,7 +76,7 @@ public class GenreServiceImpl implements GenreService {
         if (null == genre) {
             throw new NotFoundException("element.type.genre", "name=\'" + name + "\'");
         }
-        return genreServiceMapper.map(genre, GenreDto.class);
+        return GenreServiceMapper.MAPPER.toGenreDto(genre);
     }
 
     @Override
@@ -86,7 +84,7 @@ public class GenreServiceImpl implements GenreService {
         if (this.isExists(genreDto)) {
             throw new AlreadyExistException("element.type.genre", genreDto.getName());
         }
-        return genreServiceMapper.map(genreRepository.saveAndFlush(genreServiceMapper.map(genreDto, Genre.class)), GenreDto.class);
+        return GenreServiceMapper.MAPPER.toGenreDto(genreRepository.saveAndFlush(GenreServiceMapper.MAPPER.toGenre(genreDto)));
     }
 
     @Override
@@ -95,9 +93,9 @@ public class GenreServiceImpl implements GenreService {
 
         if (genre.isPresent()) {
             genre.get().setName(genreDto.getName());
-            return genreServiceMapper.map(genreRepository.saveAndFlush(genre.get()), GenreDto.class);
+            return GenreServiceMapper.MAPPER.toGenreDto(genreRepository.saveAndFlush(genre.get()));
         } else {
-            throw new NotFoundException("element.type.genre", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.genre", "id=\'" + id + "\'");
         }
     }
 
@@ -108,7 +106,7 @@ public class GenreServiceImpl implements GenreService {
         if (genre.isPresent()) {
             this.genreRepository.delete(genre.get());
         } else {
-            throw new NotFoundException("element.type.genre", "id=\'" + String.valueOf(id) + "\'");
+            throw new NotFoundException("element.type.genre", "id=\'" + id + "\'");
         }
     }
 

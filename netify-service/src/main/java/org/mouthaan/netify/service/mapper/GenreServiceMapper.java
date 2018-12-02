@@ -1,23 +1,22 @@
 package org.mouthaan.netify.service.mapper;
 
-import ma.glasnost.orika.MapperFactory;
-import ma.glasnost.orika.impl.ConfigurableMapper;
+import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.NullValueMappingStrategy;
+import org.mapstruct.factory.Mappers;
 import org.mouthaan.netify.domain.model.Genre;
 import org.mouthaan.netify.service.dto.GenreDto;
-import org.springframework.stereotype.Component;
 
-@Component
-public class GenreServiceMapper extends ConfigurableMapper {
+@Mapper(nullValueMappingStrategy = NullValueMappingStrategy.RETURN_DEFAULT)
+public interface GenreServiceMapper {
 
-    @Override
-    protected void configure(MapperFactory factory) {
-        factory.classMap(Genre.class, GenreDto.class)
-//                .field("id", "id")
-//                .field("name", "name")
-//                .field("gender", "gender")
-                //.customize(customMapper)
-                .mapNulls(false).mapNullsInReverse(false) // don't map nulls in both directions
-                .byDefault()
-                .register();
-    }
+    GenreServiceMapper MAPPER = Mappers.getMapper(GenreServiceMapper.class);
+
+    @Mapping(target = "id", source = "id")
+    @Mapping(target = "name", source = "name")
+    GenreDto toGenreDto(Genre genre);
+
+    @InheritInverseConfiguration
+    Genre toGenre(GenreDto genreDto);
 }
